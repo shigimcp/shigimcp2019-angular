@@ -1,1 +1,218 @@
-/* You can add global styles to this file, and also import other style files */
+// ========================= FONTS =========================
+
+@font-face {
+	font-family: 'AnimeAceItalic';
+	src: url('/assets/fonts/AnimeAceItalic.otf') format("opentype");
+	src: url('/assets/fonts/AnimeAceItalic.eot');
+	src: url('/assets/fonts/AnimeAceItalic.woff') format('woff'),
+	url('/assets/fonts/AnimeAceItalic.svg#-Italic') format('svg');
+}
+
+@font-face {
+	font-family: 'HelveticaNeue-Light';
+	src: url('/assets/fonts/HelveticaNeue-Light.otf') format("opentype");
+	src: url('/assets/fonts/HelveticaNeue-Light.eot');
+	src: url('/assets/fonts/HelveticaNeue-Light.woff') format('woff'),
+	url('/assets/fonts/HelveticaNeue-Light.svg#-Italic') format('svg');
+}
+
+@font-face {
+	font-family: 'HelveticaNeue-Bold';
+	src: url('/assets/fonts/HelveticaNeue-Bold.otf') format("opentype");
+	src: url('/assets/fonts/HelveticaNeue-Bold.eot');
+	src: url('/assets/fonts/HelveticaNeue-Bold.woff') format('woff'),
+	url('/assets/fonts/HelveticaNeue-Bold.svg#-Italic') format('svg');
+}
+
+$comicScript: 'AnimeAceItalic';
+$body: 'HelveticaNeue-Light';
+$hedContainer: 'HelveticaNeue-Bold';
+
+
+// ========================= HTML, BODY =========================
+
+html, body {
+	// border: 2px solid #ff0000;
+
+	// font-family: 'HelveticaNeue-Light', Arial, Helvetica, sans-serif;
+	font-family: $body, Arial, Helvetica, sans-serif !important;
+	letter-spacing: 0.0125em;
+
+    user-select: none;
+
+    width: 100%;
+    height: 100%;
+
+	margin: 0;
+	padding: 0;
+
+    scroll-behavior: smooth;
+
+    :focus {
+        border: none;
+        outline: none;
+    }
+}
+
+
+// ========================= BACKGROUND =========================
+
+$bgR: 255;
+$bgG: 255;
+$bgB: 255;
+$bg_angle: 90deg;
+$bg_opacity: 0.25;
+// $bg_width_lf: 65%;
+$bg_width_lf: 62.5%;
+
+body {
+	// border: 2px solid #00ff00;
+
+	background: rgb($bgR,$bgG,$bgB);
+	background: -moz-linear-gradient($bg_angle, rgba($bgR,$bgG,$bgB,$bg_opacity) 0%, rgba($bgR,$bgG,$bgB,$bg_opacity) $bg_width_lf, rgba(0,0,0,$bg_opacity) $bg_width_lf);
+	background: -webkit-linear-gradient($bg_angle, rgba($bgR,$bgG,$bgB,$bg_opacity) 0%, rgba($bgR,$bgG,$bgB,$bg_opacity) $bg_width_lf, rgba(0,0,0,$bg_opacity) $bg_width_lf);
+	background: linear-gradient($bg_angle, rgba($bgR,$bgG,$bgB,$bg_opacity) 0%, rgba($bgR,$bgG,$bgB,$bg_opacity) $bg_width_lf, rgba(0,0,0,$bg_opacity) $bg_width_lf);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#000000",GradientType=1);
+
+    // background-image: url(./assets/snapshots/shigimcp_2019_08_1440x900.jpg);
+    // background-size: 50vw;
+    // background-position: top center;
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
+}
+
+
+.globalSm {
+
+    .bg_txt {
+        // border: 2px solid #ff0000;
+
+        // color: rgba($color: #000000, $alpha: 0.1);
+        color: rgba($color: #000000, $alpha: 0.05);
+        font-family: 'HelveticaNeue-Bold';
+        font-size: 20em;
+        // font-size: 20vw;
+        letter-spacing: -0.1875em;
+        word-spacing: 0.0875em;
+        // line-height: 10em;
+        line-height: 0.75em;
+        text-transform: lowercase;
+
+        // width: 100%;
+        // width: 45%;
+        // width: 30vw;
+        width: 40vw;
+
+        // display: block;
+        // opacity: 0.1;
+        // overflow: hidden;
+
+        // position: absolute;
+        position: fixed;
+        // top: -0.1875em;
+        // top: -0.25em;
+        top: 0;
+        left: 55vw;
+        // z-index: -10;
+        z-index: 10;
+    }
+
+
+    // ========================= CONTAINER: sectContainer =========================
+
+    .sectContainer {
+        // border: 2px solid #ff0000;
+
+        // margin: 80px 0 0 12.5%;
+        margin: 120px 0 0 12.5%;
+        // margin: 120px 0 0 10%;
+        padding: 0;
+        // padding: 0 0 50vh 0;
+    }
+}
+
+
+.globalMd {
+
+    .bg_txt {
+        // border: 2px solid #ff0000;
+
+        color: rgba($color: #000000, $alpha: 0.05);
+        font-family: 'HelveticaNeue-Bold';
+        font-size: 15em;
+        letter-spacing: -0.1875em;
+        word-spacing: 0.0875em;
+        line-height: 0.75em;
+        text-transform: lowercase;
+
+        width: 40vw;
+
+        position: fixed;
+        top: 0;
+        left: 55vw;
+        z-index: 10;
+    }
+
+
+    // ========================= CONTAINER: sectContainer =========================
+
+    .sectContainer {
+        // border: 2px solid #ff0000;
+
+        // margin: 80px 0 0 12.5%;
+        margin: 120px 0 0 12.5%;
+        // margin: 120px 0 0 10%;
+        padding: 0;
+        // padding: 0 0 50vh 0;
+    }
+}
+
+
+.globalLg {
+
+    .bg_txt {
+        // border: 2px solid #ff0000;
+
+        // color: rgba($color: #000000, $alpha: 0.1);
+        color: rgba($color: #000000, $alpha: 0.05);
+        font-family: 'HelveticaNeue-Bold';
+        font-size: 20em;
+        // font-size: 20vw;
+        letter-spacing: -0.1875em;
+        word-spacing: 0.0875em;
+        // line-height: 10em;
+        line-height: 0.75em;
+        text-transform: lowercase;
+
+        // width: 100%;
+        // width: 45%;
+        // width: 30vw;
+        width: 40vw;
+
+        // display: block;
+        // opacity: 0.1;
+        // overflow: hidden;
+
+        // position: absolute;
+        position: fixed;
+        // top: -0.1875em;
+        // top: -0.25em;
+        top: 0;
+        left: 55vw;
+        // z-index: -10;
+        z-index: 10;
+    }
+
+
+    // ========================= CONTAINER: sectContainer =========================
+
+    .sectContainer {
+        // border: 2px solid #ff0000;
+
+        // margin: 80px 0 0 12.5%;
+        margin: 120px 0 0 12.5%;
+        // margin: 120px 0 0 10%;
+        padding: 0;
+        // padding: 0 0 50vh 0;
+    }
+}

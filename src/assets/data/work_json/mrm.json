@@ -1,0 +1,72 @@
+[
+ {
+   "albumIndex": 5,
+   "albumID": "mrm",
+   "imageIndex": 0,
+   "src": "mrm00.jpg",
+   "caption": 2005,
+   "format": "flash",
+   "formatSrc": "img/0elements/badge_flash.svg",
+   "link": "flash/intel/espn_landing14.html",
+   "cta": "click image for Flash* presentation",
+   "alert": "*Flash is deprecated technology, so this will likely fail for security reasons and/or require a download/permission to use the Flash Plug-In.",
+   "mwidth": 785,
+   "mheight": 700
+ },
+ {
+   "albumIndex": 5,
+   "albumID": "mrm",
+   "imageIndex": 1,
+   "src": "mrm01.jpg",
+   "caption": 2005,
+   "format": "flash",
+   "formatSrc": "img/0elements/badge_flash.svg",
+   "link": "flash/intel/awareness_multi01.html",
+   "cta": "click image for Flash* presentation",
+   "alert": "*Flash is deprecated technology, so this will likely fail for security reasons and/or require a download/permission to use the Flash Plug-In.",
+   "mwidth": 660,
+   "mheight": 270
+ },
+ {
+   "albumIndex": 5,
+   "albumID": "mrm",
+   "imageIndex": 2,
+   "src": "mrm02.jpg",
+   "caption": 2006,
+   "format": "flash",
+   "formatSrc": "img/0elements/badge_flash.svg",
+   "link": "flash/wendys/336x280xerox02.html",
+   "cta": "click image for Flash* presentation",
+   "alert": "*Flash is deprecated technology, so this will likely fail for security reasons and/or require a download/permission to use the Flash Plug-In.",
+   "mwidth": 336,
+   "mheight": 310
+ },
+ {
+   "albumIndex": 5,
+   "albumID": "mrm",
+   "imageIndex": 3,
+   "src": "mrm03.jpg",
+   "caption": 2005,
+   "format": "flash",
+   "formatSrc": "img/0elements/badge_flash.svg",
+   "link": "flash/gm/cars/yahoo05.html",
+   "cta": "click image for Flash* presentation",
+   "alert": "*Flash is deprecated technology, so this will likely fail for security reasons and/or require a download/permission to use the Flash Plug-In.",
+   "mwidth": 800,
+   "mheight": 575
+ },
+ {
+   "albumIndex": 5,
+   "albumID": "mrm",
+   "imageIndex": 4,
+   "src": "mrm04.jpg",
+   "caption": 2006,
+   "format": "flash",
+   "formatSrc": "img/0elements/badge_flash.svg",
+   "link": "flash/gm/rising/728x90_rising_LA.html",
+   "cta": "click image for Flash* presentation",
+   "alert": "*Flash is deprecated technology, so this will likely fail for security reasons and/or require a download/permission to use the Flash Plug-In.",
+   "mwidth": 728,
+   "mheight": 120
+ }
+]

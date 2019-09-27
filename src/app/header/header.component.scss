@@ -1,0 +1,560 @@
+.headerSm {
+    // border: 2px solid #ff0000;
+	background: #000000;
+
+	color: #ffffff;
+	font-size: 1em;
+
+    width: 100vw;
+    height: 60px;
+
+	margin: 0 auto;
+    padding: 0;
+
+    position: fixed;
+    z-index: 999;
+
+	.hedContainer {
+		// border: 02px solid #00ffff;
+
+		// color: #0000ff;
+		color: #ffffff;
+		font-family: 'HelveticaNeue-Light';
+		text-align: left;
+
+        width: inherit;
+        max-width: 1280px;
+		height: inherit;
+        max-height: 60px;
+
+		margin: 0 auto;
+		padding: 0;
+
+		overflow: visible;
+
+        .logoIcon {
+            // border: 02px solid #ff00ff;
+
+            // // width: 150px;
+            width: 7.5vw;
+            max-width: 150px;
+            // height: 10vh;
+            // max-height: 132px;
+
+            margin: 0;
+            padding: 0;
+
+            position: relative;
+            top: 5px;
+            left: -35px;
+            // top: 0.5vh;
+            // z-index: 999;
+
+            display: block;
+            float: left;
+            overflow: visible;
+
+            cursor: pointer;
+
+            // /* ---------- LOGO / afro ---------- */
+            #shigeru_logo_afro_k {
+                // fill: #00ff00;
+
+                clip-path: url(#shigeru_logo_afro_k_mask);
+            }
+
+            #shigeru_logo_afro_w {
+                fill: #ffffff;
+                // fill: #0000ff;
+
+                clip-path: url(#shigeru_logo_afro_w_mask);
+            }
+
+            // /* ---------- LOGO / glasses ---------- */
+            #shigeru_logo_glasses_k {
+                // fill: #00ff00;
+
+                clip-path: url(#shigeru_logo_glasses_k_mask);
+            }
+
+            #shigeru_logo_glasses_w {
+                fill: #ffffff;
+                // fill: #0000ff;
+
+                clip-path: url(#shigeru_logo_glasses_w_mask);
+            }
+
+            // /* ---------- LOGO / kanji ---------- */
+            #shigeru_logo_kanji_w {
+                fill: #ffffff;
+                // fill: #FF00FF;
+                clip-path: url(#shigeru_logo_kanji_w_mask);
+                // clip-path: url(#header_mask);
+            }
+        }
+
+        .hed {
+            // border: 02px solid #ff00ff;
+
+            vertical-align: bottom;
+
+            // height: inherit;
+            height: 60px;
+
+            margin: 0 0 0 -15px;
+            padding: 0;
+
+            float: left;
+
+            .hed01, .hed02 {
+                // border: 02px solid #0000ff;
+
+                line-height: 0.75em;
+                vertical-align: bottom;
+                text-transform: uppercase;
+
+                height: inherit;
+
+                margin: 0;
+                padding: 0;
+                // padding: 0 20px 0 125px;
+
+                display: table-cell;
+
+                cursor: pointer;
+            }
+
+            .hed01 {
+                font-family: 'HelveticaNeue-Bold';
+                font-size: 2em;
+                font-weight: 900;
+
+                padding: 0 10px 0 0;
+            }
+
+            .hed02 {
+                font-size: 1em;
+            }    
+        }
+
+		.nav {
+			// border: 02px solid #00ff00;
+
+			font-size: 1.125em;
+            text-align: center;
+            vertical-align: bottom;
+			text-transform: uppercase;
+
+            width: auto;
+			height: 74px;
+
+			margin: 0;
+			padding: 0;
+
+            display: table-cell;
+            overflow: hidden;
+            float: right;
+
+			ul {
+                // border: 02px solid #0000ff;
+
+                height: inherit;
+
+				margin: 0;
+				padding: 0;
+
+                li {
+                    // border: 02px solid #ff00ff;
+
+                    list-style-type: none;
+                    vertical-align: bottom;
+                    line-height: 0;
+
+                    height: inherit;
+
+                    margin: 0;
+                    padding: 20px 15px;
+
+                    display: table-cell;
+
+                    cursor: pointer;
+                }
+			}
+		}
+	}
+}
+
+
+.headerMd {
+    // border: 2px solid #ff0000;
+	background: #000000;
+
+	color: #ffffff;
+	font-size: 1em;
+
+    width: 100vw;
+    height: 60px;
+
+	margin: 0 auto;
+    padding: 0;
+
+    position: fixed;
+    z-index: 999;
+
+	.hedContainer {
+		// border: 02px solid #00ffff;
+
+		// color: #0000ff;
+		color: #ffffff;
+		font-family: 'HelveticaNeue-Light';
+		text-align: left;
+
+        width: inherit;
+        max-width: 1280px;
+		height: inherit;
+        max-height: 60px;
+
+		margin: 0 auto;
+		padding: 0;
+
+		overflow: visible;
+
+        .logoIcon {
+            // border: 02px solid #ff00ff;
+
+            // // width: 150px;
+            // width: 7.5vw;
+            max-width: 150px;
+            // height: 10vh;
+            // max-height: 132px;
+
+            margin: 0;
+            padding: 0;
+
+            position: relative;
+            top: 5px;
+            left: -35px;
+            // top: 0.5vh;
+            // z-index: 999;
+
+            display: block;
+            float: left;
+            overflow: visible;
+
+            cursor: pointer;
+
+            // /* ---------- LOGO / afro ---------- */
+            #shigeru_logo_afro_k {
+                // fill: #00ff00;
+
+                clip-path: url(#shigeru_logo_afro_k_mask);
+            }
+
+            #shigeru_logo_afro_w {
+                fill: #ffffff;
+                // fill: #0000ff;
+
+                clip-path: url(#shigeru_logo_afro_w_mask);
+            }
+
+            // /* ---------- LOGO / glasses ---------- */
+            #shigeru_logo_glasses_k {
+                // fill: #00ff00;
+
+                clip-path: url(#shigeru_logo_glasses_k_mask);
+            }
+
+            #shigeru_logo_glasses_w {
+                fill: #ffffff;
+                // fill: #0000ff;
+
+                clip-path: url(#shigeru_logo_glasses_w_mask);
+            }
+
+            // /* ---------- LOGO / kanji ---------- */
+            #shigeru_logo_kanji_w {
+                fill: #ffffff;
+                // fill: #FF00FF;
+                clip-path: url(#shigeru_logo_kanji_w_mask);
+                // clip-path: url(#header_mask);
+            }
+        }
+
+        .hed {
+            // border: 02px solid #ff00ff;
+
+            vertical-align: bottom;
+
+            // height: inherit;
+            height: 60px;
+
+            margin: 0 0 0 -15px;
+            padding: 0;
+
+            float: left;
+
+            .hed01, .hed02 {
+                // border: 02px solid #0000ff;
+
+                line-height: 0.75em;
+                vertical-align: bottom;
+                text-transform: uppercase;
+
+                height: inherit;
+
+                margin: 0;
+                padding: 0;
+                // padding: 0 20px 0 125px;
+
+                display: table-cell;
+
+                cursor: pointer;
+            }
+
+            .hed01 {
+                font-family: 'HelveticaNeue-Bold';
+                font-size: 2em;
+                font-weight: 900;
+
+                padding: 0 10px 0 0;
+            }
+
+            .hed02 {
+                font-size: 1em;
+            }    
+        }
+
+		.nav {
+			// border: 02px solid #00ff00;
+
+			font-size: 1.125em;
+            text-align: center;
+            vertical-align: bottom;
+			text-transform: uppercase;
+
+            width: auto;
+			height: 74px;
+
+			margin: 0 5vw 0 0;
+			padding: 0;
+
+            display: table-cell;
+            overflow: hidden;
+            float: right;
+
+			ul {
+                // border: 02px solid #0000ff;
+
+                height: inherit;
+
+				margin: 0;
+				padding: 0;
+
+                li {
+                    // border: 02px solid #ff00ff;
+
+                    list-style-type: none;
+                    vertical-align: bottom;
+                    line-height: 0;
+
+                    height: inherit;
+
+                    margin: 0;
+                    padding: 20px 15px;
+
+                    display: table-cell;
+
+                    cursor: pointer;
+                }
+			}
+		}
+	}
+}
+
+
+.headerLg {
+    // border: 2px solid #ff0000;
+	background: #000000;
+
+	color: #ffffff;
+	font-size: 1em;
+
+    width: 100vw;
+    height: 60px;
+
+	margin: 0 auto;
+    padding: 0;
+
+    position: fixed;
+    z-index: 999;
+
+	.hedContainer {
+		// border: 02px solid #00ffff;
+
+		// color: #0000ff;
+		color: #ffffff;
+		font-family: 'HelveticaNeue-Light';
+		text-align: left;
+
+        width: inherit;
+        max-width: 1280px;
+		height: inherit;
+        max-height: 60px;
+
+		margin: 0 auto;
+		padding: 0;
+
+		overflow: visible;
+
+        .logoIcon {
+            // border: 02px solid #ff00ff;
+
+            // // width: 150px;
+            width: 7.5vw;
+            max-width: 150px;
+            // height: 10vh;
+            // max-height: 132px;
+
+            margin: 0;
+            padding: 0;
+
+            position: relative;
+            top: 5px;
+            left: -35px;
+            // top: 0.5vh;
+            // z-index: 999;
+
+            display: block;
+            float: left;
+            overflow: visible;
+
+            cursor: pointer;
+
+            // /* ---------- LOGO / afro ---------- */
+            #shigeru_logo_afro_k {
+                // fill: #00ff00;
+
+                clip-path: url(#shigeru_logo_afro_k_mask);
+            }
+
+            #shigeru_logo_afro_w {
+                fill: #ffffff;
+                // fill: #0000ff;
+
+                clip-path: url(#shigeru_logo_afro_w_mask);
+            }
+
+            // /* ---------- LOGO / glasses ---------- */
+            #shigeru_logo_glasses_k {
+                // fill: #00ff00;
+
+                clip-path: url(#shigeru_logo_glasses_k_mask);
+            }
+
+            #shigeru_logo_glasses_w {
+                fill: #ffffff;
+                // fill: #0000ff;
+
+                clip-path: url(#shigeru_logo_glasses_w_mask);
+            }
+
+            // /* ---------- LOGO / kanji ---------- */
+            #shigeru_logo_kanji_w {
+                fill: #ffffff;
+                // fill: #FF00FF;
+                clip-path: url(#shigeru_logo_kanji_w_mask);
+                // clip-path: url(#header_mask);
+            }
+        }
+
+        .hed {
+            // border: 02px solid #ff00ff;
+
+            vertical-align: bottom;
+
+            // height: inherit;
+            height: 60px;
+
+            margin: 0 0 0 -15px;
+            padding: 0;
+
+            float: left;
+
+            .hed01, .hed02 {
+                // border: 02px solid #0000ff;
+
+                line-height: 0.75em;
+                vertical-align: bottom;
+                text-transform: uppercase;
+
+                height: inherit;
+
+                margin: 0;
+                padding: 0;
+                // padding: 0 20px 0 125px;
+
+                display: table-cell;
+
+                cursor: pointer;
+            }
+
+            .hed01 {
+                font-family: 'HelveticaNeue-Bold';
+                font-size: 2em;
+                font-weight: 900;
+
+                padding: 0 10px 0 0;
+            }
+
+            .hed02 {
+                font-size: 1em;
+            }    
+        }
+
+		.nav {
+			// border: 02px solid #00ff00;
+
+			font-size: 1.125em;
+            text-align: center;
+            vertical-align: bottom;
+			text-transform: uppercase;
+
+            width: auto;
+			height: 74px;
+
+			margin: 0;
+			padding: 0;
+
+            display: table-cell;
+            overflow: hidden;
+            float: right;
+
+			ul {
+                // border: 02px solid #0000ff;
+
+                height: inherit;
+
+				margin: 0;
+				padding: 0;
+
+                li {
+                    // border: 02px solid #ff00ff;
+
+                    list-style-type: none;
+                    vertical-align: bottom;
+                    line-height: 0;
+
+                    height: inherit;
+
+                    margin: 0;
+                    padding: 20px 15px;
+
+                    display: table-cell;
+
+                    cursor: pointer;
+                }
+			}
+		}
+	}
+}
+

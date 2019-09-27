@@ -1,0 +1,517 @@
+// ------------------------- SMALL screens -------------------------
+
+// .thoughtBubble {
+.thoughtBubbleSm {
+    // border: 1px solid #00ff00;
+    // border-radius: 25px;
+
+    background-color: transparent;
+    background-image: url("../../assets/img/0elements/thoughtBubble.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 30vw;
+    height: 21vw;
+    max-width: 600px;
+    max-height: 420px;
+
+    // autoAlpha: 0;
+
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+
+    overflow: visible;
+
+    .thoughtCopy {
+        // border: 02px solid #00ff00;
+    
+        font-family: AnimeAceItalic, Comic Sans MS, cursive, sans-serif;
+        font-size: 1em;
+        line-height: 1.5em;
+        letter-spacing: 0.03125em;
+        text-align: center;
+        white-space: pre-wrap;
+
+        // width: 80%;
+        width: 77.5%;
+        // width: 75%;
+        height: auto;
+
+        margin: 0;
+        padding: 0;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        // transform: translate(-47.5%, -42.5%);
+        // transform: translate(-47.5%, -45%);
+        transform: translate(-47.5%, -46.25%);
+
+        .thought {
+            // border: 02px solid #ff00ff;
+
+            margin: 0;
+            padding: 0;
+        }
+
+        .aside {
+            // border: 02px solid #ff00ff;
+
+            font-size: 0.8125em;
+            line-height: 1.5em;
+
+            margin: inherit;
+            padding: 0.75em 0 0 0;
+        }
+    }
+
+    .thoughtClose {
+        // border: 5px solid #000000;
+        border: 0.25em solid #000000;
+        // border-radius: 30px;
+        border-radius: 2vh;
+
+        background-color: #FFFFFF;
+
+        font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+        font-size: 20px;
+        font-weight: 600;
+        // line-height: 30px;
+        line-height: 1.625em;
+        text-align: center;
+
+        // width: 30px;
+        // height: 30px;
+        width: 2.5vh;
+        height: 2.5vh;
+
+        position: absolute;
+        top: 17.5%;
+        right: 5%;
+
+        cursor: pointer;
+    }
+}
+
+
+// .curlSVG {
+.curlSVGsm {
+    // border: 1px solid #00ff00;
+
+    // width: 50px;
+    // height: 100px;
+    width: 4.125vh;
+    // height: 4.125vh;
+    // max-width: 75;
+    // max-height: 150px;
+    max-width: 100px;
+    max-height: 200px;
+
+    // margin: 15% 0 0 0;
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+
+    .curl {
+        // border: 1px solid #00ffff;
+
+        // fill: #333333;
+        fill: rgba(50, 50, 50, 0.75);
+        // fill: rgba(255, 0, 255, 0.5);
+        // fill: none;
+        // width: 2.5vw;
+    }
+
+    .curlRO {
+        // border: 1px solid #00ffff;
+
+        // fill: rgba(0, 255, 0, 0.25);
+        fill: rgba(0, 255, 0, 0);
+        // fill: none;
+
+        // display: none;
+
+        cursor: pointer;
+    }
+}
+
+
+// .boing {
+.boingSm {
+    // border: 1px solid #00ffff;
+
+    fill: none;
+    stroke: none;
+    // stroke: #0000ff;
+
+    width: 350px;
+    height: 295px;
+    // width: 15vw;
+    // height: 12.642857142857143vw;
+    // width: 20vw;
+    // height: 16.857142857142857vw;
+    // width: 25vw;
+    // height: 21.071428571428571vw;
+    // max-width: 600px;
+    // max-height: 505.714285714285714px;
+
+    // margin: 15% 0 0 0;
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+}
+
+
+// ------------------------- MEDIUM screens -------------------------
+
+.thoughtBubbleMd {
+    // border: 1px solid #00ff00;
+
+    background-color: transparent;
+    background-image: url("../../assets/img/0elements/thoughtBubble.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    // width: 30vw;
+    // height: 21vw;
+    width: 35vw;
+    height: 24.5vw;
+    // width: 40vw;
+    // height: 28vw;
+    max-width: 600px;
+    max-height: 420px;
+
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    overflow: visible;
+
+    .thoughtCopy {
+        // border: 02px solid #00ff00;
+    
+        font-family: AnimeAceItalic, Comic Sans MS, cursive, sans-serif;
+        font-size: 0.8125em;
+        line-height: 1.5em;
+        letter-spacing: 0.03125em;
+        text-align: center;
+        white-space: pre-wrap;
+
+        width: 77.5%;
+        height: auto;
+
+        margin: 0;
+        padding: 0;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-47.5%, -43.75%);
+
+        .thought {
+            // border: 02px solid #ff00ff;
+
+            margin: 0;
+            padding: 0;
+        }
+
+        .aside {
+            // border: 02px solid #ff00ff;
+
+            font-size: 0.80625em;
+            line-height: 1.625em;
+
+            margin: inherit;
+            padding: 1em 0 0 0;
+        }
+    }
+
+    .thoughtClose {
+        border: 0.1875em solid #000000;
+        border-radius: 2.375vh;
+
+        background-color: #FFFFFF;
+
+        font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.5em;
+        text-align: center;
+
+        width: 4.75vh;
+        height: 4.75vh;
+
+        position: absolute;
+        top: 17.5%;
+        right: 5%;
+
+        cursor: pointer;
+    }
+}
+
+
+.curlSVGmd {
+    // border: 1px solid #00ff00;
+
+    width: 5vh;
+    max-width: 100px;
+    max-height: 200px;
+
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .curl {
+        // border: 1px solid #00ffff;
+
+        fill: rgba(50, 50, 50, 0.75);
+    }
+
+    .curlRO {
+        // border: 1px solid #00ffff;
+
+        fill: rgba(0, 255, 0, 0);
+        cursor: pointer;
+    }
+}
+
+
+.boingMd {
+    // border: 1px solid #00ffff;
+
+    fill: none;
+    stroke: none;
+
+    // width: 350px;
+    // height: 295px;
+
+    width: 10vw;
+    height: 8.428571428571429vw;
+
+    // width: 15vw;
+    // height: 12.642857142857143vw;
+
+    // width: 20vw;
+    // height: 16.857142857142857vw;
+
+    // width: 25vw;
+    // height: 21.071428571428571vw;
+
+    // max-width: 600px;
+    // max-height: 505.714285714285714px;
+
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+// ------------------------- LARGE screens -------------------------
+
+.thoughtBubbleLg {
+    // border: 1px solid #00ff00;
+    // border-radius: 25px;
+
+    background-color: transparent;
+    background-image: url("../../assets/img/0elements/thoughtBubble.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 30vw;
+    height: 21vw;
+    max-width: 600px;
+    max-height: 420px;
+
+    // autoAlpha: 0;
+
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+
+    overflow: visible;
+
+    .thoughtCopy {
+        // border: 02px solid #00ff00;
+    
+        font-family: AnimeAceItalic, Comic Sans MS, cursive, sans-serif;
+        font-size: 1em;
+        line-height: 1.5em;
+        letter-spacing: 0.03125em;
+        text-align: center;
+        white-space: pre-wrap;
+
+        // width: 80%;
+        width: 77.5%;
+        // width: 75%;
+        height: auto;
+
+        margin: 0;
+        padding: 0;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        // transform: translate(-47.5%, -42.5%);
+        // transform: translate(-47.5%, -45%);
+        transform: translate(-47.5%, -46.25%);
+
+        .thought {
+            // border: 02px solid #ff00ff;
+
+            margin: 0;
+            padding: 0;
+        }
+
+        .aside {
+            // border: 02px solid #ff00ff;
+
+            font-size: 0.8125em;
+            line-height: 1.5em;
+
+            margin: inherit;
+            padding: 0.75em 0 0 0;
+        }
+    }
+
+    .thoughtClose {
+        // border: 5px solid #000000;
+        border: 0.25em solid #000000;
+        // border-radius: 30px;
+        border-radius: 2vh;
+
+        background-color: #FFFFFF;
+
+        font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+        font-size: 20px;
+        font-weight: 600;
+        // line-height: 30px;
+        line-height: 1.625em;
+        text-align: center;
+
+        // width: 30px;
+        // height: 30px;
+        width: 2.5vh;
+        height: 2.5vh;
+
+        position: absolute;
+        top: 17.5%;
+        right: 5%;
+
+        cursor: pointer;
+    }
+}
+
+
+.curlSVGlg {
+    // border: 1px solid #00ff00;
+
+    // width: 50px;
+    // height: 100px;
+    width: 4.125vh;
+    // height: 4.125vh;
+    // max-width: 75;
+    // max-height: 150px;
+    max-width: 100px;
+    max-height: 200px;
+
+    // margin: 15% 0 0 0;
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+
+    .curl {
+        // border: 1px solid #00ffff;
+
+        // fill: #333333;
+        fill: rgba(50, 50, 50, 0.75);
+        // fill: rgba(255, 0, 255, 0.5);
+        // fill: none;
+        // width: 2.5vw;
+    }
+
+    .curlRO {
+        // border: 1px solid #00ffff;
+
+        // fill: rgba(0, 255, 0, 0.25);
+        fill: rgba(0, 255, 0, 0);
+        // fill: none;
+
+        // display: none;
+
+        cursor: pointer;
+    }
+}
+
+
+.boingLg {
+    // border: 1px solid #00ffff;
+
+    fill: none;
+    stroke: none;
+    // stroke: #0000ff;
+
+    width: 350px;
+    height: 295px;
+    // width: 15vw;
+    // height: 12.642857142857143vw;
+    // width: 20vw;
+    // height: 16.857142857142857vw;
+    // width: 25vw;
+    // height: 21.071428571428571vw;
+    // max-width: 600px;
+    // max-height: 505.714285714285714px;
+
+    // margin: 15% 0 0 0;
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+}

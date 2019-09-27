@@ -1,0 +1,243 @@
+// .employerContainer {
+.employerSm {
+    // border: 2px solid #0000ff;
+
+    // width: 82.5%;
+    width: 100%;
+    height: auto;
+
+    margin: 0;
+    // padding: 0;
+    // padding: 60px 0;
+    // padding: 60px 0 0 0;
+    padding: 5vh 0;
+
+    // .slideContainer {
+    //     border: 2px solid #ff00ff;
+
+    //     width: inherit;
+    //     // height: inherit;
+
+    //     margin: 0;
+    //     padding: 0;
+
+    //     overflow-x: scroll;
+    //     overflow-y: hidden;
+    //     white-space: nowrap;
+
+    //     .slide {
+    //         // border: 2px solid #00ffff;
+
+    //         width: inherit;
+    //         height: auto;
+
+    //         vertical-align: middle;
+    //     }
+    // }
+
+    // .carousel-thumbnails ol {
+    //     border: 2px solid #ff00ff !important;
+
+    //     // width: 100px !important;
+    //     // height: auto;
+    // }
+
+    // .img-fluid {
+    //     max-height: 60px;
+    //   }
+
+}
+
+// .thumbContainer {
+.thumbSm {
+    // border: 2px solid #00ffff;
+
+    text-align: center;
+
+    width: 15vw;
+    max-width: 420px;
+    height: 0;
+    // height: 20vh;
+
+    // margin: 0;
+    // padding: 0;
+    // // padding: 0.5em 0 0 0;
+
+    position: relative;
+    // // top: 15vh;
+    // // left: 75vw;
+    // // top: -15vh;
+    // top: 0;
+    left: 55vw;
+    z-index: 5;
+
+    // margin: 0;
+    margin: -21.25vh 0 21.25vh 0;
+    padding: 0;
+
+    .thumbnail {
+    // img {
+        // border: 2px solid #ff0000;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+
+        // width: 5em;
+        width: 5vw;
+        // width: 4.125vw;
+        max-width: 140px;
+
+        margin: 0;
+        // margin: 0.5em;
+        // padding: 0;
+        padding: 0.25em;
+
+        cursor: pointer;
+    }
+}
+
+
+.employerMd {
+    // border: 2px solid #0000ff;
+    // border: 1px inset rgba(255, 255, 255, 0);
+    // background-color: rgba(255, 255, 255, 0.5);
+
+    width: 100vw;
+    // height: auto;
+    // min-height: 100vh - 60px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.thumbMd {
+    // border: 2px solid #00ffff;
+    background-color: rgba(255, 255, 255, 0.5);
+    // background-color: rgba(0, 0, 0, 0.5);
+
+    text-align: center;
+
+    // width: 100vw;
+    // height: 10vh;
+
+    position: relative;
+    // top: -10vh;
+    z-index: 95;
+
+    margin: 0;
+    // margin: -7vh 0 0 0;
+    padding: 1vh 0;
+
+    // overflow: scroll;
+
+    .thumbnail {
+        // border: 2px solid #ff0000;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        // background-color: rgba(255, 255, 255, 0.75);
+
+        width: auto;
+        // height: inherit;
+        height: 5vh;
+
+        margin: 0 0.25em;
+        padding: 0;
+
+        // display: inline-block;
+
+        cursor: pointer;
+    }
+}
+
+
+.employerLg {
+    // border: 2px solid #0000ff;
+
+    // width: 82.5%;
+    width: 100%;
+    height: auto;
+
+    margin: 0;
+    // padding: 0;
+    // padding: 60px 0;
+    // padding: 60px 0 0 0;
+    padding: 5vh 0;
+
+    // .slideContainer {
+    //     border: 2px solid #ff00ff;
+
+    //     width: inherit;
+    //     // height: inherit;
+
+    //     margin: 0;
+    //     padding: 0;
+
+    //     overflow-x: scroll;
+    //     overflow-y: hidden;
+    //     white-space: nowrap;
+
+    //     .slide {
+    //         // border: 2px solid #00ffff;
+
+    //         width: inherit;
+    //         height: auto;
+
+    //         vertical-align: middle;
+    //     }
+    // }
+
+    // .carousel-thumbnails ol {
+    //     border: 2px solid #ff00ff !important;
+
+    //     // width: 100px !important;
+    //     // height: auto;
+    // }
+
+    // .img-fluid {
+    //     max-height: 60px;
+    //   }
+
+}
+
+.thumbLg {
+    // border: 2px solid #00ffff;
+
+    text-align: center;
+
+    width: 15vw;
+    // max-width: 420px;
+    // height: 0;
+    // height: 20vh;
+
+    // margin: 0;
+    // padding: 0;
+    // // padding: 0.5em 0 0 0;
+
+    position: relative;
+    // // top: 15vh;
+    // // left: 75vw;
+    // // top: -15vh;
+    // top: 0;
+    left: 55vw;
+    z-index: 5;
+
+    // margin: 0;
+    // margin: -21.25vh 0 21.25vh 0;
+    margin: -17.5vh 0 21.25vh 0;
+    padding: 0;
+
+    .thumbnail {
+    // img {
+        // border: 2px solid #ff0000;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+
+        // width: 5em;
+        width: 5vw;
+        // width: 4.125vw;
+        max-width: 140px;
+
+        margin: 0;
+        // margin: 0.5em;
+        // padding: 0;
+        padding: 0.25em;
+
+        cursor: pointer;
+    }
+}

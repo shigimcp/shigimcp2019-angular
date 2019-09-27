@@ -1,0 +1,56 @@
+<!-- <div class="sectContainer"> -->
+<!-- <div class="employerContainer"> -->
+<!-- <div class="employerContainer" id="{{ employer.albumID }}"> -->
+<div [ngClass]="[globalStyles, employerStyles]">
+<!-- <div [ngClass]="[globalStyles, employerStyles, thumbStyles]"> -->
+
+	<!-- <p>========================= EMPLOYER COMPONENT =========================</p> -->
+<!-- 
+	<div class="slideContainer">
+		<img class="slide" *ngFor="let image of images; index as imageIndex" id="{{ employer.albumID }}{{imageIndex}}" src="http://www.shigimcp.com/Xstage/shigimcp_2019/img/slides_angular/{{ employer.albumID }}/{{ image.src }}">
+	</div>
+
+	<div class="thumbContainer">
+		<button class="thumbnail" *ngFor="let thumb of images; index as thumbIndex">
+		<p [routerLink]='"."' [fragment]="employer.albumID+thumbIndex" (click)="goToImage(employer.albumID+thumbIndex)">thumbIndex = {{ employer.albumID }}{{ thumbIndex }}</p>
+		</button>
+	</div>
+ -->
+
+<!-- 
+	<mdb-carousel [isControls]="false" [animation]="'slide'">
+		<mdb-carousel-item *ngFor="let image of images; index as imageIndex" id="{{ employer.albumID }}{{imageIndex}}">
+			<img class="d-block w-100" src="http://www.shigimcp.com/Xstage/shigimcp_2019/img/slides_angular/{{ employer.albumID }}/{{ image.src }}" alt="{{ employer.albumID }}{{imageIndex}}">
+		</mdb-carousel-item>
+	</mdb-carousel>
+ -->
+
+
+	<!-- <mdb-carousel class="carousel slide carousel-fade" [isControls]="true" [type]="'carousel-thumbnails'" [animation]="'fade'" [keyboard]="true" [interval]="'0'"> -->
+	<mdb-carousel class="carousel slide carousel-fade" [isControls]="true" [animation]="'fade'" [keyboard]="true" [interval]="'0'">
+		<mdb-carousel-item *ngFor="let image of images; index as imageIndex" id="{{ employer.albumID }}{{imageIndex}}">
+			<!-- <img class="d-block w-100" [alt]="image.src"> -->
+			<!-- <img class="d-block w-100" [alt]="imageLoc+employer.slpath+image.src"> -->
+			<!-- <img class="d-block w-100" [alt]="imageLoc+slideLoc+employer.slpath+image.src"> -->
+			<img class="d-block w-100" [src]="imageLoc+slideLoc+employer.slpath+image.src" [alt]="image.src">
+			<!-- <img class="d-block w-100" src="http://www.shigimcp.com/Xstage/shigimcp_2019/img/slides_angular/{{ employer.albumID }}/{{ image.src }}" alt="{{ employer.albumID }}{{ imageIndex }}"> -->
+		</mdb-carousel-item>
+	</mdb-carousel>
+
+	<!-- <button mdbBtn type="button" color="default" class="waves-light"mdbWavesEffect (click)="goToImage(imageIndex)"> Move to Slide </button> -->
+	<!-- <button mdbBtn type="button" color="default" class="waves-light"mdbWavesEffect (click)="goToImage(2)"> Move to Slide </button> -->
+	<!-- <button *ngFor="let image of images; index as imageIndex" mdbBtn type="button" color="default" class="waves-light"mdbWavesEffect (click)="goToImage(imageIndex)"> {{imageIndex}} </button> -->
+
+	<div [ngClass]="thumbStyles">
+		<img *ngFor="let thumb of images; index as thumbIndex" class="thumbnail"  [src]="imageLoc+thumbLoc+employer.slpath+thumb.src" [alt]="thumb.src" (click)="goToImage(thumbIndex)">
+	</div>
+
+</div>
+
+
+<!-- <div class="thumbContainer"> -->
+<!-- 
+<div [ngClass]="thumbStyles">
+	<img *ngFor="let thumb of images; index as thumbIndex" class="thumbnail"  [src]="imageLoc+thumbLoc+employer.slpath+thumb.src" [alt]="thumb.src" (click)="goToImage(thumbIndex)">
+</div>
+ -->

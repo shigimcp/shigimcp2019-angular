@@ -1,0 +1,44 @@
+<!-- <div class="sectContainer"> -->
+<!-- <div class="resumeContainer"> -->
+<!-- <div [ngClass]="resStyles"> -->
+<div [ngClass]="[globalStyles, resStyles]">
+
+	<!-- <h3>Resume</h3> -->
+	<div class="bg_txt">resume</div>
+
+	<div class="employer_card" *ngFor="let employer of employers; index as employerIndex">
+
+		<!-- <app-employer></app-employer> -->
+
+		<div class="empl_logo"><img src="../../assets/img/{{ employer.logopath }}"></div>
+
+		<div class="empl_descr">
+			<p class="empl_hed">{{ employer.employer }}</p>
+			<hr>
+			<p class="empl_title">{{ employer.title }}</p>
+			<p class="empl_date">{{ employer.dateStart | date:'MM/yy' }} - {{ employer.dateEnd | date:'MM/yy' }}</p>
+			<p class="empl_info" *ngFor="let info of employer.info; index as infoIndex">{{ info }}</p>
+
+			<!-- <button (click)="viewWork('blast')">View work from {{ employer.albumID }}</button> -->
+			<!-- <button (click)="viewWork(employerId)">View work from {{ employer.albumID }}</button> -->
+			<!-- <button (click)="viewWork(employer.albumID)">View work from {{ employer.albumID }}</button> -->
+			<!-- <button (click)="viewWork(employer.albumID)" [routerLink]="['/employer']">View work from {{ employer.employer }}</button> -->
+			<!-- <button (click)="viewWork(employer.albumID)" [routerLink]="['/employer', employerId]">View work from {{ employer.employer }}</button> -->
+			<!-- <button (click)="viewWork(employer)" [routerLink]="['/employer']">View work from {{ employer.employer }}</button> -->
+
+            <!-- <br> -->
+			<!-- <p (click)="viewWork(employer)">View work from {{ employer.employer }}</p> -->
+			<!-- <p (click)="viewWork(employer)" [routerLink]="['/employer', employerId]">View work from {{ employer.employer }}</p> -->
+
+            <!-- <a [routerLink]="['/employer']">View work from {{ employer.employer }}</a> -->
+            <!-- <a [routerLink]="['/employer', employerId]">View work from {{ employer.employer }}</a> -->
+			<!-- <a [routerLink]="['/employer', employer.employer]">View work from {{ employer.employer }}</a> -->
+			<!-- <a [routerLink]="['/employer', employer]">View work from {{ employer.employer }}</a> -->
+
+			<!-- <app-employer [albumID]="employer.employer"></app-employer> -->
+			<!-- <app-employer [albumID]="thisEmployerID"></app-employer> -->
+		</div>
+
+	</div>
+
+</div>

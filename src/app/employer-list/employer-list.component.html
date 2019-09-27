@@ -1,0 +1,32 @@
+<!-- <p>employer-list works!</p> -->
+
+<div class="sectContainer">
+
+	<p>========================= EMPLOYER LIST COMPONENT =========================</p>
+
+    <!-- <h3>Employers</h3> -->
+    <div class="bg_txt">employers list</div>
+    <!-- <p>employer.employer = {{ getEmployers() }}</p> -->
+    <!-- <app-employer [employer]="employer"></app-employer> -->
+
+<!-- 
+    <div class="employer_card" *ngFor="let employer of employers; index as employerIndex">
+        <img width="100" src="../../assets/img/{{ employer.logopath }}">
+        <p>employer.employer = {{ employer.employer }}</p>
+        <p>employer.employer = {{ getEmployers() }}</p>
+
+        <app-employer [employer]="employer"></app-employer>
+    </div>
+ -->
+
+    <p>------------------------- EMPLOYERS -------------------------</p>
+    <div *ngFor="let employer of employers; index as employerIndex">
+        <p>employer.employer = {{ employer.employer }}</p>
+    </div>
+    <br><br>
+    <p>------------------------- WORK -------------------------</p>
+    <div *ngFor="let work of workTest; index as workIndex">
+        <p>work.albumID = {{ work.albumID }}</p>
+    </div>
+    
+</div>    
