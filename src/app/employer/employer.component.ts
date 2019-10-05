@@ -24,7 +24,8 @@ export class EmployerComponent implements OnInit {
 
 
     // imageLoc = 'http://www.shigimcp.com/Xstage/shigimcp_2019/img/slides_angular_01/';
-    imageLoc = 'http://www.shigimcp.com/Xstage/shigimcp_2019/img/slides_angular_02/';
+    // imageLoc = 'http://www.shigimcp.com/Xstage/shigimcp_2019/img/slides_angular_02/';
+    imageLoc = 'http://shigimcp.com/Xstage/angular_github/img/slides_angular_02/';
     slideLoc = 'sl/';
     thumbLoc = 'th/';
 
