@@ -1,0 +1,122 @@
+/* ========================== */
+/* ========== LOGO ========== */
+/* ========================== */
+
+#logoIcon {
+/*	border: 02px solid #ff0000;*/
+
+/*	text-align: left;*/
+
+	width: 150px;
+
+	margin: 0;
+	padding: 0;
+
+	position: relative;
+	top: 5px;
+	left: -35px;
+	z-index: 99;
+
+	display: block;
+	overflow: visible;
+
+	cursor: pointer;
+
+	#logo {
+	/*	border: 02px solid #ff0000;*/
+
+	/*	width: 700px;*/
+	/*	width: 1275.193798449612403px;*/
+
+		margin: 0 auto;
+		padding: 0;
+
+		position: relative;
+	/*	position: absolute;*/
+	/*	top: 90px;*/
+	/*	top: -55px;*/
+	/*	left: -225px;*/
+		display: block;
+		z-index: 11;
+
+		overflow: visible;
+		box-shadow : 0px -0px 10000px transparent; /*trick for chrome*/
+
+		cursor: pointer;
+	}
+
+	/* #logo path, #logoIcon path {
+		fill: #ff0000;
+	} */
+
+
+	/* ---------- LOGO / afro ---------- */
+
+	/* #shigeru_logo_afro {
+		fill: #ff0000;
+
+		visibility: hidden;
+		opacity: 0;
+	} */
+
+	#shigeru_logo_afro_k {
+	/*	fill: #00ff00;*/
+
+		clip-path: url(#shigeru_logo_afro_k_mask);
+	}
+
+	#shigeru_logo_afro_w {
+		fill: #ffffff;
+	/*	fill: #0000ff;*/
+
+		clip-path: url(#shigeru_logo_afro_w_mask);
+	}
+
+
+	/* ---------- LOGO / glasses ---------- */
+
+	/* #shigeru_logo_glasses {
+		fill: #ff0000;
+	} */
+
+	#shigeru_logo_glasses_k {
+	/*	fill: #00ff00;*/
+
+		clip-path: url(#shigeru_logo_glasses_k_mask);
+	}
+
+	#shigeru_logo_glasses_w {
+		fill: #ffffff;
+	/*	fill: #0000ff;*/
+
+		clip-path: url(#shigeru_logo_glasses_w_mask);
+	}
+
+
+	/* ---------- LOGO / kanji ---------- */
+
+	/* #shigeru_logo_kanji {
+		fill: #ffffff;
+		fill: #0000ff;
+	} */
+
+	/* #shigeru_logo_kanji_k {
+		fill: #0000ff;
+	} */
+
+	#shigeru_logo_kanji_w {
+		fill: #ffffff;
+	/*	fill: #FF00FF;*/
+		clip-path: url(#shigeru_logo_kanji_w_mask);
+	/*	clip-path: url(#header_mask);*/
+	}
+
+
+	/* ---------- LOGO / masks ---------- */
+
+	/* #shigeru_logo_afro_w_mask, #shigeru_logo_glasses_w_mask, #shigeru_logo_kanji_w_mask {
+		position: relative;
+		position: fixed;
+		display: block;
+	} */
+}
