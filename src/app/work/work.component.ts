@@ -1,23 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-// import { HttpClient } from '@angular/common/http';
-// import { tap, map, catchError, first, filter } from 'rxjs/operators';
-// import { Observable, pipe } from 'rxjs';
-
-// import { EmployerSchema } from '../employer-schema';
-// import { Employers } from '../../assets/data/employers';
-// import { EmployerService } from '../employer.service';
-
-// import { WorkSchema } from '../work-schema';
-// import { Work } from '../../assets/data/work';
-// import { WorkService } from '../work.service';
 
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 
-
-
-// REF: https://www.positronx.io/read-local-json-files-in-angular/
-// import workPositronx from '../../assets/data/work_positronx.json';
-
+import { ModalService } from '../modal/modal.service';
 
 import workComplete from '../../assets/data/work.json';
 
@@ -30,11 +15,6 @@ import workComplete from '../../assets/data/work.json';
 
 export class WorkComponent implements OnInit {
 
-    // employers = Employers;
-    // work = Work;
-
-    // workP: any = workPositronx;
-
     work: any = workComplete;
 
     globalStyles: string;
@@ -42,10 +22,15 @@ export class WorkComponent implements OnInit {
 
     bgText = 'mimi';
 
+    constructor(
+        public breakpointObserver: BreakpointObserver,
+        private modalService: ModalService
+    ) { }
 
-    constructor(public breakpointObserver: BreakpointObserver) { }
 
     ngOnInit() {
+        // console.log('');
+        // console.log('========== work.component.ts - ngOnInit() ==========');
 
         this.breakpointObserver.observe([
             Breakpoints.XSmall,
@@ -88,9 +73,12 @@ export class WorkComponent implements OnInit {
     }
 
 
-
     goToEmployer(thisEmployer: string) {
-        console.log('thisEmployer = ' + thisEmployer);
+        // console.log('');
+        // console.log('========== work.component.ts - goToEmployer(thisEmployer: string) ==========');
+
+        // console.log('thisEmployer = ' + thisEmployer);
+
         // this.getElementsByClassName('.bg_txt').nativeElement.innerHtml = thisEmployer;
         this.bgText = thisEmployer;
     }

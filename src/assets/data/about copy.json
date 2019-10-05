@@ -132,7 +132,7 @@
 	{
 		"about_index": 13,
 		"brain": "right",
-		"thought": "The toilet paper roll should *always* feed from the top, and here is why: if you try to snap off the amount you want, it is likely to over-roll. If the toilet paper feeds from the bottom, there is a 2*PI*r increase in chance that the end of the roll will land on the floor. ew.",
+		"thought": "The toilet paper roll should *always* feed from the top, and here is why: if you try to snap off the amount you want, it is likely to over-roll. When the toilet paper feeds from the bottom, there is a 2*PI*r increase in chance that the end of the roll will land on the floor. ew.",
 		"format": "#",
 		"formatSrc": "img/about/",
 		"link": "#",

@@ -2,55 +2,44 @@
 <!-- <div class="employerContainer"> -->
 <!-- <div class="employerContainer" id="{{ employer.albumID }}"> -->
 <div [ngClass]="[globalStyles, employerStyles]">
-<!-- <div [ngClass]="[globalStyles, employerStyles, thumbStyles]"> -->
 
 	<!-- <p>========================= EMPLOYER COMPONENT =========================</p> -->
+
+    <!-- <mdb-carousel class="carousel slide carousel-fade" id="{{ employer.albumID }}" [animation]="'fade'" [isControls]="true" [type]="'carousel-thumbnails'" [keyboard]="true" [interval]="'0'"> -->
+    <mdb-carousel class="carousel slide carousel-fade" id="{{ employer.albumID }}" [animation]="'fade'" [isControls]="true" [keyboard]="true" [interval]="'0'">
+		<mdb-carousel-item *ngFor="let image of images; index as imageIndex" id="{{ employer.albumID }}{{ imageIndex }}">
+
+            <div class="view w-100">
+                <!-- <img class="d-block w-100" [src]="imageLoc+slideLoc+employer.slpath+image.src" [alt]="image.src"> -->
+				<!-- <img class="d-block w-100" [src]="imageLoc+slideLoc+employer.slpath+image.src" [alt]="image.src" (click)="openModal('modalApp')"> -->
+				<!-- <img class="d-block w-100" [src]="imageLoc+slideLoc+employer.slpath+image.src" [alt]="image.src" (click)="openModal('modalApp', $event, image.link)"> -->
+				<img *ngIf="image.link === '#'; else linkedImage" class="d-block w-100" [src]="imageLoc+slideLoc+employer.slpath+image.src" [alt]="image.src">
+
+				<ng-template #linkedImage>
+					<!-- <img class="d-block w-100" [src]="imageLoc+slideLoc+employer.slpath+image.src" [alt]="image.src" (click)="openModal($event, 'modalApp', image.link)"> -->
+					<!-- <img class="d-block w-100" [src]="imageLoc+slideLoc+employer.slpath+image.src" [alt]="image.src" (click)="openModal([$event, 'modalApp', image.link])"> -->
+					<!-- <img class="d-block w-100" [src]="imageLoc+slideLoc+employer.slpath+image.src" [alt]="image.src" (click)="openModal([$event, 'modalApp', image.link, this])"> -->
+                    <!-- <img class="d-block w-100" [src]="imageLoc+slideLoc+employer.slpath+image.src" [alt]="image.src" (click)="openModal([$event, 'modalApp', image.link, image])"> -->
+                    <img class="d-block w-100" [src]="imageLoc+slideLoc+employer.slpath+image.src" [alt]="image.src" (click)="openModal([$event, 'modalApp', image.link, employer.albumID, image])">
 <!-- 
-	<div class="slideContainer">
-		<img class="slide" *ngFor="let image of images; index as imageIndex" id="{{ employer.albumID }}{{imageIndex}}" src="http://www.shigimcp.com/Xstage/shigimcp_2019/img/slides_angular/{{ employer.albumID }}/{{ image.src }}">
-	</div>
+                    <img *ngIf="image.format === 'video'; else linkedHTML5" class="d-block w-100" [src]="imageLoc+slideLoc+employer.slpath+image.src" [alt]="image.src" (click)="openModal([$event, 'modalApp', image.link, image])">
 
-	<div class="thumbContainer">
-		<button class="thumbnail" *ngFor="let thumb of images; index as thumbIndex">
-		<p [routerLink]='"."' [fragment]="employer.albumID+thumbIndex" (click)="goToImage(employer.albumID+thumbIndex)">thumbIndex = {{ employer.albumID }}{{ thumbIndex }}</p>
-		</button>
-	</div>
+                    <ng-template #linkedHTML5>
+                        <img class="d-block w-100" [src]="imageLoc+slideLoc+employer.slpath+image.src" [alt]="image.src" (click)="openModal([$event, 'htmlModal', image.link, image])">
+                    </ng-template>
  -->
+				</ng-template>
+            </div>
 
-<!-- 
-	<mdb-carousel [isControls]="false" [animation]="'slide'">
-		<mdb-carousel-item *ngFor="let image of images; index as imageIndex" id="{{ employer.albumID }}{{imageIndex}}">
-			<img class="d-block w-100" src="http://www.shigimcp.com/Xstage/shigimcp_2019/img/slides_angular/{{ employer.albumID }}/{{ image.src }}" alt="{{ employer.albumID }}{{imageIndex}}">
-		</mdb-carousel-item>
-	</mdb-carousel>
- -->
+            <div class="carousel-caption">
+                <p>{{ image.caption }}</p>
+            </div>
 
+        </mdb-carousel-item>
+    </mdb-carousel>
 
-	<!-- <mdb-carousel class="carousel slide carousel-fade" [isControls]="true" [type]="'carousel-thumbnails'" [animation]="'fade'" [keyboard]="true" [interval]="'0'"> -->
-	<mdb-carousel class="carousel slide carousel-fade" [isControls]="true" [animation]="'fade'" [keyboard]="true" [interval]="'0'">
-		<mdb-carousel-item *ngFor="let image of images; index as imageIndex" id="{{ employer.albumID }}{{imageIndex}}">
-			<!-- <img class="d-block w-100" [alt]="image.src"> -->
-			<!-- <img class="d-block w-100" [alt]="imageLoc+employer.slpath+image.src"> -->
-			<!-- <img class="d-block w-100" [alt]="imageLoc+slideLoc+employer.slpath+image.src"> -->
-			<img class="d-block w-100" [src]="imageLoc+slideLoc+employer.slpath+image.src" [alt]="image.src">
-			<!-- <img class="d-block w-100" src="http://www.shigimcp.com/Xstage/shigimcp_2019/img/slides_angular/{{ employer.albumID }}/{{ image.src }}" alt="{{ employer.albumID }}{{ imageIndex }}"> -->
-		</mdb-carousel-item>
-	</mdb-carousel>
-
-	<!-- <button mdbBtn type="button" color="default" class="waves-light"mdbWavesEffect (click)="goToImage(imageIndex)"> Move to Slide </button> -->
-	<!-- <button mdbBtn type="button" color="default" class="waves-light"mdbWavesEffect (click)="goToImage(2)"> Move to Slide </button> -->
-	<!-- <button *ngFor="let image of images; index as imageIndex" mdbBtn type="button" color="default" class="waves-light"mdbWavesEffect (click)="goToImage(imageIndex)"> {{imageIndex}} </button> -->
-
-	<div [ngClass]="thumbStyles">
+    <div [ngClass]="thumbStyles">
 		<img *ngFor="let thumb of images; index as thumbIndex" class="thumbnail"  [src]="imageLoc+thumbLoc+employer.slpath+thumb.src" [alt]="thumb.src" (click)="goToImage(thumbIndex)">
 	</div>
 
 </div>
-
-
-<!-- <div class="thumbContainer"> -->
-<!-- 
-<div [ngClass]="thumbStyles">
-	<img *ngFor="let thumb of images; index as thumbIndex" class="thumbnail"  [src]="imageLoc+thumbLoc+employer.slpath+thumb.src" [alt]="thumb.src" (click)="goToImage(thumbIndex)">
-</div>
- -->

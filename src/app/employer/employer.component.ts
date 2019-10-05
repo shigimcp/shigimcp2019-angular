@@ -1,26 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
-// import { HttpClient } from '@angular/common/http';
-// import { tap, map, catchError, first, filter } from 'rxjs/operators';
-// import { Observable, pipe } from 'rxjs';
-
-// import { EmployerSchema } from '../employer-schema';
-// import { Employers } from '../../assets/data/employers';
-// import { EmployerService } from '../employer.service';
-
-// import { WorkSchema } from '../work-schema';
-// import { Work } from '../../assets/data/work';
-// import { WorkService } from '../work.service';
-
-import { CarouselComponent } from 'angular-bootstrap-md';
 import { ViewChild } from '@angular/core';
 
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 
-
-
-// REF: https://www.positronx.io/read-local-json-files-in-angular/
-// import workPositronx from '../../assets/data/work_positronx.json';
-// import workComplete from '../../assets/data/work.json';
+import { CarouselComponent } from 'angular-bootstrap-md';
+import { ModalService } from '../modal/modal.service';
+// import { ElementRef } from '@angular/core';
 
 
 @Component({
@@ -31,18 +16,11 @@ import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/l
 
 export class EmployerComponent implements OnInit {
 
-    // @Input() employer: EmployerSchema;
-    // @Input() work: WorkSchema;
-    // @Input() workP: any;
-
-
     @Input() work: any;
     @Input() employer: any;
     @Input() images: any;
 
-    @ViewChild(CarouselComponent, { static: true })
-
-    public carousel: CarouselComponent;
+    @ViewChild(CarouselComponent, { static: true }) public carousel: CarouselComponent;
 
 
     // imageLoc = 'http://www.shigimcp.com/Xstage/shigimcp_2019/img/slides_angular_01/';
@@ -50,15 +28,20 @@ export class EmployerComponent implements OnInit {
     slideLoc = 'sl/';
     thumbLoc = 'th/';
 
-
     globalStyles: string;
     employerStyles: string;
     thumbStyles: string;
 
 
-    constructor(public breakpointObserver: BreakpointObserver) { }
+    constructor(
+        public breakpointObserver: BreakpointObserver,
+        private modalService: ModalService
+    ) { }
+
 
     ngOnInit() {
+        // console.log('');
+        // console.log('========== employer.component.ts - ngOnInit() ==========');
 
         this.breakpointObserver.observe([
             Breakpoints.XSmall,
@@ -106,10 +89,41 @@ export class EmployerComponent implements OnInit {
     }
 
 
-    goToImage(imageIndex) {
+    goToImage(imageIndex: number) {
+        // console.log('PING!!! goToImage(imageIndex: number) triggered!');
         console.log('imageIndex = ' + imageIndex);
+
         // this.getElementsByClassName('.bg_txt').nativeElement.innerHtml = thisEmployer;
         // this.bgText = thisEmployer;
         this.carousel.selectSlide(imageIndex);
+    }
+
+
+    openModal(modalParams: Array<any>) {
+        console.log('');
+        console.log('========== employer.component.ts - openModal(modalParams: Array<any>) ==========');
+
+        // console.log('modalParams = ' + modalParams);
+
+        // console.log('');
+        // // console.log('evt = ' + modalParams[0].type + '     id = ' + modalParams[1] + '     thisLink = ' + modalParams[2] + '     thisImg = ' + modalParams[4]);
+        // console.log('evt = modalParams[0].type = ' + modalParams[0].type);
+        // console.log('id = modalParams[1] = ' + modalParams[1]);
+        // console.log('thisLink = modalParams[2] = ' + modalParams[2]);
+        // console.log('thisImg = modalParams[4] = ' + modalParams[4]);
+
+        // console.log('');
+        // console.log('JSON.stringify(modalParams[4] = ' + JSON.stringify(modalParams[4]));
+        console.log('modalParams[4].format = ' + modalParams[4].format);
+
+        this.modalService.open(modalParams);
+    }
+
+
+    closeModal(id: string) {
+        // console.log('');
+        // console.log('========== employer.component.ts - closeModal(id: string) ==========');
+
+        this.modalService.close(id);
     }
 }

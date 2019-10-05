@@ -38,6 +38,8 @@ html, body {
 	font-family: $body, Arial, Helvetica, sans-serif !important;
 	letter-spacing: 0.0125em;
 
+    -moz-user-select: none;
+    -webkit-user-select: none;
     user-select: none;
 
     width: 100%;
@@ -101,7 +103,8 @@ body {
         // width: 100%;
         // width: 45%;
         // width: 30vw;
-        width: 40vw;
+        // width: 40vw;
+        width: 50vw;
 
         // display: block;
         // opacity: 0.1;
@@ -145,7 +148,8 @@ body {
         line-height: 0.75em;
         text-transform: lowercase;
 
-        width: 40vw;
+        // width: 40vw;
+        width: 50vw;
 
         position: fixed;
         top: 0;
@@ -187,7 +191,8 @@ body {
         // width: 100%;
         // width: 45%;
         // width: 30vw;
-        width: 40vw;
+        // width: 40vw;
+        width: 50vw;
 
         // display: block;
         // opacity: 0.1;
@@ -200,7 +205,7 @@ body {
         top: 0;
         left: 55vw;
         // z-index: -10;
-        z-index: 10;
+        // z-index: 10;
     }
 
 
@@ -214,5 +219,12 @@ body {
         // margin: 120px 0 0 10%;
         padding: 0;
         // padding: 0 0 50vh 0;
+    }
+
+
+    // ========================= EMPLOYER COMPONENT - mdb-carousel =========================
+
+    .carousel-indicators {
+        visibility: hidden !important;
     }
 }

@@ -4,12 +4,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { RouterModule, Routes, ExtraOptions } from '@angular/router';
-
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-
-import { LayoutModule } from '@angular/cdk/layout';
+// import { LayoutModule } from '@angular/cdk/layout';
 
 
 import { HeaderComponent } from './header/header.component';
@@ -21,6 +18,9 @@ import { HomeComponent } from './home/home.component';
 import { MesmerizeComponent } from './mesmerize/mesmerize.component';
 import { AboutComponent } from './about/about.component';
 import { ThoughtComponent } from './thought/thought.component';
+import { ModalComponent } from './modal/modal.component';
+import { ModalModule } from './modal/modal.module';
+import { ModalService } from './modal/modal.service';
 // import { ChangeContentDirective } from './change-content.directive';
 
 
@@ -57,7 +57,8 @@ const routerOptions: ExtraOptions = {
             routerOptions
         ),
         MDBBootstrapModule.forRoot(),
-        LayoutModule,
+        // LayoutModule,
+        ModalModule,
     ],
 
     declarations: [
@@ -71,10 +72,13 @@ const routerOptions: ExtraOptions = {
         MesmerizeComponent,
         AboutComponent,
         ThoughtComponent,
+        ModalComponent,
         // ChangeContentDirective
     ],
 
-    providers: [],
+    providers: [
+        ModalService
+    ],
 
     bootstrap: [AppComponent]
 })
