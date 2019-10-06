@@ -47,5 +47,5 @@ testem.log
 Thumbs.db
 
 # other
-/src/assets/0snippets
-/src/assets/snapshots
+/assets/0snippets
+/assets/snapshots
