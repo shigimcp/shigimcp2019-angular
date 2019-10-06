@@ -4,6 +4,7 @@
 /dist
 /tmp
 /out-tsc
+
 # Only exists if Bazel was run
 /bazel-out
 
@@ -44,3 +45,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# other
+/src/assets/0snippets
+/src/assets/snapshots
