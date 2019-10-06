@@ -14,8 +14,8 @@ export const Employers = [
         logopath: 'logos/logo_mimi_short.svg',
         slpath: 'mimi/sl',
         thpath: 'mimi/th',
-        flpath: 'http://www.shigimcp.com/img/mimi/',
-        flpathStage: 'http://www.shigimcp.com/Xstage/shigimcp_2019/img/mimi/'
+        flpath: 'https://www.shigimcp.com/img/mimi/',
+        flpathStage: 'https://www.shigimcp.com/Xstage/shigimcp_2019/img/mimi/'
     },
     {
         albumIndex: 1,
@@ -34,8 +34,8 @@ export const Employers = [
         logopath: 'logos/ea/logo_ea.svg',
         slpath: 'ea/sl/',
         thpath: 'ea/th/',
-        flpath: 'http://www.shigimcp.com/img/ea/',
-        flpathStage: 'http://www.shigimcp.com/Xstage/shigimcp_2019/img/ea/'
+        flpath: 'https://www.shigimcp.com/img/ea/',
+        flpathStage: 'https://www.shigimcp.com/Xstage/shigimcp_2019/img/ea/'
     },
     {
         albumIndex: 2,
@@ -54,8 +54,8 @@ export const Employers = [
         logopath: 'logos/logo_ax.png',
         slpath: 'ax/sl/',
         thpath: 'ax/th/',
-        flpath: 'http://www.shigimcp.com/img/ax/',
-        flpathStage: 'http://www.shigimcp.com/Xstage/shigimcp_2019/img/ax/'
+        flpath: 'https://www.shigimcp.com/img/ax/',
+        flpathStage: 'https://www.shigimcp.com/Xstage/shigimcp_2019/img/ax/'
     },
     {
         albumIndex: 3,
@@ -74,8 +74,8 @@ export const Employers = [
         logopath: 'logos/hearst/logo_hearst.svg',
         slpath: 'hearst/sl/',
         thpath: 'hearst/th/',
-        flpath: 'http://www.shigimcp.com/img/hearst/',
-        flpathStage: 'http://www.shigimcp.com/Xstage/shigimcp_2019/img/hearst/'
+        flpath: 'https://www.shigimcp.com/img/hearst/',
+        flpathStage: 'https://www.shigimcp.com/Xstage/shigimcp_2019/img/hearst/'
     },
     {
         albumIndex: 4,
@@ -92,8 +92,8 @@ export const Employers = [
         logopath: 'logos/logo_ddb.svg',
         slpath: 'ddb/sl/',
         thpath: 'ddb/th/',
-        flpath: 'http://www.shigimcp.com/img/ddb/',
-        flpathStage: 'http://www.shigimcp.com/Xstage/shigimcp_2019/img/ddb/'
+        flpath: 'https://www.shigimcp.com/img/ddb/',
+        flpathStage: 'https://www.shigimcp.com/Xstage/shigimcp_2019/img/ddb/'
     },
     {
         albumIndex: 5,
@@ -114,8 +114,8 @@ export const Employers = [
         logopath: 'logos/mrm/logo_mrm.svg',
         slpath: 'mrm/sl/',
         thpath: 'mrm/th/',
-        flpath: 'http://www.shigimcp.com/img/mrm/',
-        flpathStage: 'http://www.shigimcp.com/Xstage/shigimcp_2019/img/mrm/'
+        flpath: 'https://www.shigimcp.com/img/mrm/',
+        flpathStage: 'https://www.shigimcp.com/Xstage/shigimcp_2019/img/mrm/'
     },
     {
         albumIndex: 6,
@@ -136,8 +136,8 @@ export const Employers = [
         logopath: 'logos/logo_heeb.svg',
         slpath: 'heeb/sl/',
         thpath: 'heeb/th/',
-        flpath: 'http://www.shigimcp.com/img/heeb/',
-        flpathStage: 'http://www.shigimcp.com/Xstage/shigimcp_2019/img/heeb/'
+        flpath: 'https://www.shigimcp.com/img/heeb/',
+        flpathStage: 'https://www.shigimcp.com/Xstage/shigimcp_2019/img/heeb/'
     },
     {
         albumIndex: 7,
@@ -159,8 +159,8 @@ export const Employers = [
         logopath: 'logos/logo_hb.svg',
         slpath: 'hb/sl/',
         thpath: 'hb/th/',
-        flpath: 'http://www.shigimcp.com/img/hb/',
-        flpathStage: 'http://www.shigimcp.com/Xstage/shigimcp_2019/img/hb/'
+        flpath: 'https://www.shigimcp.com/img/hb/',
+        flpathStage: 'https://www.shigimcp.com/Xstage/shigimcp_2019/img/hb/'
     },
     {
         albumIndex: 8,
@@ -179,8 +179,8 @@ export const Employers = [
         logopath: 'logos/logo_luminant.svg',
         slpath: 'lum/sl/',
         thpath: 'lum/th/',
-        flpath: 'http://www.shigimcp.com/img/lum/',
-        flpathStage: 'http://www.shigimcp.com/Xstage/shigimcp_2019/img/lum/'
+        flpath: 'https://www.shigimcp.com/img/lum/',
+        flpathStage: 'https://www.shigimcp.com/Xstage/shigimcp_2019/img/lum/'
     },
     {
         albumIndex: 9,
@@ -199,8 +199,8 @@ export const Employers = [
         logopath: 'logos/logo_darwin.svg',
         slpath: 'dar/sl/',
         thpath: 'dar/th/',
-        flpath: 'http://www.shigimcp.com/img/dar/',
-        flpathStage: 'http://www.shigimcp.com/Xstage/shigimcp_2019/img/dar/'
+        flpath: 'https://www.shigimcp.com/img/dar/',
+        flpathStage: 'https://www.shigimcp.com/Xstage/shigimcp_2019/img/dar/'
     },
     {
         albumIndex: 10,
@@ -215,7 +215,7 @@ export const Employers = [
         logopath: '0elements/shigeru_logo.svg',
         slpath: 'other/sl/',
         thpath: 'other/th/',
-        flpath: 'http://www.shigimcp.com/img/other/',
-        flpathStage: 'http://www.shigimcp.com/Xstage/shigimcp_2019/img/other/'
+        flpath: 'https://www.shigimcp.com/img/other/',
+        flpathStage: 'https://www.shigimcp.com/Xstage/shigimcp_2019/img/other/'
     }
 ];

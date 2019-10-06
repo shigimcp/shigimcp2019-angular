@@ -23,9 +23,9 @@ export class EmployerComponent implements OnInit {
     @ViewChild(CarouselComponent, { static: true }) public carousel: CarouselComponent;
 
 
-    // imageLoc = 'http://www.shigimcp.com/Xstage/shigimcp_2019/img/slides_angular_01/';
-    // imageLoc = 'http://www.shigimcp.com/Xstage/shigimcp_2019/img/slides_angular_02/';
-    imageLoc = 'http://shigimcp.com/Xstage/angular_github/img/slides_angular_02/';
+    // imageLoc = 'https://www.shigimcp.com/Xstage/shigimcp_2019/img/slides_angular_01/';
+    // imageLoc = 'https://www.shigimcp.com/Xstage/shigimcp_2019/img/slides_angular_02/';
+    imageLoc = 'https://shigimcp.com/Xstage/angular_github/img/slides_angular_02/';
     slideLoc = 'sl/';
     thumbLoc = 'th/';
 

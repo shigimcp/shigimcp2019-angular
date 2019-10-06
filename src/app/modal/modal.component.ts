@@ -45,8 +45,8 @@ export class ModalComponent implements OnInit, OnDestroy {
     vidWidth = 0.9 * window.innerWidth;
     vidHeight = this.vidWidth * 9 / 16;
 
-    html5Loc = 'http://www.shigimcp.com/img/';
-    flashLoc = 'http://www.shigimcp.com/img/';
+    html5Loc = 'https://www.shigimcp.com/img/';
+    flashLoc = 'https://www.shigimcp.com/img/';
 
     modalLink: any;
     // modalLink: Url;

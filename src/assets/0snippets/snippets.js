@@ -154,7 +154,7 @@ function shuffle(thisContainer){
 
 		for(var i = 0; i < rects.length; i++) $(rects[i]).remove();            
 
-		//the fisher yates algorithm, from http://stackoverflow.com/questions/2450954/how-to-randomize-a-javascript-array
+		//the fisher yates algorithm, from https://stackoverflow.com/questions/2450954/how-to-randomize-a-javascript-array
 		var i = rects.length;
 		if ( i == 0 ) return false;
 
@@ -335,7 +335,7 @@ $("#Stage_gwp_img").append("<svg version='1.1' baseProfile='full' id='gwp_img_sv
 </svg>
 
 
-//-------------------- GRADIENT MASKS (REF: http://codepen.io/shigimcp/pen/qNgwxy) --------------------
+//-------------------- GRADIENT MASKS (REF: https://codepen.io/shigimcp/pen/qNgwxy) --------------------
 
 <svg version='1.1' baseProfile='full' id='bg_svg' width='300' height='250' xml:space='preserve'>
 
@@ -349,7 +349,7 @@ $("#Stage_gwp_img").append("<svg version='1.1' baseProfile='full' id='gwp_img_sv
 			<image xlink:href='images/crosshatch03.svg' width='80' height='19' />
 		</pattern>
 
-		<filter xmlns='http://www.w3.org/2000/svg' id='dropshadow01' x='-75%' y='-75%' width='250%' height='250%'>
+		<filter xmlns='https://www.w3.org/2000/svg' id='dropshadow01' x='-75%' y='-75%' width='250%' height='250%'>
 			<feGaussianBlur in='SourceGraphic' stdDeviation='3' result='blur01'/> 
 			<feOffset dx='0' dy='0' result='blurOffset01'/>
 			<feComponentTransfer>
@@ -402,7 +402,7 @@ $("#Stage_gwp_img").append("<svg version='1.1' baseProfile='full' id='gwp_img_sv
 </svg>
 
 
-//-------------------- SVG BLURS (REFs: http://codepen.io/shigimcp/pen/yVLrNG, https://codepen.io/shigimcp/pen/dOyLeW?editors=1100) --------------------
+//-------------------- SVG BLURS (REFs: https://codepen.io/shigimcp/pen/yVLrNG, https://codepen.io/shigimcp/pen/dOyLeW?editors=1100) --------------------
 
 //-------------------- DROPSHADOW --------------------
 
@@ -414,7 +414,7 @@ $("#Stage_gwp_img").append("<svg version='1.1' baseProfile='full' id='gwp_img_sv
 			<image xlink:href='images/gwp_ko.png' width='180' height='180' />
 		</pattern>
 
-		<filter xmlns='http://www.w3.org/2000/svg' id='dropshadow01' x='-75%' y='-75%' width='250%' height='250%'>
+		<filter xmlns='https://www.w3.org/2000/svg' id='dropshadow01' x='-75%' y='-75%' width='250%' height='250%'>
 			<feGaussianBlur in='SourceGraphic' stdDeviation='50' result='blur_gwp'/> 
 			<feOffset dx='0' dy='0' result='blurOffset01'/>
 			<feComponentTransfer>

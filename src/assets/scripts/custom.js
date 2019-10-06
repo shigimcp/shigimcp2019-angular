@@ -387,7 +387,7 @@ function boing(thisElem) {
 
 // 		for(var i = 0; i < rects.length; i++) $(rects[i]).remove();            
 
-// 		//the fisher yates algorithm, from http://stackoverflow.com/questions/2450954/how-to-randomize-a-javascript-array
+// 		//the fisher yates algorithm, from https://stackoverflow.com/questions/2450954/how-to-randomize-a-javascript-array
 // 		var i = rects.length;
 // 		if ( i == 0 ) return false;
 
