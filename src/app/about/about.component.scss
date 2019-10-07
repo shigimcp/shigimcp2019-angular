@@ -1,3 +1,5 @@
+// ------------------------- SMALL screens -------------------------
+
 // .aboutContainer {
 .aboutSm {
 	// border: 2px solid #ff0000;
@@ -14,7 +16,7 @@
     // }
 
 
-	// -------------------- AFRO - logoAbout --------------------
+    // -------------------- AFRO - logoAbout --------------------
 
 	.logoAbout {
         // border: 2px solid #00ff00;
@@ -29,39 +31,114 @@
 		// position: relative;
 		// top: 22.5%;
 	}
+
+    .resetThoughts {
+        // border: 2px solid #ff0000;
+        border: none;
+
+        background-color: transparent;
+        background-image: url("https://shigimcp.com/Xstage/angular_github/img/0elements/thoughtBubble.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+    
+        opacity: 0.5;
+
+        color: #000000;
+        // font-family: 'HelveticaNeue-Light';
+        font-family: 'AnimeAceItalic';
+        font-size: 0.6875em;
+        letter-spacing: 0.0125em;
+        line-height: 1.5em;
+        text-align: center;
+        // text-transform: uppercase;
+
+        // width: 200px;
+        // height: 50px;
+        width: 150px;
+        height: 100px;
+
+        // margin: 0;
+        // padding: 0 0 10px 0;
+
+        position: fixed;
+        // top: 45vh;
+        // right: 0;
+        top: 20vh;
+        right: 2.5vw;
+
+        cursor: pointer;
+
+        &:focus {
+            border: none;
+            outline: none;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
 }
+
+
+// ------------------------- MEDIUM screens -------------------------
 
 .aboutMd {
 	// border: 2px solid #ff0000;
 
-	// width: 100%;
-	// height: 100%;
-
-	// width: 100vw;
-	// height: 100vh;
-
-    // .bg_txt {
-    //     font-size: 18.75em;
-    //     // line-height: 1em;
-    // }
+    .bg_txt {
+        font-size: 12em;
+        line-height: 1em;
+        z-index: 0;
+    }
 
 
-	// -------------------- AFRO - logoAbout --------------------
+    // -------------------- AFRO - logoAbout --------------------
 
 	.logoAbout {
         // border: 2px solid #00ff00;
 
-        // width: 80vw;
-        // max-height: 100vh;
         height: 100vh;
-
-        // margin: 0;
         margin: 22.5% 0 0 0;
-
-		// position: relative;
-		// top: 22.5%;
 	}
+
+    .resetThoughts {
+        // border: 2px solid #ff0000;
+        border: none;
+
+        background-color: transparent;
+        background-image: url("https://shigimcp.com/Xstage/angular_github/img/0elements/thoughtBubble.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+    
+        opacity: 0.75;
+
+        color: #000000;
+        font-family: 'AnimeAceItalic';
+        font-size: 0.6875em;
+        letter-spacing: 0.0125em;
+        line-height: 1.5em;
+        text-align: center;
+
+        width: 150px;
+        height: 100px;
+
+        position: fixed;
+        top: 20vh;
+        right: 2.5vw;
+
+        cursor: pointer;
+
+        &:focus {
+            border: none;
+            outline: none;
+        }
+    }
 }
+
+
+// ------------------------- LARGE screens -------------------------
 
 .aboutLg {
 	// border: 2px solid #ff0000;
@@ -72,10 +149,9 @@
 	// width: 100vw;
 	// height: 100vh;
 
-    // .bg_txt {
-    //     font-size: 18.75em;
-    //     // line-height: 1em;
-    // }
+    .bg_txt {
+        z-index: 0;
+    }
 
 
     // -------------------- AFRO - logoAbout --------------------

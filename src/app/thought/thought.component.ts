@@ -8,14 +8,14 @@ import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/l
 import { TweenMax, TimelineMax, Power3 } from 'gsap';
 import MorphSVGPlugin from 'gsap/bonus/MorphSVGPlugin';
 
-import About from '../../assets/data/about.json';
+import { About } from '../../assets/data/about';
 
 
 // protect from tree shaking by referencing the GSAP plugin(s)
 const plugins = [ MorphSVGPlugin ];
 
 
-declare const consoleLog: any;
+// declare const consoleLog: any;
 declare const randRange: any;
 declare const getDims: any;
 

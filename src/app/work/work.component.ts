@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
-
 import { ModalService } from '../modal/modal.service';
 
-import workComplete from '../../assets/data/work.json';
+import { Work } from '../../assets/data/work';
 
 
 @Component({
@@ -15,7 +13,7 @@ import workComplete from '../../assets/data/work.json';
 
 export class WorkComponent implements OnInit {
 
-    work: any = workComplete;
+    work = Work;
 
     globalStyles: string;
     workStyles: string;

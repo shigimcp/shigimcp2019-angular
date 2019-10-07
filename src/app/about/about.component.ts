@@ -9,6 +9,9 @@ import { ThoughtComponent } from '../thought/thought.component';
 // import { TweenMax, TimelineMax, Power1, Power3 } from 'gsap';
 import { TweenMax } from 'gsap';
 
+
+declare const getDims: any;
+
 @Component({
     selector: 'app-about',
     templateUrl: './about.component.html',
@@ -89,6 +92,28 @@ export class AboutComponent implements OnInit, AfterViewInit {
 
         // console.log('this.childComp.curlSVG = ' + this.childComp.curlSVG);
         // console.log('this.childComp.thoughtBubble = ' + this.childComp.thoughtBubble);
+
+
+        // -------------------- getDims --------------------
+
+        this.childComp.afroDims = getDims('logoAboutId');
+        this.childComp.afroX = this.childComp.afroDims[0];
+        this.childComp.afroY = this.childComp.afroDims[1];
+        this.childComp.afroW = this.childComp.afroDims[2];
+        this.childComp.afroH = this.childComp.afroDims[3];
+
+        this.childComp.thoughtDims = getDims('thoughtBubbleId');
+        this.childComp.thoughtW = this.childComp.thoughtDims[2];
+        this.childComp.thoughtH = this.childComp.thoughtDims[3];
+
+        this.childComp.curlDims = getDims(this.childComp.curlSVG.first.nativeElement.id);
+        this.childComp.curlW = this.childComp.curlDims[2];
+        this.childComp.curlH = this.childComp.curlDims[3];
+
+        this.childComp.boingDims = getDims(this.childComp.boingSVG.nativeElement.id);
+        this.childComp.boingW = this.childComp.boingDims[2];
+        this.childComp.boingH = this.childComp.boingDims[3];
+
 
         TweenMax.set(['#thoughtBubbleId'], {autoAlpha: 0});
 

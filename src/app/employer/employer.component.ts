@@ -5,7 +5,6 @@ import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/l
 
 import { CarouselComponent } from 'angular-bootstrap-md';
 import { ModalService } from '../modal/modal.service';
-// import { ElementRef } from '@angular/core';
 
 
 @Component({
