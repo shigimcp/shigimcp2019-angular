@@ -67,15 +67,19 @@ function getDims(thisElem) {
 }
 
 
-//-------------------- FUNCTION: numChildren(thisElem) --------------------
+//-------------------- FUNCTION: modalDims(contentWidth, contentHeight) --------------------
 
-function numChildren(thisElem) {
+function modalDims(contentWidth, contentHeight) {
 
 	console.log('');
-	console.log('------------------- custom.js - numChildren(thisElem) -------------------');
-	console.log('PING! numChildren(thisElem) triggered!   thisElem = ' + thisElem);
-	// console.log('PING! numChildren(thisElem) triggered!     thisElem.childNodes = ' + thisElem.childNodes);
-	console.log('$(#thoughtContainerId) = ' + $('#thoughtContainerId').children().length);
+	console.log('-------------------- custom.js - modalDims(contentWidth, contentHeight) --------------------');
+	console.log('contentWidth = ' + contentWidth + '     contentHeight = ' + contentHeight);
+    console.log('window.innerWidth = ' + window.innerWidth + '     window.innerHeight = ' + window.innerHeight);
+	console.log('16/9 = ' + 16/9 + '     window.innerWidth/window.innerHeight = ' + window.innerWidth/window.innerHeight);
+
+    // var mWidth = 
+
+    // return [mWidth, mHeight];
 }
 
 
@@ -91,220 +95,233 @@ function numChildren(thisElem) {
 
 
 
+// //-------------------- FUNCTION: numChildren(thisElem) --------------------
 
-//-------------------- FUNCTION: addCurls(thisElem) --------------------
+// function numChildren(thisElem) {
 
-var theta = 0;
-// var thetaMax = 180;
-var thetaMax = 190;
-// var rFactor = 1;
-var rFactor = 0.9;
+// 	console.log('');
+// 	console.log('------------------- custom.js - numChildren(thisElem) -------------------');
+// 	console.log('PING! numChildren(thisElem) triggered!   thisElem = ' + thisElem);
+// 	// console.log('PING! numChildren(thisElem) triggered!     thisElem.childNodes = ' + thisElem.childNodes);
+// 	console.log('$(#thoughtContainerId) = ' + $('#thoughtContainerId').children().length);
+// }
 
-// function addCurls(numThoughts, afroDims, curlDims, thisElem) {
-function addCurls(thoughtIndex, numThoughts, afroDims, curlDims, thisElem) {
 
-	// console.log('');
-	// console.log('-------------------- custom.js - addCurls(thoughtIndex, numThoughts, afroDims, curlDims, thisElem) --------------------');
+
+
+
+
+
+
+
+
+
+
+
+
+
+// //-------------------- FUNCTION: addCurls(thisElem) --------------------
+
+// var theta = 0;
+// // var thetaMax = 180;
+// var thetaMax = 190;
+// // var rFactor = 1;
+// var rFactor = 0.9;
+
+// // function addCurls(numThoughts, afroDims, curlDims, thisElem) {
+// function addCurls(thoughtIndex, numThoughts, afroDims, curlDims, thisElem) {
+
+// 	// console.log('');
+// 	// console.log('-------------------- custom.js - addCurls(thoughtIndex, numThoughts, afroDims, curlDims, thisElem) --------------------');
 	
-	// console.log('thoughtIndex = ' + thoughtIndex);
-	// console.log('numThoughts = ' + numThoughts);
-	// // console.log('boingDims = ' + boingDims);
-	// // console.log('afroDims = ' + afroDims);
-	// // console.log('curlDims = ' + curlDims);
-	// console.log('thisElem = ' + thisElem);
-	// console.log('thisElem.id = ' + thisElem.id);
-	// console.log('thisElem.children = ' + thisElem.children);
-	// console.log('thisElem.children.length = ' + thisElem.children.length);
+// 	// console.log('thoughtIndex = ' + thoughtIndex);
+// 	// console.log('numThoughts = ' + numThoughts);
+// 	// // console.log('boingDims = ' + boingDims);
+// 	// // console.log('afroDims = ' + afroDims);
+// 	// // console.log('curlDims = ' + curlDims);
+// 	// console.log('thisElem = ' + thisElem);
+// 	// console.log('thisElem.id = ' + thisElem.id);
+// 	// console.log('thisElem.children = ' + thisElem.children);
+// 	// console.log('thisElem.children.length = ' + thisElem.children.length);
 
-	// // console.log('');
-	// for (i = 0; i < thisElem.children.length; i++) {
-	// 	console.log('');
-	// 	console.log('thisElem.children[' + i + '].id = ' + thisElem.children[i].id);
-	// 	console.log('thisElem.children[' + i + '].children = ' + thisElem.children[i].children);
-	// 	console.log('thisElem.children[' + i + '].children.length = ' + thisElem.children[i].children.length);
-	// 	console.log('');
+// 	// // console.log('');
+// 	// for (i = 0; i < thisElem.children.length; i++) {
+// 	// 	console.log('');
+// 	// 	console.log('thisElem.children[' + i + '].id = ' + thisElem.children[i].id);
+// 	// 	console.log('thisElem.children[' + i + '].children = ' + thisElem.children[i].children);
+// 	// 	console.log('thisElem.children[' + i + '].children.length = ' + thisElem.children[i].children.length);
+// 	// 	console.log('');
 
-	// 	for (c = 0; c < thisElem.children[i].children.length; c++) {
-	// 		console.log('thisElem.children[' + i + '].children.[' + c + '] = ' + thisElem.children[i].children[c].id);
-	// 	}
-	// }
+// 	// 	for (c = 0; c < thisElem.children[i].children.length; c++) {
+// 	// 		console.log('thisElem.children[' + i + '].children.[' + c + '] = ' + thisElem.children[i].children[c].id);
+// 	// 	}
+// 	// }
 
 
-	// -------------------- place curls --------------------
+// 	// -------------------- place curls --------------------
 
-	var deltaTheta = -(thetaMax / numThoughts) / 180 * Math.PI;
+// 	var deltaTheta = -(thetaMax / numThoughts) / 180 * Math.PI;
 
-	// console.log('deltaTheta = ' + deltaTheta);
+// 	// console.log('deltaTheta = ' + deltaTheta);
 
 
-	// var rX = (afroDims[2] / 2) * rFactor;
-	// var rY = (afroDims[3] / 2) * rFactor;
-	// var rX = randRange((afroDims[2] / 4.5), (afroDims[2] / 2)) * rFactor;
-	// var rY = randRange((afroDims[3] / 4.5), (afroDims[3] / 2)) * rFactor;
-	var rX = randRange((afroDims[2] / 4), (afroDims[2] / 2)) * rFactor;
-	var rY = randRange((afroDims[3] / 4), (afroDims[3] / 2)) * rFactor;
+// 	// var rX = (afroDims[2] / 2) * rFactor;
+// 	// var rY = (afroDims[3] / 2) * rFactor;
+// 	// var rX = randRange((afroDims[2] / 4.5), (afroDims[2] / 2)) * rFactor;
+// 	// var rY = randRange((afroDims[3] / 4.5), (afroDims[3] / 2)) * rFactor;
+// 	var rX = randRange((afroDims[2] / 4), (afroDims[2] / 2)) * rFactor;
+// 	var rY = randRange((afroDims[3] / 4), (afroDims[3] / 2)) * rFactor;
 
-	// console.log('rX = ' + rX + '     rY = ' + rY);
+// 	// console.log('rX = ' + rX + '     rY = ' + rY);
 
 
-	// var thisX = Math.round(rX * (Math.cos(theta)));
-	// var thisY = Math.round(rY * (Math.sin(theta)));
-	var thisX = Math.round(rX * (Math.cos(theta))) - (curlDims[2] / 2);
-	var thisY = Math.round(rY * (Math.sin(theta))) - (curlDims[3] / 4);
+// 	// var thisX = Math.round(rX * (Math.cos(theta)));
+// 	// var thisY = Math.round(rY * (Math.sin(theta)));
+// 	var thisX = Math.round(rX * (Math.cos(theta))) - (curlDims[2] / 2);
+// 	var thisY = Math.round(rY * (Math.sin(theta))) - (curlDims[3] / 4);
 
-	// console.log('thisX = ' + thisX + '     thisY = ' + thisY);
+// 	// console.log('thisX = ' + thisX + '     thisY = ' + thisY);
 
 
-	// TweenMax.to([thisElem], 1, {x: thisX, y: thisY, scale: 0.125, transformOrigin:"50% 50%", ease:Power3.easeOut, delay: 0.5});
-	// TweenMax.to([thisElem], 1, {x: thisX, y: thisY, transformOrigin:"50% 50%", ease:Power3.easeOut, delay: 0.5});
-	// TweenMax.set([thisElem], {x: thisX, y: thisY, scale:0.125, transformOrigin:"50% 50%"});
-	TweenMax.set([thisElem], { x: thisX, y: thisY, transformOrigin: "50% 50%" });
+// 	// TweenMax.to([thisElem], 1, {x: thisX, y: thisY, scale: 0.125, transformOrigin:"50% 50%", ease:Power3.easeOut, delay: 0.5});
+// 	// TweenMax.to([thisElem], 1, {x: thisX, y: thisY, transformOrigin:"50% 50%", ease:Power3.easeOut, delay: 0.5});
+// 	// TweenMax.set([thisElem], {x: thisX, y: thisY, scale:0.125, transformOrigin:"50% 50%"});
+// 	TweenMax.set([thisElem], { x: thisX, y: thisY, transformOrigin: "50% 50%" });
 
 
-	// // -------------------- path animation --------------------
+// 	// // -------------------- path animation --------------------
 
-	// var thisBoing = thisElem.children[0].children[0];
-	// var thisCurl = thisElem.children[0].children[1];
-	// var thisCurlRO = thisElem.children[0].children[2];
+// 	// var thisBoing = thisElem.children[0].children[0];
+// 	// var thisCurl = thisElem.children[0].children[1];
+// 	// var thisCurlRO = thisElem.children[0].children[2];
 
-	// var animPath = MorphSVGPlugin.pathDataToBezier( thisBoing, {align: thisCurl });
-	// var rotation = Math.atan2(animPath[1].y - animPath[0].y, animPath[1].x - animPath[0].x) + "_rad";
+// 	// var animPath = MorphSVGPlugin.pathDataToBezier( thisBoing, {align: thisCurl });
+// 	// var rotation = Math.atan2(animPath[1].y - animPath[0].y, animPath[1].x - animPath[0].x) + "_rad";
 
 
-	// // var thisBoingX = 25;
-	// // var thisBoingY = -200;
+// 	// // var thisBoingX = 25;
+// 	// // var thisBoingY = -200;
 
-	// // TweenMax.set([thisBoing], {x: thisBoingX, y: thisBoingY });
+// 	// // TweenMax.set([thisBoing], {x: thisBoingX, y: thisBoingY });
 
-	// // console.log('rotation = ' + rotation);
+// 	// // console.log('rotation = ' + rotation);
 
 
-	// var thisCurlX = animPath[0].x;
-	// var thisCurlY = animPath[0].y;
-	// // var thisCurlX = animPath[0].x - (curlDims[2] / 2);
-	// // var thisCurlY = animPath[0].y - (curlDims[3] / 2);
+// 	// var thisCurlX = animPath[0].x;
+// 	// var thisCurlY = animPath[0].y;
+// 	// // var thisCurlX = animPath[0].x - (curlDims[2] / 2);
+// 	// // var thisCurlY = animPath[0].y - (curlDims[3] / 2);
 
-	// // TweenMax.set([thisCurl, thisCurlRO], {x: -25, y: 200 });
-	// // TweenMax.set([thisCurl], {xPercent: -50, yPercent: -50 });
-	// // TweenMax.set([thisCurl, thisCurlRO], {x: thisCurlX, y: thisCurlY });
-	// // TweenMax.set([thisCurl, thisCurlRO], {x: thisCurlX, y: thisCurlY, rotation });
+// 	// // TweenMax.set([thisCurl, thisCurlRO], {x: -25, y: 200 });
+// 	// // TweenMax.set([thisCurl], {xPercent: -50, yPercent: -50 });
+// 	// // TweenMax.set([thisCurl, thisCurlRO], {x: thisCurlX, y: thisCurlY });
+// 	// // TweenMax.set([thisCurl, thisCurlRO], {x: thisCurlX, y: thisCurlY, rotation });
 
-	// // TweenMax.set([thisCurl, thisCurlRO], {x: -25, y: 200, transformOrigin: "50% 50%" });
-	// // TweenMax.set([thisCurl], {xPercent: -50, yPercent: -50, transformOrigin: "50% 50%" });
-	// // TweenMax.set([thisCurl, thisCurlRO], {x: thisCurlX, y: thisCurlY, transformOrigin: "50% 50%" });
-	// TweenMax.set([thisCurl, thisCurlRO], {x: thisCurlX, y: thisCurlY, rotation, transformOrigin: "50% 50%" });
+// 	// // TweenMax.set([thisCurl, thisCurlRO], {x: -25, y: 200, transformOrigin: "50% 50%" });
+// 	// // TweenMax.set([thisCurl], {xPercent: -50, yPercent: -50, transformOrigin: "50% 50%" });
+// 	// // TweenMax.set([thisCurl, thisCurlRO], {x: thisCurlX, y: thisCurlY, transformOrigin: "50% 50%" });
+// 	// TweenMax.set([thisCurl, thisCurlRO], {x: thisCurlX, y: thisCurlY, rotation, transformOrigin: "50% 50%" });
 
 
-	// // // TweenMax.to([thisCurl], 5, {bezier: { values: animPath, autoRotate: true, type: 'cubic' }, ease: Power3.easeOut, delay: 5 });
-	// // TweenMax.to([thisCurl], 5, {bezier: { values: animPath, autoRotate: true, type: 'cubic' }, transformOrigin: "50% 50%", ease: Power3.easeOut, delay: 5 });
+// 	// // // TweenMax.to([thisCurl], 5, {bezier: { values: animPath, autoRotate: true, type: 'cubic' }, ease: Power3.easeOut, delay: 5 });
+// 	// // TweenMax.to([thisCurl], 5, {bezier: { values: animPath, autoRotate: true, type: 'cubic' }, transformOrigin: "50% 50%", ease: Power3.easeOut, delay: 5 });
 
 
-	// -------------------- new theta for next curl --------------------
+// 	// -------------------- new theta for next curl --------------------
 
-	if (thoughtIndex < numThoughts - 1) {
-		theta = theta + deltaTheta;
-		// console.log('theta = ' + theta);
-	} else {
-		theta = 0;
-		// console.log('theta = ' + theta);
-	}
-}
+// 	if (thoughtIndex < numThoughts - 1) {
+// 		theta = theta + deltaTheta;
+// 		// console.log('theta = ' + theta);
+// 	} else {
+// 		theta = 0;
+// 		// console.log('theta = ' + theta);
+// 	}
+// }
 
 
-//-------------------- FUNCTION: boing(thisElem) --------------------
+// //-------------------- FUNCTION: boing(thisElem) --------------------
 
-// function boing(evt) {
-function boing(thisElem) {
-	// function boing(evt, thisElem) {
+// // function boing(evt) {
+// function boing(thisElem) {
+// 	// function boing(evt, thisElem) {
 
-	console.log('');
-	console.log('-------------------- custom.js - boing(evt) --------------------');
+// 	console.log('');
+// 	console.log('-------------------- custom.js - boing(evt) --------------------');
 
-	console.log('MorphSVGPlugin.version = ' + MorphSVGPlugin.version);
+// 	console.log('MorphSVGPlugin.version = ' + MorphSVGPlugin.version);
 
-	// var animPath = MorphSVGPlugin.pathDataToBezier( thisElem );
+// 	// var animPath = MorphSVGPlugin.pathDataToBezier( thisElem );
 
-	console.log('');
-	console.log('thisElem = ' + thisElem);
-	console.log('thisElem.id = ' + thisElem.id);
-	console.log('thisElem.attributes.length = ' + thisElem.attributes.length);
+// 	console.log('');
+// 	console.log('thisElem = ' + thisElem);
+// 	console.log('thisElem.id = ' + thisElem.id);
+// 	console.log('thisElem.attributes.length = ' + thisElem.attributes.length);
 
-	console.log('');
-	for (i = 0; i < thisElem.attributes.length; i++) {
-		// console.log('thisElem.attributes[' + i + '].value = ' + thisElem.attributes[i].value);
-		// console.log('thisElem.attributes[' + i + '].name = ' + thisElem.attributes[i].name + '     thisElem.attributes[' + i + '].value = ' + thisElem.attributes[i].value);
-		// console.log('thisElem.attributes[' + i + '].name = ' + thisElem.attributes[i].name + ' = ' + thisElem.attributes[i].value);
-		console.log('thisElem.attributes[' + i + '] = ' + thisElem.attributes[i].name + ' = ' + thisElem.attributes[i].value);
-	}
+// 	console.log('');
+// 	for (i = 0; i < thisElem.attributes.length; i++) {
+// 		// console.log('thisElem.attributes[' + i + '].value = ' + thisElem.attributes[i].value);
+// 		// console.log('thisElem.attributes[' + i + '].name = ' + thisElem.attributes[i].name + '     thisElem.attributes[' + i + '].value = ' + thisElem.attributes[i].value);
+// 		// console.log('thisElem.attributes[' + i + '].name = ' + thisElem.attributes[i].name + ' = ' + thisElem.attributes[i].value);
+// 		console.log('thisElem.attributes[' + i + '] = ' + thisElem.attributes[i].name + ' = ' + thisElem.attributes[i].value);
+// 	}
 
-	// var animPath = MorphSVGPlugin.pathDataToBezier(thisElem.path);
-	var animPath = MorphSVGPlugin.pathDataToBezier($('#boingId'));
+// 	// var animPath = MorphSVGPlugin.pathDataToBezier(thisElem.path);
+// 	var animPath = MorphSVGPlugin.pathDataToBezier($('#boingId'));
 
-	// console.log('PING! boing(evt) triggered!   evt = ' + evt);
-	// console.log('PING! boing(evt) triggered!   evt.type = ' + evt.type);
-	// console.log('PING! boing(evt) triggered!   evt.target = ' + evt.target);
-	// console.log('PING! boing(evt) triggered!   evt.target.getAttribute(id) = ' + evt.target.getAttribute('id'));
+// 	// console.log('PING! boing(evt) triggered!   evt = ' + evt);
+// 	// console.log('PING! boing(evt) triggered!   evt.type = ' + evt.type);
+// 	// console.log('PING! boing(evt) triggered!   evt.target = ' + evt.target);
+// 	// console.log('PING! boing(evt) triggered!   evt.target.getAttribute(id) = ' + evt.target.getAttribute('id'));
 
-	// console.log('');
-	// console.log('PING! boing(evt) triggered!   evt.target.parentNode = ' + evt.target.parentNode);
-	// console.log('PING! boing(evt) triggered!   evt.target.parentNode.getAttribute(id) = ' + evt.target.parentNode.getAttribute('id'));
-	// console.log('PING! boing(evt) triggered!   evt.target.parentNode.childNodes[1] = ' + evt.target.parentNode.childNodes[1]);
-	// console.log('PING! boing(evt) triggered!   evt.target.parentNode.childNodes[1].getAttribute(id) = ' + evt.target.parentNode.childNodes[1].getAttribute('id'));
+// 	// console.log('');
+// 	// console.log('PING! boing(evt) triggered!   evt.target.parentNode = ' + evt.target.parentNode);
+// 	// console.log('PING! boing(evt) triggered!   evt.target.parentNode.getAttribute(id) = ' + evt.target.parentNode.getAttribute('id'));
+// 	// console.log('PING! boing(evt) triggered!   evt.target.parentNode.childNodes[1] = ' + evt.target.parentNode.childNodes[1]);
+// 	// console.log('PING! boing(evt) triggered!   evt.target.parentNode.childNodes[1].getAttribute(id) = ' + evt.target.parentNode.childNodes[1].getAttribute('id'));
 
-	// // var thisCurlId = evt.target.getAttribute('id');
-	// // var thisBoingId = evt.target.parentNode.childNodes[1].getAttribute('id');
-	// var thisCurlId = '#' + evt.target.getAttribute('id');
-	// var thisBoingId = '#' + evt.target.parentNode.childNodes[1].getAttribute('id');
+// 	// // var thisCurlId = evt.target.getAttribute('id');
+// 	// // var thisBoingId = evt.target.parentNode.childNodes[1].getAttribute('id');
+// 	// var thisCurlId = '#' + evt.target.getAttribute('id');
+// 	// var thisBoingId = '#' + evt.target.parentNode.childNodes[1].getAttribute('id');
 
-	// console.log('thisCurlId = ' + thisCurlId + '     thisBoingId = ' + thisBoingId);
+// 	// console.log('thisCurlId = ' + thisCurlId + '     thisBoingId = ' + thisBoingId);
 
 
-	// var motionPath = MorphSVGPlugin.pathDataToBezier([thisBoingId], {align: [thisCurlId]});
-	// var motionPath = MorphSVGPlugin.pathDataToBezier("#"+thisBoingId, {align:"#"+thisCurlId});
-	// var motionPath = MorphSVGPlugin.pathDataToBezier("#boingPath_lf0", {align: "#curl0"});
-	// var motionPath = MorphSVGPlugin.pathDataToBezier([evt.target.parentNode.childNodes[1]], {align: [evt.target]});
+// 	// var motionPath = MorphSVGPlugin.pathDataToBezier([thisBoingId], {align: [thisCurlId]});
+// 	// var motionPath = MorphSVGPlugin.pathDataToBezier("#"+thisBoingId, {align:"#"+thisCurlId});
+// 	// var motionPath = MorphSVGPlugin.pathDataToBezier("#boingPath_lf0", {align: "#curl0"});
+// 	// var motionPath = MorphSVGPlugin.pathDataToBezier([evt.target.parentNode.childNodes[1]], {align: [evt.target]});
 
-	// TweenMax.to([evt.target], 0.5, {x: -200, y: -200, scale: 0.125, transformOrigin:"50% 50%", ease: Power3.easeOut, delay: 0});
+// 	// TweenMax.to([evt.target], 0.5, {x: -200, y: -200, scale: 0.125, transformOrigin:"50% 50%", ease: Power3.easeOut, delay: 0});
 
 
-	// console.log('');
-	// console.log('PING! boing(evt) triggered!   evt.target.previousSibling = ' + evt.target.previousSibling);
-	// console.log('PING! boing(evt) triggered!   evt.target.previousSibling.firstElementChild = ' + evt.target.previousSibling.firstElementChild);
-	// // console.log('PING! boing(evt) triggered!   evt.target.previousSibling.getAttribute(id) = ' + evt.target.previousSibling.getAttribute('id'));
+// 	// console.log('');
+// 	// console.log('PING! boing(evt) triggered!   evt.target.previousSibling = ' + evt.target.previousSibling);
+// 	// console.log('PING! boing(evt) triggered!   evt.target.previousSibling.firstElementChild = ' + evt.target.previousSibling.firstElementChild);
+// 	// // console.log('PING! boing(evt) triggered!   evt.target.previousSibling.getAttribute(id) = ' + evt.target.previousSibling.getAttribute('id'));
 
-	// console.log('PING! boing(thisElem) triggered!   thisElem = ' + thisElem);
-	// console.log('PING! boing(thisElem) triggered!   thisElem.id = ' + thisElem.attributes.id);
-	// console.log('PING! boing(thisElem) triggered!   thisElem.parentNode = ' + thisElem.parentNode);
-	// console.log('PING! boing(thisElem) triggered!   thisElem.parentNode.id = ' + thisElem.parentNode.id);
-	// console.log('PING! boing(thisElem) triggered!   thisElem.parentNode.firstChild.id = ' + thisElem.parentNode.firstChild.id);
-	// console.log('PING! boing(thisElem) triggered!   thisElem.parentNode.lastChild.id = ' + thisElem.parentNode.lastChild.id);
-	// // console.log('PING! boing(thisElem) triggered!   thisElem.parentNode.firstChild.nextSibling = ' + thisElem.parentNode.firstChild.nextSibling);
-	// // console.log('PING! boing(thisElem) triggered!   thisElem.previousSibling = ' + thisElem.previousSibling);
-	// // console.log('PING! boing(thisElem) triggered!   thisElem.nextSibling = ' + thisElem.nextSibling);
+// 	// console.log('PING! boing(thisElem) triggered!   thisElem = ' + thisElem);
+// 	// console.log('PING! boing(thisElem) triggered!   thisElem.id = ' + thisElem.attributes.id);
+// 	// console.log('PING! boing(thisElem) triggered!   thisElem.parentNode = ' + thisElem.parentNode);
+// 	// console.log('PING! boing(thisElem) triggered!   thisElem.parentNode.id = ' + thisElem.parentNode.id);
+// 	// console.log('PING! boing(thisElem) triggered!   thisElem.parentNode.firstChild.id = ' + thisElem.parentNode.firstChild.id);
+// 	// console.log('PING! boing(thisElem) triggered!   thisElem.parentNode.lastChild.id = ' + thisElem.parentNode.lastChild.id);
+// 	// // console.log('PING! boing(thisElem) triggered!   thisElem.parentNode.firstChild.nextSibling = ' + thisElem.parentNode.firstChild.nextSibling);
+// 	// // console.log('PING! boing(thisElem) triggered!   thisElem.previousSibling = ' + thisElem.previousSibling);
+// 	// // console.log('PING! boing(thisElem) triggered!   thisElem.nextSibling = ' + thisElem.nextSibling);
 
 
-	// var animPath = MorphSVGPlugin.pathDataToBezier(thisElem.parentNode.lastChild, { align: thisElem.parentNode.firstChild });
-	// var animPath = MorphSVGPlugin.pathDataToBezier([{"x":0,"y":245},{"x":10.1,"y":197},{"x":24.7,"y":153.8},{"x":42.8,"y":117.5},{"x":60.89999999999999,"y":81.19999999999999},{"x":82.4,"y":51.8},{"x":106.19999999999999,"y":31.5},{"x":129.99999999999997,"y":11.200000000000003},{"x":156.3,"y":0},{"x":183.9,"y":0},{"x":211.5,"y":0},{"x":237.7,"y":11.2},{"x":261.6,"y":31.5},{"x":285.50000000000006,"y":51.8},{"x":307,"y":81.2},{"x":325,"y":117.5}]);
+// 	// var animPath = MorphSVGPlugin.pathDataToBezier(thisElem.parentNode.lastChild, { align: thisElem.parentNode.firstChild });
+// 	// var animPath = MorphSVGPlugin.pathDataToBezier([{"x":0,"y":245},{"x":10.1,"y":197},{"x":24.7,"y":153.8},{"x":42.8,"y":117.5},{"x":60.89999999999999,"y":81.19999999999999},{"x":82.4,"y":51.8},{"x":106.19999999999999,"y":31.5},{"x":129.99999999999997,"y":11.200000000000003},{"x":156.3,"y":0},{"x":183.9,"y":0},{"x":211.5,"y":0},{"x":237.7,"y":11.2},{"x":261.6,"y":31.5},{"x":285.50000000000006,"y":51.8},{"x":307,"y":81.2},{"x":325,"y":117.5}]);
 
-	// TweenMax.to([thisElem], 0.5, {x: -200, y: -200, scale: 0.125, transformOrigin:"50% 50%", delay: 0});
-	// TweenMax.to(['#'+thisElem.parentNode.id], 0.5, {x: -200, y: -200, scale: 0.125, transformOrigin:"50% 50%", ease:Power3.easeOut, delay: 0});
-	// TweenMax.to([thisElem], 0.5, {x: -200, y: -200, scale: 0.125, transformOrigin:"50% 50%", delay: 0});
+// 	// TweenMax.to([thisElem], 0.5, {x: -200, y: -200, scale: 0.125, transformOrigin:"50% 50%", delay: 0});
+// 	// TweenMax.to(['#'+thisElem.parentNode.id], 0.5, {x: -200, y: -200, scale: 0.125, transformOrigin:"50% 50%", ease:Power3.easeOut, delay: 0});
+// 	// TweenMax.to([thisElem], 0.5, {x: -200, y: -200, scale: 0.125, transformOrigin:"50% 50%", delay: 0});
 
-	// TweenMax.to([thisElem], 3 ,{bezier:{curviness:1.5, values:[{"x":0,"y":245},{"x":10.1,"y":197},{"x":24.7,"y":153.8},{"x":42.8,"y":117.5},{"x":60.89999999999999,"y":81.19999999999999},{"x":82.4,"y":51.8},{"x":106.19999999999999,"y":31.5},{"x":129.99999999999997,"y":11.200000000000003},{"x":156.3,"y":0},{"x":183.9,"y":0},{"x":211.5,"y":0},{"x":237.7,"y":11.2},{"x":261.6,"y":31.5},{"x":285.50000000000006,"y":51.8},{"x":307,"y":81.2},{"x":325,"y":117.5}]}, ease:Power3.easeOut});
-	// TweenMax.to([thisElem], 3 ,{bezier:{values:[{"x":0,"y":245},{"x":10.1,"y":197},{"x":24.7,"y":153.8},{"x":42.8,"y":117.5},{"x":60.89999999999999,"y":81.19999999999999},{"x":82.4,"y":51.8},{"x":106.19999999999999,"y":31.5},{"x":129.99999999999997,"y":11.200000000000003},{"x":156.3,"y":0},{"x":183.9,"y":0},{"x":211.5,"y":0},{"x":237.7,"y":11.2},{"x":261.6,"y":31.5},{"x":285.50000000000006,"y":51.8},{"x":307,"y":81.2},{"x":325,"y":117.5}]}, ease:Power3.easeOut});
-	// TweenMax.to([thisElem], 3 ,{bezier:{values:[{"x":325,"y":245},{"x":314.9,"y":197},{"x":300.3,"y":153.8},{"x":282.2,"y":117.5},{"x":264.09999999999997,"y":81.19999999999999},{"x":242.6,"y":51.8},{"x":218.79999999999998,"y":31.5},{"x":194.99999999999997,"y":11.200000000000003},{"x":168.7,"y":0},{"x":141.1,"y":0},{"x":113.5,"y":0},{"x":87.3,"y":11.2},{"x":63.4,"y":31.5},{"x":39.5,"y":51.8},{"x":18.1,"y":81.2},{"x":0,"y":117.5}]}});
-}
-
-
-
-
-
-
-
-
-
-
-
+// 	// TweenMax.to([thisElem], 3 ,{bezier:{curviness:1.5, values:[{"x":0,"y":245},{"x":10.1,"y":197},{"x":24.7,"y":153.8},{"x":42.8,"y":117.5},{"x":60.89999999999999,"y":81.19999999999999},{"x":82.4,"y":51.8},{"x":106.19999999999999,"y":31.5},{"x":129.99999999999997,"y":11.200000000000003},{"x":156.3,"y":0},{"x":183.9,"y":0},{"x":211.5,"y":0},{"x":237.7,"y":11.2},{"x":261.6,"y":31.5},{"x":285.50000000000006,"y":51.8},{"x":307,"y":81.2},{"x":325,"y":117.5}]}, ease:Power3.easeOut});
+// 	// TweenMax.to([thisElem], 3 ,{bezier:{values:[{"x":0,"y":245},{"x":10.1,"y":197},{"x":24.7,"y":153.8},{"x":42.8,"y":117.5},{"x":60.89999999999999,"y":81.19999999999999},{"x":82.4,"y":51.8},{"x":106.19999999999999,"y":31.5},{"x":129.99999999999997,"y":11.200000000000003},{"x":156.3,"y":0},{"x":183.9,"y":0},{"x":211.5,"y":0},{"x":237.7,"y":11.2},{"x":261.6,"y":31.5},{"x":285.50000000000006,"y":51.8},{"x":307,"y":81.2},{"x":325,"y":117.5}]}, ease:Power3.easeOut});
+// 	// TweenMax.to([thisElem], 3 ,{bezier:{values:[{"x":325,"y":245},{"x":314.9,"y":197},{"x":300.3,"y":153.8},{"x":282.2,"y":117.5},{"x":264.09999999999997,"y":81.19999999999999},{"x":242.6,"y":51.8},{"x":218.79999999999998,"y":31.5},{"x":194.99999999999997,"y":11.200000000000003},{"x":168.7,"y":0},{"x":141.1,"y":0},{"x":113.5,"y":0},{"x":87.3,"y":11.2},{"x":63.4,"y":31.5},{"x":39.5,"y":51.8},{"x":18.1,"y":81.2},{"x":0,"y":117.5}]}});
+// }
 
 
 

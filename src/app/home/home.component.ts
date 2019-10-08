@@ -91,8 +91,11 @@ export class HomeComponent implements OnInit {
 
     logoAnim() {
         this.logoTL
-            .to(['#imgLID'], 1, { x: -this.deltaX, y: this.deltaY, transformOrigin: '100% 100%', ease: Power3.easeOut }, 'frame01 += 0')
-            .to(['#imgRID'], 1, { x: this.deltaX, transformOrigin: '50% 50%', ease: Power3.easeOut }, 'frame01 += 0')
+            // .to(['#imgLID'], 1, { x: -this.deltaX, y: this.deltaY, transformOrigin: '100% 100%', ease: Power3.easeOut }, 'frame01 += 0')
+            // .to(['#imgRID'], 1, { x: this.deltaX, transformOrigin: '50% 50%', ease: Power3.easeOut }, 'frame01 += 0')
+            .to(['#imgDivLID'], 1, { x: -this.deltaX, y: this.deltaY, transformOrigin: '100% 100%', ease: Power3.easeOut }, 'frame01 += 0')
+            .to(['#imgDivRID'], 1, { x: this.deltaX, transformOrigin: '50% 50%', ease: Power3.easeOut }, 'frame01 += 0')
+            .fromTo(['#tagL, #tagR'], 1.5, {autoAlpha: 0}, {autoAlpha: 1, ease: Power3.easeOut}, 'frame01 +=0')
         ;
     }
 
@@ -114,5 +117,13 @@ export class HomeComponent implements OnInit {
 
         TweenMax.to(['#' + evt.target.firstChild.id], 0.25, { autoAlpha: propsArray[1], ease: Power3.easeOut });
         TweenMax.to(['#' + evt.target.lastChild.id], 0.25, { autoAlpha: propsArray[2], ease: Power3.easeOut });
+    }
+
+
+    shigimcpDOTcom() {
+        // window.location.href = 'https://www.shigimcp.com';
+        window.open(
+        'https://www.shigimcp.com', '_blank'
+        );
     }
 }

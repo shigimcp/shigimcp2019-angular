@@ -2,16 +2,76 @@
 <!-- <div class="homeContainer"> -->
 <div [ngClass]="[globalStyles, homeStyles]">
 
+<!-- 
 	<div class="imgContainer" id="imgContainerId">
 		<img class="imgR" id="imgRID" src="https://shigimcp.com/Xstage/angular_github/img/0elements/kawaii02.png">
 		<img class="imgL" id="imgLID" src="https://shigimcp.com/Xstage/angular_github/img/0elements/shigeru_logo.svg">
 	</div>
+ -->
 
-	<!-- <div class="egg" id="eggID" [routerLink]="['/mesmerize']"> -->
-	<!-- <div class="egg" id="eggID" [routerLink]="['/mesmerize']" (mouseover)="eggOver([this, 'autoAlpha', 1, 1])" (mouseout)="eggOver([this, 'autoAlpha', 0.125, 0])"> -->
-	<!-- <div class="egg" id="eggId" #eggId [routerLink]="['/mesmerize']" (mouseover)="eggOver(['autoAlpha', 1, 1])" (mouseout)="eggOver(['autoAlpha', 0.125, 0])"> -->
-	<!-- <div class="egg" #egg id="eggID" [routerLink]="['/mesmerize']" (mouseover)="eggOver([egg.id, 'autoAlpha', 1, 1])" (mouseout)="eggOver([egg.id, 'autoAlpha', 0.125, 0])"> -->
-	<!-- <div class="egg" #egg id="eggID" [routerLink]="['/mesmerize']" (mouseover)="eggOver([egg.id, 'autoAlpha', 1, 1])" (mouseout)="eggOver([egg.id, 'autoAlpha', 0.125, 0])"> -->
+
+	<div class="imgContainer" id="imgContainerId">
+
+		<div class="imgDiv" id="imgDivRID">
+			<!-- <img class="imgR" id="imgRID" src="https://shigimcp.com/Xstage/angular_github/img/0elements/kawaii02.png"> -->
+			<!-- <img src="https://shigimcp.com/Xstage/angular_github/img/0elements/kawaii02.png" [routerLink]="['/about']"> -->
+			<img class="imgR" src="https://shigimcp.com/Xstage/angular_github/img/0elements/kawaii02.png" [routerLink]="['/about']">
+
+			<p id="tagR">Continue with Angular 8 ==&gt;</p>
+		</div>
+
+		<div class="imgDiv" id="imgDivLID">
+			<!-- <img class="imgL" id="imgLID" src="https://shigimcp.com/Xstage/angular_github/img/0elements/shigeru_logo.svg"> -->
+			<!-- <img src="https://shigimcp.com/Xstage/angular_github/img/0elements/shigeru_logo.svg" (click)="shigimcpDOTcom()"> -->
+			<img class="imgL" id="imgLID" src="https://shigimcp.com/Xstage/angular_github/img/0elements/shigeru_logo.svg" (click)="shigimcpDOTcom()">
+
+			<p id="tagL">&lt;== Go To Current/Legacy Website</p>
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+	<figure class="imgContainer" id="imgContainerId">
+		<img class="imgR" id="imgRID" src="https://shigimcp.com/Xstage/angular_github/img/0elements/kawaii02.png">
+		<figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+		<img class="imgL" id="imgLID" src="https://shigimcp.com/Xstage/angular_github/img/0elements/shigeru_logo.svg">
+		<figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+	</figure>
+
+
+	<figure class="imgContainer" id="imgContainerId">
+		<img class="imgR" id="imgRID" src="https://shigimcp.com/Xstage/angular_github/img/0elements/kawaii02.png">
+		<figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+	</figure>
+
+
+	<figure class="imgContainer" id="imgContainerId">
+		<img class="imgL" id="imgLID" src="https://shigimcp.com/Xstage/angular_github/img/0elements/shigeru_logo.svg">
+		<figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+	</figure>
+ -->
+
+
+<!-- <div class="egg" id="eggID" [routerLink]="['/mesmerize']"> -->
+<!-- <div class="egg" id="eggID" [routerLink]="['/mesmerize']" (mouseover)="eggOver([this, 'autoAlpha', 1, 1])" (mouseout)="eggOver([this, 'autoAlpha', 0.125, 0])"> -->
+<!-- <div class="egg" id="eggId" #eggId [routerLink]="['/mesmerize']" (mouseover)="eggOver(['autoAlpha', 1, 1])" (mouseout)="eggOver(['autoAlpha', 0.125, 0])"> -->
+<!-- <div class="egg" #egg id="eggID" [routerLink]="['/mesmerize']" (mouseover)="eggOver([egg.id, 'autoAlpha', 1, 1])" (mouseout)="eggOver([egg.id, 'autoAlpha', 0.125, 0])"> -->
+<!-- <div class="egg" #egg id="eggID" [routerLink]="['/mesmerize']" (mouseover)="eggOver([egg.id, 'autoAlpha', 1, 1])" (mouseout)="eggOver([egg.id, 'autoAlpha', 0.125, 0])"> -->
 	<div class="egg" id="eggID" [routerLink]="['/mesmerize']" (mouseenter)="eggOver($event, ['autoAlpha', 1, 1])" (mouseleave)="eggOver($event, ['autoAlpha', 0.25, 0])">
 		<img class="egg_img" #egg_img id="egg_imgId" src="https://shigimcp.com/Xstage/angular_github/img/0elements/kawaii02_dirty_anim03_1920x1080_16bit.gif">
 		<p class="egg_copy" #egg_copy id="egg_copyId">If you value your eyeballs,<br>leave the dancing egg thing alone...</p>

@@ -9,6 +9,7 @@ import { ViewChild, Renderer2 } from '@angular/core';
 // ---------- use scss variables in *.ts files - REF: https://mattferderer.com/use-sass-variables-in-typescript-and-javascript ----------
 // import styles from './modal.component.scss';
 
+declare const modalDims: any;
 
 @Component({
     selector: 'app-modal',
@@ -41,16 +42,16 @@ export class ModalComponent implements OnInit, OnDestroy {
     thisFormat: string;
 
     videoLoc = 'https://player.vimeo.com/video/';
-    // vidWidth = '90vw';
-    vidWidth = 0.9 * window.innerWidth;
-    vidHeight = this.vidWidth * 9 / 16;
-
     html5Loc = 'https://www.shigimcp.com/img/';
     flashLoc = 'https://www.shigimcp.com/img/';
 
     modalLink: any;
     // modalLink: Url;
     // modalLink: Url = 'https://player.vimeo.com/video/325441227';
+
+    // vidWidth = '90vw';
+    vidWidth = 0.9 * window.innerWidth;
+    vidHeight = this.vidWidth * 9 / 16;
 
 
     constructor(
@@ -129,69 +130,77 @@ export class ModalComponent implements OnInit, OnDestroy {
         // console.log('this.modalService.modalParams[3] = ' + this.modalService.modalParams[3]);
         // console.log('this.modalService.modalParams[4] = ' + this.modalService.modalParams[4]);
         // console.log('this.modalService.modalParams[4] = ' + JSON.stringify(this.modalService.modalParams[4]));
-        // // console.log('this.modalService.modalParams[4].format = ' + this.modalService.modalParams[4].format);
-        // // console.log('this.modalService.modalParams[4].mwidth = ' + this.modalService.modalParams[4].mwidth);
-        // // console.log('this.modalService.modalParams[4].mheight = ' + this.modalService.modalParams[4].mheight);
-        // // console.log('this.modalService.modalParams[4].albumIndex = ' + this.modalService.modalParams[4].albumIndex);
-        // // console.log('this.modalService.modalParams[4].albumID = ' + this.modalService.modalParams[4].albumID);
-        // // console.log('this.modalService.modalParams[4].imageIndex = ' + this.modalService.modalParams[4].imageIndex);
+        // console.log('this.modalService.modalParams[4].format = ' + this.modalService.modalParams[4].format);
+        console.log('this.modalService.modalParams[4].mwidth = ' + this.modalService.modalParams[4].mwidth);
+        console.log('this.modalService.modalParams[4].mheight = ' + this.modalService.modalParams[4].mheight);
+        // console.log('this.modalService.modalParams[4].albumIndex = ' + this.modalService.modalParams[4].albumIndex);
+        // console.log('this.modalService.modalParams[4].albumID = ' + this.modalService.modalParams[4].albumID);
+        // console.log('this.modalService.modalParams[4].imageIndex = ' + this.modalService.modalParams[4].imageIndex);
+
+        // console.log('window.innerWidth = ' + window.innerWidth + '     window.innerHeight = ' + window.innerHeight);
 
 
         this.thisFormat = this.modalService.modalParams[4].format;
 
+        // modalDims(contentWidth, contentHeight);
+        modalDims(this.modalService.modalParams[4].mwidth, this.modalService.modalParams[4].mheight);
+
+        // if (window.innerWidth <= this.modalService.modalParams[4].mwidth) {
+        //     this.modalBody.nativeElement.style.height = this.vidHeight + 'px';
+        //     this.modalBody.nativeElement.style.width = (this.modalService.modalParams[4].mwidth / this.modalService.modalParams[4].mheight) * this.vidHeight + 'px';
+        // } else {
+        //     this.modalBody.nativeElement.style.width = this.vidWidth + 'px';
+        //     this.modalBody.nativeElement.style.height = (this.modalService.modalParams[4].mheight / this.modalService.modalParams[4].mwidth) * this.vidWidth + 'px';
+        // }
+
         switch (this.thisFormat) {
 
             case 'video': {
+                console.log('');
                 console.log('----- this is a video -----');
+                // console.log('this.vidWidth = ' + this.vidWidth + '     this.vidHeight = ' + this.vidHeight);
 
                 // this.modalLink = this.sanitizer.bypassSecurityTrustResourceUrl(this.videoLoc + this.modalService.modalParams[2]);
                 this.modalLink = this.sanitizer.bypassSecurityTrustResourceUrl(this.videoLoc + this.modalService.modalParams[2] + '?autoplay=1&loop=1&autopause=0');
 
-                // console.log('styles.vidWidth = ' + styles.vidWidth + '     styles.vidHeight = ' + styles.vidHeight);
-                // console.log('this.vidWidth = ' + this.vidWidth + '     this.vidHeight = ' + this.vidHeight);
+                if (window.innerWidth <= this.modalService.modalParams[4].mwidth) {
+                    this.modalBody.nativeElement.style.height = this.vidHeight + 'px';
+                    this.modalBody.nativeElement.style.width = (this.modalService.modalParams[4].mwidth / this.modalService.modalParams[4].mheight) * this.vidHeight + 'px';
+                } else {
+                    this.modalBody.nativeElement.style.width = this.vidWidth + 'px';
+                    this.modalBody.nativeElement.style.height = (this.modalService.modalParams[4].mheight / this.modalService.modalParams[4].mwidth) * this.vidWidth + 'px';
+                }
 
-                // this.html5Modal.nativeElement.style.display = 'none';
-
-                // this.modalBody.nativeElement.style.width = '90' + 'vw';
-                // this.modalBody.nativeElement.style.height = '90' + 'vw' * 9 / 16;
-
-                // this.modalBody.nativeElement.style.width = styles.vidWidth;
-                // this.modalBody.nativeElement.style.height = styles.vidHeight;
-
-                this.modalBody.nativeElement.style.width = this.vidWidth + 'px';
-                this.modalBody.nativeElement.style.height = this.vidHeight + 'px';
-                this.modalBody.nativeElement.style.background = '#ffffff';
+                // this.modalBody.nativeElement.style.background = '#ffffff';
 
                 break;
             }
 
             case 'html5': {
+                console.log('');
                 console.log('----- this is an html5 presentation -----');
 
                 this.modalLink = this.sanitizer.bypassSecurityTrustResourceUrl(this.html5Loc + this.modalService.modalParams[3] + '/' + this.modalService.modalParams[2]);
 
-                // this.vidModal.nativeElement.style.display = 'none';
-
-                // this.html5Body.nativeElement.style.width = this.modalService.modalParams[4].mwidth + 'px';
-                // this.html5Body.nativeElement.style.height = this.modalService.modalParams[4].mheight + 'px';
-
                 this.modalBody.nativeElement.style.width = this.modalService.modalParams[4].mwidth + 'px';
                 this.modalBody.nativeElement.style.height = this.modalService.modalParams[4].mheight + 'px';
-                this.modalBody.nativeElement.style.background = 'none';
+
+                // this.modalBody.nativeElement.style.background = 'none';
 
                 break;
             }
 
             case 'flash': {
+                console.log('');
                 console.log('----- this is a flash presentation -----');
 
                 this.modalLink = this.sanitizer.bypassSecurityTrustResourceUrl('#');
                 this.modalLink = this.sanitizer.bypassSecurityTrustResourceUrl(this.flashLoc + this.modalService.modalParams[3] + '/' + this.modalService.modalParams[2]);
 
-                // this.html5Modal.nativeElement.style.display = 'none';
-
                 this.modalBody.nativeElement.style.width = this.modalService.modalParams[4].mwidth + 'px';
                 this.modalBody.nativeElement.style.height = this.modalService.modalParams[4].mheight + 'px';
+
+                // this.modalBody.nativeElement.style.background = 'none';
 
                 break;
             }

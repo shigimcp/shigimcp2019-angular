@@ -164,26 +164,26 @@ export const Work = [
             {
                 imageIndex: 6,
                 src: 'ea06.jpg',
-                caption: '2013 - Nicki Minaj - Pink Friday',
+                caption: '2013 - Nicki Minaj - Minajesty',
                 format: 'video',
                 formatSrc: 'img/0elements/badge_flash.svg',
                 link: '325527427',
                 cta: 'click image to play video',
                 alert: '',
-                mwidth: 1900,
-                mheight: 1280
+                mwidth: 2100,
+                mheight: 1530
             },
             {
                 imageIndex: 7,
                 src: 'ea07.jpg',
-                caption: '2013 - Nicki Minaj - Minajesty',
+                caption: '2013 - Nicki Minaj - Pink Friday',
                 format: 'video',
                 formatSrc: 'img/0elements/badge_flash.svg',
                 link: '325527394',
                 cta: 'click image to play video',
                 alert: '',
-                mwidth: 2100,
-                mheight: 1530
+                mwidth: 1900,
+                mheight: 1280
             },
             {
                 imageIndex: 8,

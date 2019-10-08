@@ -3,6 +3,7 @@
 $vidWidth: 90vw;
 $vidHeight: $vidWidth * 9/16;
 
+
 // ---------- use scss variables in *.ts files - REF: https://mattferderer.com/use-sass-variables-in-typescript-and-javascript ----------
 // :export {
 //     vidWidth: $vidWidth;
@@ -34,7 +35,7 @@ app-modal {
         overflow: auto;
 
         .app-modal-body {
-            // border: 2px solid #00ff00;
+            border: 2px solid #00ff00;
             // background-color: #ffffff;
             // background: none;
 
