@@ -40,7 +40,7 @@ function randRange2(min, max) {
 //-------------------- FUNCTION: randMinMax(thisMin, thisMax, thisRound) - (ref: https://gist.github.com/timohausmann/4997906) --------------------
 
 function randMinMax(thisMin, thisMax, thisRound) {
-	"use strict";
+	// "use strict";
 
 	var thisRandNum = thisMin + Math.random() * (thisMax - thisMin);
 	return thisRound && (thisRandNum = Math.round(thisRandNum)), thisRandNum;
@@ -67,22 +67,82 @@ function getDims(thisElem) {
 }
 
 
-//-------------------- FUNCTION: modalDims(contentWidth, contentHeight) --------------------
+//-------------------- FUNCTION: getModalDims(contentWidth, contentHeight) --------------------
 
-function modalDims(contentWidth, contentHeight) {
+function getModalDims(contentWidth, contentHeight) {
 
-	console.log('');
-	console.log('-------------------- custom.js - modalDims(contentWidth, contentHeight) --------------------');
-	console.log('contentWidth = ' + contentWidth + '     contentHeight = ' + contentHeight);
-    console.log('window.innerWidth = ' + window.innerWidth + '     window.innerHeight = ' + window.innerHeight);
-	console.log('16/9 = ' + 16/9 + '     window.innerWidth/window.innerHeight = ' + window.innerWidth/window.innerHeight);
+	// console.log('');
+	// console.log('-------------------- custom.js - getModalDims(contentWidth, contentHeight) --------------------');
+	// console.log('contentWidth = ' + contentWidth + '     contentHeight = ' + contentHeight);
+    // console.log('window.innerWidth = ' + window.innerWidth + '     window.innerHeight = ' + window.innerHeight);
+    // console.log('16/9 = ' + 16/9 + '     window.innerWidth/window.innerHeight = ' + window.innerWidth/window.innerHeight);
 
-    // var mWidth = 
+    var mWidth;
+    var mHeight;
+    var mScale;
+
+    switch (true) {
+
+        case contentWidth/contentHeight <= 1 && contentHeight <= 0.9 * window.innerHeight: {
+            // console.log('');
+            // console.log('----- orientation: treat as small portrait -----');
+
+            mWidth = contentWidth;
+            mHeight = contentHeight;
+
+            break;
+        }
+
+        case contentWidth/contentHeight <= 1: {
+            // console.log('');
+            // console.log('----- orientation: treat as portrait -----');
+
+            // mWidth = contentWidth;
+            mHeight = 0.9 * window.innerHeight;
+            mWidth = (contentWidth / contentHeight) * mHeight;
+
+            break;
+        }
+
+        case contentWidth/contentHeight <= 1 && contentHeight >= window.innerHeight: {
+            // console.log('');
+            // console.log('----- orientation: treat as large portrait -----');
+
+            // mWidth = contentWidth;
+            // mHeight = contentHeight;
+
+            break;
+        }
+
+        case contentWidth/contentHeight > 1: {
+            // console.log('');
+            // console.log('----- orientation: treat as landscape -----');
+
+            mWidth = 0.9 * window.innerWidth;
+            // mHeight = mWidth * 9 / 16;
+            mHeight = (contentHeight / contentWidth) * mWidth;
+
+            break;
+        }
+
+        default: {
+            // console.log('');
+            // console.log('----- default: need a conditional -----');
+
+            mWidth = contentWidth;
+            mHeight = contentHeight;
+
+            break;
+        }
+    }
+
+    mScale = mHeight/contentHeight;
+
+    // console.log('mWidth = ' + mWidth + '     mHeight = ' + mHeight + '     mScale = ' + mScale);
 
     // return [mWidth, mHeight];
+    return [mWidth, mHeight, mScale];
 }
-
-
 
 
 

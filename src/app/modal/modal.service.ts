@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 // import { Observable } from 'rxjs';
 
+declare const getModalDims: any;
 
 @Injectable({
     providedIn: 'root'
@@ -13,6 +14,11 @@ export class ModalService {
 
     // public vidlink: string;
     public modalParams: Array<any>;
+
+    public modalDims: Array<any>;
+    // public mWidth: number;
+    // public mHeight: number;
+
 
     constructor() { }
 
@@ -53,6 +59,13 @@ export class ModalService {
 
         this.modalParams = modalParams;
         // console.log('this.modalParams = ' + this.modalParams);
+
+        // getModalDims(contentWidth, contentHeight);
+        this.modalDims = getModalDims(this.modalParams[4].mwidth, this.modalParams[4].mheight);
+
+        // this.mWidth = this.modalParams[4].mwidth, this.modalParams[4].mheight;
+        // this.mHeight = modalDims[1];
+        // console.log('this.mWidth = ' + this.mWidth);
 
         modal.open();
     }

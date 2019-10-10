@@ -111,7 +111,8 @@ export const Work = [
                 cta: 'click image for HTML5 presentation',
                 alert: '',
                 mwidth: 1366,
-                mheight: 1300
+                // mheight: 1300
+                mheight: 1500
             },
             {
                 imageIndex: 2,

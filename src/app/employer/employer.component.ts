@@ -19,6 +19,9 @@ export class EmployerComponent implements OnInit {
     @Input() employer: any;
     @Input() images: any;
 
+    // @Input() mWidth: number;
+    // @Input() mHeight: number;
+
     @ViewChild(CarouselComponent, { static: true }) public carousel: CarouselComponent;
 
 

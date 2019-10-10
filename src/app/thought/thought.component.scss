@@ -251,8 +251,9 @@
     }
 
     .thoughtClose {
-        border: 0.1875em solid #000000;
-        border-radius: 2.375vh;
+        border: 0.2125em solid #000000;
+        // border-radius: 2.375vh;
+        border-radius: 0.9375em;
 
         background-color: #FFFFFF;
 
@@ -262,8 +263,10 @@
         line-height: 1.5em;
         text-align: center;
 
-        width: 4.75vh;
-        height: 4.75vh;
+        // width: 4.75vh;
+        // height: 4.75vh;
+        width: 1.875em;
+        height: 1.875em;
 
         position: absolute;
         top: 17.5%;
@@ -414,7 +417,8 @@
         // border: 5px solid #000000;
         border: 0.25em solid #000000;
         // border-radius: 30px;
-        border-radius: 2vh;
+        // border-radius: 2vh;
+        border-radius: 1.0625em;
 
         background-color: #FFFFFF;
 
@@ -427,8 +431,10 @@
 
         // width: 30px;
         // height: 30px;
-        width: 2.5vh;
-        height: 2.5vh;
+        // width: 2.5vh;
+        // height: 2.5vh;
+        width: 2.125em;
+        height: 2.125em;
 
         position: absolute;
         top: 17.5%;

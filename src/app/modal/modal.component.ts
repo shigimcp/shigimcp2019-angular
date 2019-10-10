@@ -4,12 +4,11 @@ import { ViewEncapsulation, ElementRef, Input, OnDestroy } from '@angular/core';
 import { ModalService } from './modal.service';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ViewChild, Renderer2 } from '@angular/core';
-// import { Url } from 'url';
 
-// ---------- use scss variables in *.ts files - REF: https://mattferderer.com/use-sass-variables-in-typescript-and-javascript ----------
-// import styles from './modal.component.scss';
+import { TweenMax, TimelineMax, Power3 } from 'gsap';
 
-declare const modalDims: any;
+
+declare const getModalDims: any;
 
 @Component({
     selector: 'app-modal',
@@ -19,7 +18,6 @@ declare const modalDims: any;
 })
 
 
-// export class ModalComponent implements OnInit {
 export class ModalComponent implements OnInit, OnDestroy {
 
     @Input() id: string;
@@ -27,14 +25,6 @@ export class ModalComponent implements OnInit, OnDestroy {
     @ViewChild('modalApp', { static: true }) public modalApp: ElementRef;
     @ViewChild('modalBody', { static: true }) public modalBody: ElementRef;
     @ViewChild('modalIframe', { static: true }) public modalIframe: ElementRef;
-
-    // @ViewChild('vidModal', { static: true }) public vidModal: ElementRef;
-    // @ViewChild('vidBody', { static: true }) public vidBody: ElementRef;
-    // @ViewChild('vidIframe', { static: true }) public vidIframe: ElementRef;
-
-    // @ViewChild('html5Modal', { static: true }) public html5Modal: ElementRef;
-    // @ViewChild('html5Body', { static: true }) public html5Body: ElementRef;
-    // @ViewChild('html5Iframe', { static: true }) public html5Iframe: ElementRef;
 
 
     private element: any;
@@ -46,12 +36,11 @@ export class ModalComponent implements OnInit, OnDestroy {
     flashLoc = 'https://www.shigimcp.com/img/';
 
     modalLink: any;
-    // modalLink: Url;
-    // modalLink: Url = 'https://player.vimeo.com/video/325441227';
+    modalDims: Array<any>;
 
-    // vidWidth = '90vw';
-    vidWidth = 0.9 * window.innerWidth;
-    vidHeight = this.vidWidth * 9 / 16;
+    mWidth: number;
+    mHeight: number;
+    mScale: number;
 
 
     constructor(
@@ -137,41 +126,38 @@ export class ModalComponent implements OnInit, OnDestroy {
         // console.log('this.modalService.modalParams[4].albumID = ' + this.modalService.modalParams[4].albumID);
         // console.log('this.modalService.modalParams[4].imageIndex = ' + this.modalService.modalParams[4].imageIndex);
 
-        // console.log('window.innerWidth = ' + window.innerWidth + '     window.innerHeight = ' + window.innerHeight);
-
 
         this.thisFormat = this.modalService.modalParams[4].format;
 
-        // modalDims(contentWidth, contentHeight);
-        modalDims(this.modalService.modalParams[4].mwidth, this.modalService.modalParams[4].mheight);
+        this.modalDims = getModalDims(this.modalService.modalParams[4].mwidth, this.modalService.modalParams[4].mheight);
 
-        // if (window.innerWidth <= this.modalService.modalParams[4].mwidth) {
-        //     this.modalBody.nativeElement.style.height = this.vidHeight + 'px';
-        //     this.modalBody.nativeElement.style.width = (this.modalService.modalParams[4].mwidth / this.modalService.modalParams[4].mheight) * this.vidHeight + 'px';
-        // } else {
-        //     this.modalBody.nativeElement.style.width = this.vidWidth + 'px';
-        //     this.modalBody.nativeElement.style.height = (this.modalService.modalParams[4].mheight / this.modalService.modalParams[4].mwidth) * this.vidWidth + 'px';
-        // }
+
+        console.log('');
+        console.log('---------- modal.component.ts - FROM custom.js - getModalDims(contentWidth, contentHeight) ----------');
+        console.log('this.modalDims = ' + this.modalDims);
+        console.log('this.mScale = ' + this.mScale + '     typeof this.mScale = ' + typeof this.mScale);
+
+        this.mWidth = parseFloat(this.modalDims[0]);
+        this.mHeight = parseFloat(this.modalDims[1]);
+        this.mScale = parseFloat(this.modalDims[2]);
+
+        this.modalBody.nativeElement.style.width = this.mWidth + 'px';
+        this.modalBody.nativeElement.style.height = this.mHeight + 'px';
+
 
         switch (this.thisFormat) {
 
             case 'video': {
                 console.log('');
                 console.log('----- this is a video -----');
-                // console.log('this.vidWidth = ' + this.vidWidth + '     this.vidHeight = ' + this.vidHeight);
+                console.log('');
 
-                // this.modalLink = this.sanitizer.bypassSecurityTrustResourceUrl(this.videoLoc + this.modalService.modalParams[2]);
+                this.modalIframe.nativeElement.style.width = this.mWidth + 'px';
+                this.modalIframe.nativeElement.style.height = this.mHeight + 'px';
+
+                TweenMax.set([this.modalIframe.nativeElement], { x: 0, y: 0, scale: 1, transformOrigin: '0 0' });
+
                 this.modalLink = this.sanitizer.bypassSecurityTrustResourceUrl(this.videoLoc + this.modalService.modalParams[2] + '?autoplay=1&loop=1&autopause=0');
-
-                if (window.innerWidth <= this.modalService.modalParams[4].mwidth) {
-                    this.modalBody.nativeElement.style.height = this.vidHeight + 'px';
-                    this.modalBody.nativeElement.style.width = (this.modalService.modalParams[4].mwidth / this.modalService.modalParams[4].mheight) * this.vidHeight + 'px';
-                } else {
-                    this.modalBody.nativeElement.style.width = this.vidWidth + 'px';
-                    this.modalBody.nativeElement.style.height = (this.modalService.modalParams[4].mheight / this.modalService.modalParams[4].mwidth) * this.vidWidth + 'px';
-                }
-
-                // this.modalBody.nativeElement.style.background = '#ffffff';
 
                 break;
             }
@@ -180,12 +166,12 @@ export class ModalComponent implements OnInit, OnDestroy {
                 console.log('');
                 console.log('----- this is an html5 presentation -----');
 
+                this.modalIframe.nativeElement.style.width = this.mWidth / this.mScale + 'px';
+                this.modalIframe.nativeElement.style.height = this.mHeight / this.mScale + 'px';
+
+                TweenMax.set([this.modalIframe.nativeElement], { x: 0, y: 0, scale: this.mScale, transformOrigin: '0 0' });
+
                 this.modalLink = this.sanitizer.bypassSecurityTrustResourceUrl(this.html5Loc + this.modalService.modalParams[3] + '/' + this.modalService.modalParams[2]);
-
-                this.modalBody.nativeElement.style.width = this.modalService.modalParams[4].mwidth + 'px';
-                this.modalBody.nativeElement.style.height = this.modalService.modalParams[4].mheight + 'px';
-
-                // this.modalBody.nativeElement.style.background = 'none';
 
                 break;
             }
@@ -194,13 +180,10 @@ export class ModalComponent implements OnInit, OnDestroy {
                 console.log('');
                 console.log('----- this is a flash presentation -----');
 
-                this.modalLink = this.sanitizer.bypassSecurityTrustResourceUrl('#');
+                // this.modalBody.nativeElement.style.width = this.modalDims[0] + 'px';
+                // this.modalBody.nativeElement.style.height = this.modalDims[1] + 'px';
+
                 this.modalLink = this.sanitizer.bypassSecurityTrustResourceUrl(this.flashLoc + this.modalService.modalParams[3] + '/' + this.modalService.modalParams[2]);
-
-                this.modalBody.nativeElement.style.width = this.modalService.modalParams[4].mwidth + 'px';
-                this.modalBody.nativeElement.style.height = this.modalService.modalParams[4].mheight + 'px';
-
-                // this.modalBody.nativeElement.style.background = 'none';
 
                 break;
             }
@@ -211,10 +194,6 @@ export class ModalComponent implements OnInit, OnDestroy {
                 break;
             }
         }
-
-        // this.modalLink = this.modalService.modalParams[2];
-        // this.modalLink = this.videoLoc + this.modalService.modalParams[2];
-        // this.modalLink = this.sanitizer.bypassSecurityTrustResourceUrl(this.videoLoc + this.modalService.modalParams[2]);
 
         this.element.style.display = 'block';
         document.body.classList.add('app-modal-open');
@@ -228,11 +207,6 @@ export class ModalComponent implements OnInit, OnDestroy {
         // console.log('========== modal.component.ts - close() ==========');
 
         // ---------- stop video - REF: https://mdbootstrap.com/support/angular/video-modal/ ----------
-        // const src = this.vidIframe.nativeElement.getAttribute('src');
-        // this.renderer.setAttribute(this.vidIframe.nativeElement, 'src', src);
-
-        // const src = this.modalIframe.nativeElement.getAttribute('src');
-        // this.renderer.setAttribute(this.modalIframe.nativeElement, 'src', src);
         this.renderer.setAttribute(this.modalIframe.nativeElement, 'src', '');
 
         this.element.style.display = 'none';

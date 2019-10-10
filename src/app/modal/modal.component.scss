@@ -12,6 +12,8 @@ $vidHeight: $vidWidth * 9/16;
 
 
 app-modal {
+    border: 2px solid #ff0000;
+
     /* modals are hidden by default */
     display: none;
 
@@ -35,7 +37,7 @@ app-modal {
         overflow: auto;
 
         .app-modal-body {
-            border: 2px solid #00ff00;
+            // border: 2px solid #00ff00;
             // background-color: #ffffff;
             // background: none;
 
@@ -55,7 +57,7 @@ app-modal {
           
             iframe {
                 // border: 2px solid #0000ff;
-                border: none;
+                // border: none;
 
                 width: inherit;
                 height: inherit;
