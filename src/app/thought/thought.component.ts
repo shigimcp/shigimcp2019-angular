@@ -281,6 +281,8 @@ export class ThoughtComponent implements OnInit, AfterViewInit {
         // console.log('this.deltaTheta = ' + this.deltaTheta);
 
 
+        // this.radX = randRange((this.afroW / 2), (this.afroW / 2)) * this.radFactor;
+        // this.radY = randRange((this.afroH / 2), (this.afroH / 2)) * this.radFactor;
         this.radX = randRange((this.afroW / 5), (this.afroW / 2)) * this.radFactor;
         this.radY = randRange((this.afroH / 5), (this.afroH / 2)) * this.radFactor;
 

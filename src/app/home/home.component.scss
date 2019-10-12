@@ -130,13 +130,15 @@
 		height: inherit;
 
 		margin: 0 auto;
-        padding: 5vh 0 0 0;
+        // padding: 5vh 0 0 0;
+        padding: 6.25vh 0 0 0;
 
 		// img {
 		.imgDiv {
 			// border: 2px solid #ff00ff;
 
-			width: 40vw;
+			// width: 40vw;
+			width: 37.5vw;
 
 			margin: 0 auto;
             // margin-left: auto;
@@ -148,6 +150,10 @@
 
             cursor: pointer;
 
+            img {
+                width: 100%
+            }
+
             p {
                 text-align: center;
                 padding: 2.5vh 0 0 0;
@@ -156,7 +162,7 @@
 
 		.imgL {
 			// border: 2px solid #ff00ff;
-			width: 40vw;
+			// width: 40vw;
 
             // padding: 5% 0 0 0;
             padding: 2.5% 0 0 0;
@@ -164,10 +170,11 @@
 
 		.imgR {
 			// border: 2px solid #ff00ff;
-			width: 40vw;
+			// width: 40vw;
+			// width: 37.5vw;
+            // height: auto;
 
-            height: auto;
-			max-height: 100vh;
+            // max-height: 100vh;
 
 			padding: 7.5% 0 0 0;
 		}
@@ -177,8 +184,8 @@
 		// border: 2px solid #ff0000;
 
 		position: absolute;
-		right: 0;
-		bottom: 0;
+		right: 1vw;
+		bottom: 1.5vh;
 
 		cursor: pointer;
 
