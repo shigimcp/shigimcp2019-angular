@@ -21,6 +21,7 @@ import { ThoughtComponent } from './thought/thought.component';
 import { ModalComponent } from './modal/modal.component';
 import { ModalModule } from './modal/modal.module';
 import { ModalService } from './modal/modal.service';
+import { ShigeruComponent } from './shigeru/shigeru.component';
 // import { ChangeContentDirective } from './change-content.directive';
 
 
@@ -73,6 +74,7 @@ const routerOptions: ExtraOptions = {
         AboutComponent,
         ThoughtComponent,
         ModalComponent,
+        ShigeruComponent,
         // ChangeContentDirective
     ],
 

@@ -68,7 +68,7 @@ var container02 = sym.$("container02");
 //-------------------- FUNCTION: consoleLog(message) --------------------
 
 function consoleLog(message) {
-//	alert(message);
+	// alert(message);
 	console.log(message);
 }
 
@@ -87,7 +87,7 @@ function nextPos(thisObj, thisX, thisY, thisScale, thisAlpha) {
 
 function randRange(min, max) {
 	var thisIndex = min + Math.round(Math.random()*(max-min));
-//	console.log("thisIndex = " + thisIndex);
+	// console.log("thisIndex = " + thisIndex);
 	return thisIndex;
 }
 
@@ -96,7 +96,7 @@ function randRange(min, max) {
 
 function randRange2(min, max) {
 	var thisIndex = min + Math.random()*(max-min);
-//	console.log("thisIndex = " + thisIndex);
+	// console.log("thisIndex = " + thisIndex);
 	return thisIndex;
 }
 
@@ -124,7 +124,7 @@ function randomStagger(thisObj) {
 
 	console.log("thisObj = " + thisObj + "   listItems = " + listItems + "   listItemsArray = " + listItemsArray);
 
-//	TweenMax.staggerFromTo(listItemsArray, staggerDuration, {scale:.25, alpha:0, ease:Power3.easeOut}, {scale:1, alpha:1, ease:Power3.easeOut}, staggerDelay, "frame01 +=0")
+	// TweenMax.staggerFromTo(listItemsArray, staggerDuration, {scale:.25, alpha:0, ease:Power3.easeOut}, {scale:1, alpha:1, ease:Power3.easeOut}, staggerDelay, "frame01 +=0")
 	TweenMax.staggerFromTo(listItemsArray, staggerDuration, {scale:2, ease:Power3.easeOut}, {scale:1, ease:Power3.easeOut}, staggerDelay, 0)
 	TweenMax.staggerFromTo(listItemsArray, staggerDuration*0.5, {alpha:0, ease:Power3.easeOut, repeat:1, yoyo:true}, {alpha:1, ease:Power3.easeOut, repeat:1, yoyo:true}, staggerDelay, 0)
 }
@@ -146,11 +146,11 @@ function shuffle(thisContainer){
 
 		var rects = $(this).find('rect');
 
-//		console.log('rects = ' + rects);
+		// console.log('rects = ' + rects);
 
-//		for(var i = 0; i < rects.length; i++) {
-//			console.log('rects[i].id = ' + rects[i].id);
-//		}
+		// for(var i = 0; i < rects.length; i++) {
+		// 	console.log('rects[i].id = ' + rects[i].id);
+		// }
 
 		for(var i = 0; i < rects.length; i++) $(rects[i]).remove();            
 
@@ -166,9 +166,9 @@ function shuffle(thisContainer){
 			rects[j] = tempi;
 		}
 
-//		for(var i = 0; i < rects.length; i++) {
-//			console.log('rects[i].id = ' + rects[i].id);
-//		}
+		// for(var i = 0; i < rects.length; i++) {
+		// 	console.log('rects[i].id = ' + rects[i].id);
+		// }
 
 		for(var i = 0; i < rects.length; i++) $(rects[i]).appendTo(this);
 	});                    
@@ -205,13 +205,13 @@ function addParticle(thisContainer){
 
 function positionParticle(thisContainer){
 	thisContainer.children().each(function(){
-//		console.log("PING!!! found this " + this + " in " + thisContainer);
+		// console.log("PING!!! found this " + this + " in " + thisContainer);
 
 		var thisX = randRange(-thisContainer.width()*1, thisContainer.width()*1);
 		var thisY = randRange(-thisContainer.height()*1, thisContainer.height()*1);
 		var thisScale = randRange(25, 75) / 100;
 
-//		console.log("thisX, thisY, thisScale = " + thisX + ", " + thisY + ", " + thisScale);
+		// console.log("thisX, thisY, thisScale = " + thisX + ", " + thisY + ", " + thisScale);
 
 		TweenLite.set(this, {x:thisX, y:thisY, alpha:0, scale:thisScale});
 
@@ -221,8 +221,8 @@ function positionParticle(thisContainer){
 
 
 function particleAnim(thisParticle){ 
-//	TweenMax.to(thisParticle, animDuration04, {x:randRange(-100, 100), rotationY:0, alpha:1, repeat:-1, yoyo:true, ease:Sine.easeInOut, delay:randRange2(.0625, 1.5)});
-//	TweenMax.to(thisParticle, animDuration01, {x:0, alpha:1, repeat:1, yoyo:true, ease:Sine.easeInOut, delay:randRange2(.0625, 1.5)});
+	// TweenMax.to(thisParticle, animDuration04, {x:randRange(-100, 100), rotationY:0, alpha:1, repeat:-1, yoyo:true, ease:Sine.easeInOut, delay:randRange2(.0625, 1.5)});
+	// TweenMax.to(thisParticle, animDuration01, {x:0, alpha:1, repeat:1, yoyo:true, ease:Sine.easeInOut, delay:randRange2(.0625, 1.5)});
 	TweenMax.to(thisParticle, animDuration01, {alpha:1, repeat:1, yoyo:true, ease:Sine.easeInOut, delay:randRange2(0, 1.5)});
 };
 
@@ -247,6 +247,82 @@ function getDims(thisElem) {
 
 
 
+//<!--/* ========================= NAME / PRONUNCIATION ========================= */-->
+
+function showThis(thisID) {
+
+	switch(thisID) {
+		case ('btn_name'):
+			// console.log('DING! thisID = ' + thisID);
+
+			TweenMax.to([name_pronunciation], 0.375, {autoAlpha:1, ease:Power3.easeOut});
+
+			break;
+
+		case ('name_syllable01'):
+			// console.log('DING! thisID = ' + thisID);
+
+			TweenMax.to([name_pronunciation], 0.375, {autoAlpha:1, ease:Power3.easeOut});
+			TweenMax.to([name_def01], 0.375, {autoAlpha:1, ease:Power3.easeOut});
+
+			break;
+
+		case ('name_syllable02'):
+			// console.log('DING! thisID = ' + thisID);
+
+			TweenMax.to([name_pronunciation], 0.375, {autoAlpha:1, ease:Power3.easeOut});
+			TweenMax.to([name_def02], 0.375, {autoAlpha:1, ease:Power3.easeOut});
+
+			break;
+
+		case ('name_syllable03'):
+			// console.log('DING! thisID = ' + thisID);
+
+			TweenMax.to([name_pronunciation], 0.375, {autoAlpha:1, ease:Power3.easeOut});
+			TweenMax.to([name_def03], 0.375, {autoAlpha:1, ease:Power3.easeOut});
+
+			break;
+	}
+}
+
+function hideThis(thisID) {
+
+	switch(thisID) {
+		case ('btn_name'):
+			// console.log('DING! thisID = ' + thisID);
+
+			TweenMax.to([name_pronunciation], 0.375, {autoAlpha:0, ease:Power3.easeOut});
+
+			break;
+
+		case ('name_syllable01'):
+			// console.log('DING! thisID = ' + thisID);
+
+			TweenMax.to([name_def01], 0.375, {autoAlpha:0, ease:Power3.easeOut});
+			TweenMax.to([name_pronunciation], 0.375, {autoAlpha:0, ease:Power3.easeOut});
+
+			break;
+
+		case ('name_syllable02'):
+			// console.log('DING! thisID = ' + thisID);
+
+			TweenMax.to([name_def02], 0.375, {autoAlpha:0, ease:Power3.easeOut});
+			TweenMax.to([name_pronunciation], 0.375, {autoAlpha:0, ease:Power3.easeOut});
+
+			break;
+
+		case ('name_syllable03'):
+			// console.log('DING! thisID = ' + thisID);
+
+			TweenMax.to([name_def03], 0.375, {autoAlpha:0, ease:Power3.easeOut});
+			TweenMax.to([name_pronunciation], 0.375, {autoAlpha:0, ease:Power3.easeOut});
+
+			break;
+	}
+}
+
+
+
 //==============================================
 //==================== TEXT ====================
 //==============================================
@@ -254,7 +330,7 @@ function getDims(thisElem) {
 //-------------------- OBJECTS - text shadows --------------------
 
 TweenMax.to([copy01_ds, copy02_01_ds, copy02_02_ds, copy05_01_ds, copy05_02_ds, copy05_03_ds, copy05_04_ds, copy05_ds02.find("div")], 0, {
-//	color:"none",
+	// color:"none",
 	textShadow:"0px 0px 30px rgba(255, 255, 255, 1), 0px 0px 30px rgba(255, 255, 255, 1), 0px 0px 30px rgba(255, 255, 255, 1), 0px 0px 30px rgba(255, 255, 255, 1), 0px 0px 30px rgba(255, 255, 255, 1), 0px 0px 50px rgba(255, 255, 255, 1), 0px 0px 50px rgba(255, 255, 255, 1), 0px 0px 50px rgba(255, 255, 255, 1), 0px 0px 50px rgba(255, 255, 255, 1), 0px 0px 50px rgba(255, 255, 255, 1)"
 });
 

@@ -4,14 +4,14 @@
 
     <div class="imgContainer" id="imgContainerId">
 
-		<div class="imgDiv" id="imgDivRID">
-			<img class="imgR" src="https://shigimcp.com/Xstage/angular_github/img/0elements/kawaii02.png" [routerLink]="['/about']">
+		<div class="imgDiv" id="imgDivRID" [routerLink]="['/about']">
+			<img class="imgR" src="https://shigimcp.com/Xstage/angular_github/img/0elements/kawaii02.png">
 			<p id="tagR">Continue with Angular 8 ==&gt;</p>
 		</div>
 
-		<div class="imgDiv" id="imgDivLID">
-			<img class="imgL" id="imgLID" src="https://shigimcp.com/Xstage/angular_github/img/0elements/shigeru_logo.svg" (click)="shigimcpDOTcom()">
-			<p id="tagL">&lt;== Go To Current/Legacy Website</p>
+		<div class="imgDiv" id="imgDivLID" (click)="shigimcpDOTcom()">
+			<img class="imgL" id="imgLID" src="https://shigimcp.com/Xstage/angular_github/img/0elements/shigeru_logo.svg">
+			<p id="tagL">&lt;== Go To Current / Soon-to-Be-Legacy Website</p>
 		</div>
 
 	</div>

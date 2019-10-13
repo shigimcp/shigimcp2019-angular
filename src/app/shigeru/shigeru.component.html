@@ -1,0 +1,64 @@
+<div [ngClass]="[globalStyles, shigiStyles]" id="shigeru">
+
+	<!-- <div class="shigiContainer" id="shigiContainerId" (mouseenter)="showDefs($event, this.id)" (mouseleave)="hideDefs($event, this.id)">whuuuuh?!?!?!</div> -->
+	<button class="btnName" id="btnNameId" (mouseenter)="showDefs($event, 'syllablesId')" (mouseleave)="hideDefs($event, 'syllablesId')">whuuuuh?!?!?!</button>
+
+
+	<div class="pronunciation" id="pronunciation">
+
+		<div class="syllables" id="syllablesId">
+<!-- 
+			<div id="syllable01" (mouseenter)="showDefs($event, this.id)" (mouseleave)="hideDefs($event, this.id)">Shi•ge•ru</div>
+			<div id="syllable02" (mouseenter)="showDefs($event, this.id)" (mouseleave)="hideDefs($event, this.id)">Shi•ge</div>
+			<div id="syllable03" (mouseenter)="showDefs($event, this.id)" (mouseleave)="hideDefs($event, this.id)">Shi•gi</div>
+
+			<div id="syllable01" (mouseenter)="showDefs($event, this)" (mouseleave)="hideDefs($event, this)">Shi•ge•ru</div>
+			<div id="syllable02" (mouseenter)="showDefs($event, this)" (mouseleave)="hideDefs($event, this)">Shi•ge</div>
+			<div id="syllable03" (mouseenter)="showDefs($event, this)" (mouseleave)="hideDefs($event, this)">Shi•gi</div>
+ -->
+			<div id="syllable01" (mouseenter)="showDefs($event, 'syllable01')" (mouseleave)="hideDefs($event, 'syllable01')">Shi•ge•ru</div>
+			<div id="syllable02" (mouseenter)="showDefs($event, 'syllable02')" (mouseleave)="hideDefs($event, 'syllable02')">Shi•ge</div>
+			<div id="syllable03" (mouseenter)="showDefs($event, 'syllable03')" (mouseleave)="hideDefs($event, 'syllable03')">Shi•gi</div>
+		</div>
+
+		<div class="defs">
+
+			<div id="def01">
+				\SHEE • g&eacute; • r̃ü\ noun m.
+				<ol>
+					<!-- <li>what Google told me in my last search: to be luxuriant, abundant, grow thick</li> -->
+					<li>to be luxuriant, abundant, grow thick</li>
+					<li>
+						what my mother told me when I was young: <br>
+						"You are a very old, very big tree with many leaves, far-reaching branches and deep, deep roots."
+					</li>
+				</ol>
+			</div>
+
+			<div id="def02">
+				\SHEE • g&eacute;\ noun m.
+				<ol>
+					<li>this is a nickname, but only native Japanese speakers pronunce it this way</li>
+				</ol>
+			</div>
+
+			<div id="def03">
+				\SHə • gee\ noun m.
+				<ol>
+					<li>
+						When people ask for my name, I used to tell them, "My name is Shigi - rhymes with 'piggy'..." 
+						<br>until it was suggested that I should probably go with, "My name is Shigi - rhymes with Ziggy." <br>
+						<i>#SubliminalBranding</i>
+					</li>
+					<!-- <li>This is what everyone calls me; it’s just easier this way</li> -->
+				</ol>
+			</div>
+
+			<!-- <div>In the end... as long as you know who you’re talking to, it’s all good.</div> -->
+
+		</div>
+
+	</div>
+
+
+</div>

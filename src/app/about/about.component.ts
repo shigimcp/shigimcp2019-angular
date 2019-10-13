@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AfterViewInit, ViewChild, ElementRef, ViewChildren, QueryList } from '@angular/core';
-
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 
 import { ThoughtComponent } from '../thought/thought.component';
@@ -11,6 +10,7 @@ import { TweenMax } from 'gsap';
 
 
 declare const getDims: any;
+declare const showMe: any;
 
 @Component({
     selector: 'app-about',
@@ -73,6 +73,8 @@ export class AboutComponent implements OnInit, AfterViewInit {
                 this.aboutStyles = 'aboutLg';
             }
         });
+
+        showMe('visible');
     }
 
 

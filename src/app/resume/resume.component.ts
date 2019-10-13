@@ -3,6 +3,10 @@ import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/l
 
 import { Employers } from '../../assets/data/employers';
 
+
+declare const showMe: any;
+
+
 @Component({
     selector: 'app-resume',
     templateUrl: './resume.component.html',
@@ -60,6 +64,8 @@ export class ResumeComponent implements OnInit {
                 this.resStyles = 'resLg';
             }
         });
+
+        showMe('hidden');
     }
 
     // viewWork(thisEmployer: any) {

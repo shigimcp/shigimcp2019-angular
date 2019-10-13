@@ -5,6 +5,9 @@ import { ModalService } from '../modal/modal.service';
 import { Work } from '../../assets/data/work';
 
 
+declare const showMe: any;
+
+
 @Component({
     selector: 'app-work',
     templateUrl: './work.component.html',
@@ -68,6 +71,8 @@ export class WorkComponent implements OnInit {
                 this.workStyles = 'workLg';
             }
         });
+
+        showMe('hidden');
     }
 
 

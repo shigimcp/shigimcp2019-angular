@@ -1,8 +1,8 @@
 "use strict";
 
-//===================================================
-//==================== FUNCTIONS ====================
-//===================================================
+//============================================================
+//==================== FUNCTIONS: Generic ====================
+//============================================================
 
 //-------------------- FUNCTION: testing123() --------------------
 
@@ -144,6 +144,104 @@ function getModalDims(contentWidth, contentHeight) {
     return [mWidth, mHeight, mScale];
 }
 
+
+//==============================================================
+//==================== NAME / PRONUNCIATION ====================
+//==============================================================
+
+function showDefsJS(thisElem) {
+
+	console.log('');
+	console.log('-------------------- custom.js - showDefs(thisElem) --------------------');
+	console.log('PING! showDefs(thisElem) triggered! thisElem = ' + thisElem);
+	console.log('PING! showDefs(thisElem) triggered! thisElem.id = ' + thisElem.id);
+
+	switch(thisElem) {
+		case ('syllablesId'):
+			// console.log('DING! thisElem = ' + thisElem);
+
+			TweenMax.to([pronunciation], 0.375, {autoAlpha:1, ease:Power3.easeOut});
+
+			break;
+
+		case ('syllable01'):
+			// console.log('DING! thisElem = ' + thisElem);
+
+			TweenMax.to([pronunciation], 0.375, {autoAlpha:1, ease:Power3.easeOut});
+			TweenMax.to([def01], 0.375, {autoAlpha:1, ease:Power3.easeOut});
+
+			break;
+
+		case ('syllable02'):
+			// console.log('DING! thisElem = ' + thisElem);
+
+			TweenMax.to([pronunciation], 0.375, {autoAlpha:1, ease:Power3.easeOut});
+			TweenMax.to([def02], 0.375, {autoAlpha:1, ease:Power3.easeOut});
+
+			break;
+
+		case ('syllable03'):
+			// console.log('DING! thisElem = ' + thisElem);
+
+			TweenMax.to([pronunciation], 0.375, {autoAlpha:1, ease:Power3.easeOut});
+			TweenMax.to([def03], 0.375, {autoAlpha:1, ease:Power3.easeOut});
+
+			break;
+	}
+}
+
+function hideDefsJS(thisElem) {
+
+	console.log('');
+	console.log('-------------------- custom.js - hideDefs(thisElem) --------------------');
+	console.log('PING! hideDefs(thisElem) triggered! thisElem = ' + thisElem);
+	// console.log('PING! hideDefs(thisElem) triggered! thisElem.id = ' + thisElem.id);
+
+	switch(thisElem) {
+		// case ('syllablesId'):
+		// 	// console.log('DING! thisElem = ' + thisElem);
+
+		// 	TweenMax.to([pronunciation], 0.375, {autoAlpha:0, ease:Power3.easeOut});
+
+		// 	break;
+
+		case ('syllable01'):
+			// console.log('DING! thisElem = ' + thisElem);
+
+			TweenMax.to([def01], 0.375, {autoAlpha:0, ease:Power3.easeOut});
+			TweenMax.to([pronunciation], 0.375, {autoAlpha:0, ease:Power3.easeOut});
+
+			break;
+
+		case ('syllable02'):
+			// console.log('DING! thisElem = ' + thisElem);
+
+			TweenMax.to([def02], 0.375, {autoAlpha:0, ease:Power3.easeOut});
+			TweenMax.to([pronunciation], 0.375, {autoAlpha:0, ease:Power3.easeOut});
+
+			break;
+
+		case ('syllable03'):
+			// console.log('DING! thisElem = ' + thisElem);
+
+			TweenMax.to([def03], 0.375, {autoAlpha:0, ease:Power3.easeOut});
+			TweenMax.to([pronunciation], 0.375, {autoAlpha:0, ease:Power3.easeOut});
+
+			break;
+	}
+}
+
+function showMe(thisVisiblity) {
+
+	// console.log('');
+	// console.log('-------------------- custom.js - showMe(thisVisiblity) --------------------');
+	// console.log('PING! hideDefs(thisVisiblity) triggered! thisVisiblity = ' + thisVisiblity);
+
+	// console.log('this = ' + this);
+    // console.log('document.getElementById(shigeru).id = ' + document.getElementById('shigeru').id);
+
+    document.getElementById('shigeru').style.visibility = thisVisiblity;
+}
 
 
 

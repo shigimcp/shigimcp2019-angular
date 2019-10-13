@@ -1,4 +1,4 @@
-import { Component, OnInit, Attribute } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 
 // import { TweenLite, TimelineLite, Power3 } from 'gsap';
@@ -17,17 +17,10 @@ declare const getDims: any;
 
 export class HomeComponent implements OnInit {
 
-    // plugins = [
-    //     CSSPlugin,
-    //     AttrPlugin
-    // ];
-
     logoTL = new TimelineMax({ delay: 1.5 });
 
     deltaX: number;
     deltaY: number;
-    // deltaX = window.innerWidth * 0.14375;
-    // deltaY = window.innerHeight * 0.14375;
 
     globalStyles: string;
     homeStyles: string;
@@ -36,6 +29,10 @@ export class HomeComponent implements OnInit {
     constructor(public breakpointObserver: BreakpointObserver) { }
 
     ngOnInit() {
+        // console.log('');
+        // console.log('==============================================================');
+        // console.log('========== home.component.ts - ngOnInit() ==========');
+        // console.log('==============================================================');
 
         // this.deltaX = getDims('imgContainerId')[0];
         this.deltaX = getDims('imgContainerId')[0] * 0.875;
@@ -91,39 +88,40 @@ export class HomeComponent implements OnInit {
 
     logoAnim() {
         this.logoTL
-            // .to(['#imgLID'], 1, { x: -this.deltaX, y: this.deltaY, transformOrigin: '100% 100%', ease: Power3.easeOut }, 'frame01 += 0')
-            // .to(['#imgRID'], 1, { x: this.deltaX, transformOrigin: '50% 50%', ease: Power3.easeOut }, 'frame01 += 0')
             .to(['#imgDivLID'], 1, { x: -this.deltaX, y: this.deltaY, transformOrigin: '100% 100%', ease: Power3.easeOut }, 'frame01 += 0')
-            .to(['#imgDivRID'], 1, { x: this.deltaX, transformOrigin: '50% 50%', ease: Power3.easeOut }, 'frame01 += 0')
+            .to(['#imgDivRID'], 1, { x: this.deltaX, transformOrigin: '50% 50%', ease: Power3.easeOut, onComplete: this.enableDivs }, 'frame01 += 0')
             .fromTo(['#tagL, #tagR'], 1.5, {autoAlpha: 0}, {autoAlpha: 1, ease: Power3.easeOut}, 'frame01 +=0')
         ;
+    }
+
+    enableDivs() {
+        document.getElementById('imgDivRID').style.pointerEvents = 'auto';
+        document.getElementById('imgDivLID').style.pointerEvents = 'auto';
+    }
+
+    shigimcpDOTcom() {
+        window.open(
+            'https://www.shigimcp.com', '_blank'
+        );
     }
 
 
     // ==================== FUNCTION: eggOver(evt, propsArray) RE: egg - SOOOOOOPER MESSY! Please clean this up for more universal use as a rollover. ====================
 
-    eggOver(evt, propsArray: Array<string | number>) {
+    eggOver(evt: any, propsArray: Array<string | number>) {
     // eggOver(evt: MouseEvent, propsArray: Array<string | number>) {
 
-        console.log('');
-        console.log('PING! eggOver triggered!   this = ' + this + '   propsArray = ' + propsArray);
-        console.log('evt.target.id = ' + evt.target.id);
-        console.log('evt.target.firstChild.id = ' + evt.target.firstChild.id);
-        console.log('evt.target.lastChild.id = ' + evt.target.lastChild.id);
+        // console.log('');
+        // console.log('PING! eggOver triggered!   this = ' + this + '     evt = ' + evt + '   propsArray = ' + propsArray);
+        // console.log('evt.target.id = ' + evt.target.id);
+        // console.log('evt.target.firstChild.id = ' + evt.target.firstChild.id);
+        // console.log('evt.target.lastChild.id = ' + evt.target.lastChild.id);
 
         // for (const thisProp of propsArray) {
         //     console.log(thisProp);
         // }
 
-        TweenMax.to(['#' + evt.target.firstChild.id], 0.25, { autoAlpha: propsArray[1], ease: Power3.easeOut });
-        TweenMax.to(['#' + evt.target.lastChild.id], 0.25, { autoAlpha: propsArray[2], ease: Power3.easeOut });
-    }
-
-
-    shigimcpDOTcom() {
-        // window.location.href = 'https://www.shigimcp.com';
-        window.open(
-        'https://www.shigimcp.com', '_blank'
-        );
+        TweenMax.to(['#' + evt.target.firstChild.id], 0.5, { autoAlpha: propsArray[1], ease: Power3.easeOut });
+        TweenMax.to(['#' + evt.target.lastChild.id], 0.5, { autoAlpha: propsArray[2], ease: Power3.easeOut });
     }
 }
