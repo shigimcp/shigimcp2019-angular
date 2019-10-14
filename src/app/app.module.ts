@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes, ExtraOptions } from '@angular/router';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 // import { LayoutModule } from '@angular/cdk/layout';
@@ -22,6 +22,14 @@ import { ModalComponent } from './modal/modal.component';
 import { ModalModule } from './modal/modal.module';
 import { ModalService } from './modal/modal.service';
 import { ShigeruComponent } from './shigeru/shigeru.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { WorkNavComponent } from './work-nav/work-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 // import { ChangeContentDirective } from './change-content.directive';
 
 
@@ -60,6 +68,13 @@ const routerOptions: ExtraOptions = {
         MDBBootstrapModule.forRoot(),
         // LayoutModule,
         ModalModule,
+        BrowserAnimationsModule,
+        LayoutModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatIconModule,
+        MatListModule,
     ],
 
     declarations: [
@@ -75,6 +90,7 @@ const routerOptions: ExtraOptions = {
         ThoughtComponent,
         ModalComponent,
         ShigeruComponent,
+        WorkNavComponent,
         // ChangeContentDirective
     ],
 

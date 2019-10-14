@@ -2,24 +2,20 @@
 <!-- <div class="workContainer"> -->
 <div [ngClass]="[globalStyles, workStyles]">
 
-	<!-- <div class="bg_txt">work</div> -->
 	<div class="bg_txt">{{ bgText }}</div>
-	<!-- <div class="bg_txt" ChangeContentDirective>{{ bgText }}</div> -->
 
 	<!-- <p>========================= WORK COMPONENT =========================</p> -->
-
+<!-- 
 	<div class="work_menu">
 		<ng-container *ngFor="let employer of work; index as employerIndex">
-		<!-- <ng-container class="work_menu_list" *ngFor="let employer of work; index as employerIndex"> -->
-			<!-- <p *ngIf="employer.images.length > 0" [routerLink]='"."' [fragment]="employer.albumID">{{ employer.employer }}</p> -->
-			<!-- <p *ngIf="employer.images.length > 0" [routerLink]='"."' [fragment]="employer.albumID" (click)="goToEmployer(employer.employer)">{{ employer.employer }}</p> -->
-
-            <!-- <ul> -->
+            <ul>
                 <li *ngIf="employer.images.length > 0" [routerLink]='"."' [fragment]="employer.albumID" (click)="goToEmployer(employer.employer)">{{ employer.employer }}</li>
-            <!-- </ul> -->
-
+            </ul>
         </ng-container>
 	</div>
+ -->
+
+	<app-work-nav></app-work-nav>
 
 	<ng-container *ngFor="let employer of work; index as employerIndex">
 		<app-employer *ngIf="employer.images.length > 0" [employer]="employer" [images]="employer.images" id="{{ employer.albumID }}"></app-employer>
@@ -27,11 +23,5 @@
 
 </div>
 
-<!-- 
-<ng-template #employer>
-	<app-employer [employer]="employer" [images]="employer.images" id="{{ employer.albumID }}"></app-employer>
-</ng-template>
- -->
 
-
- <app-modal id="modalApp"></app-modal>
+<app-modal id="modalApp"></app-modal>
