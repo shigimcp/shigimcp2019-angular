@@ -151,10 +151,10 @@ function getModalDims(contentWidth, contentHeight) {
 
 function showDefsJS(thisElem) {
 
-	console.log('');
-	console.log('-------------------- custom.js - showDefs(thisElem) --------------------');
-	console.log('PING! showDefs(thisElem) triggered! thisElem = ' + thisElem);
-	console.log('PING! showDefs(thisElem) triggered! thisElem.id = ' + thisElem.id);
+	// console.log('');
+	// console.log('-------------------- custom.js - showDefs(thisElem) --------------------');
+	// console.log('PING! showDefs(thisElem) triggered! thisElem = ' + thisElem);
+	// // console.log('PING! showDefs(thisElem) triggered! thisElem.id = ' + thisElem.id);
 
 	switch(thisElem) {
 		case ('syllablesId'):
@@ -192,10 +192,10 @@ function showDefsJS(thisElem) {
 
 function hideDefsJS(thisElem) {
 
-	console.log('');
-	console.log('-------------------- custom.js - hideDefs(thisElem) --------------------');
-	console.log('PING! hideDefs(thisElem) triggered! thisElem = ' + thisElem);
-	// console.log('PING! hideDefs(thisElem) triggered! thisElem.id = ' + thisElem.id);
+	// console.log('');
+	// console.log('-------------------- custom.js - hideDefs(thisElem) --------------------');
+	// console.log('PING! hideDefs(thisElem) triggered! thisElem = ' + thisElem);
+	// // console.log('PING! hideDefs(thisElem) triggered! thisElem.id = ' + thisElem.id);
 
 	switch(thisElem) {
 		// case ('syllablesId'):

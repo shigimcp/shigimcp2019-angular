@@ -9,8 +9,8 @@ import { ThoughtComponent } from '../thought/thought.component';
 import { TweenMax } from 'gsap';
 
 
-declare const getDims: any;
 declare const showMe: any;
+declare const getDims: any;
 
 @Component({
     selector: 'app-about',

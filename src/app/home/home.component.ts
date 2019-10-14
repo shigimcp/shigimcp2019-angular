@@ -5,6 +5,7 @@ import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/l
 import { TweenMax, TimelineMax, Power3 } from 'gsap';
 
 
+declare const showMe: any;
 declare const getDims: any;
 
 
@@ -80,6 +81,7 @@ export class HomeComponent implements OnInit {
             }
         });
 
+        showMe('hidden');
         this.logoAnim();
     }
 
