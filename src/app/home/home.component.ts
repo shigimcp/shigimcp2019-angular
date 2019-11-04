@@ -31,13 +31,21 @@ export class HomeComponent implements OnInit {
 
     ngOnInit() {
         // console.log('');
-        // console.log('==============================================================');
+        // console.log('====================================================');
         // console.log('========== home.component.ts - ngOnInit() ==========');
-        // console.log('==============================================================');
+        // console.log('====================================================');
 
-        // this.deltaX = getDims('imgContainerId')[0];
-        this.deltaX = getDims('imgContainerId')[0] * 0.875;
+        // console.log('getDims(imgContainerId) = ' + getDims('imgContainerId'));
+
+        // this.deltaX = getDims('imgContainerId')[0] * 0.875;
+        // this.deltaX = getDims('imgContainerId')[0] * 0.6;
+        // this.deltaX = (window.innerWidth * 0.9) * 0.875;
+        // this.deltaX = (window.innerWidth * 0.9) * 0.25;
         this.deltaY = window.innerHeight * 0.05;
+
+        // console.log('window.innerWidth = ' + window.innerWidth + '     window.innerHeight = ' + window.innerHeight);
+        // console.log('this.deltaX = ' + this.deltaX + '     this.deltaY = ' + this.deltaY);
+
 
         this.breakpointObserver.observe([
             Breakpoints.XSmall,
@@ -51,24 +59,38 @@ export class HomeComponent implements OnInit {
                 // console.log( 'Matches XSmall viewport - Breakpoints.XSmall: max-width equals 599.99px');
                 this.globalStyles = 'globalSm';
                 this.homeStyles = 'homeSm';
+
+                // this.deltaX = getDims('imgContainerId')[0] * 0.6;
+                this.deltaX = (window.innerWidth * 0.9) * 0.2375;
             }
 
             if (state.breakpoints[Breakpoints.Small]) {
                 // console.log( 'Matches Small viewport - Breakpoints.Small: min-width equals 600px and max-width equals 959.99px');
                 this.globalStyles = 'globalSm';
                 this.homeStyles = 'homeSm';
+
+                // this.deltaX = getDims('imgContainerId')[0] * 0.6;
+                this.deltaX = (window.innerWidth * 0.9) * 0.2375;
             }
 
             if (state.breakpoints[Breakpoints.Medium]) {
                 // console.log( 'Matches Medium viewport - Breakpoints.Medium: min-width equals 960px and max-width equals 1279.99px');
                 this.globalStyles = 'globalSm';
                 this.homeStyles = 'homeSm';
+
+                // this.deltaX = getDims('imgContainerId')[0] * 0.6;
+                // this.deltaX = (window.innerWidth - (window.innerWidth * 0.9)) * 0.5;
+                this.deltaX = (window.innerWidth * 0.9) * 0.2375;
             }
 
             if (state.breakpoints[Breakpoints.Large]) {
                 // console.log( 'Matches Large viewport - Breakpoints.Large: min-width equals 1280px and max-width equals 1919.99px');
                 this.globalStyles = 'globalMd';
                 this.homeStyles = 'homeMd';
+
+                // this.deltaX = getDims('imgContainerId')[0] * 0.6;
+                // this.deltaX = (window.innerWidth - (window.innerWidth * 0.9)) * 0.5;
+                this.deltaX = (window.innerWidth * 0.9) * 0.2375;
             }
 
             if (state.breakpoints[Breakpoints.XLarge]) {
@@ -77,11 +99,14 @@ export class HomeComponent implements OnInit {
                 this.homeStyles = 'homeLg';
 
                 // this.deltaX = getDims('imgContainerId')[0] / 1.6875;
-                this.deltaX = getDims('imgContainerId')[0] * 0.6;
+                // this.deltaX = getDims('imgContainerId')[0] * 0.6;
+                this.deltaX = (window.innerWidth * 0.9) * 0.1875;
             }
         });
 
-        showMe('hidden');
+        // showMe('hidden');
+        showMe('shigeru', 'hidden');
+
         this.logoAnim();
     }
 
@@ -89,6 +114,12 @@ export class HomeComponent implements OnInit {
     // ==================== FUNCTION: logoAnim() ====================
 
     logoAnim() {
+        // console.log('');
+        // console.log('========== home.component.ts - logoAnim() ==========');
+
+        // this.deltaX = getDims('imgContainerId')[0] * 0.6;
+        // console.log('this.deltaX = ' + this.deltaX + '     this.deltaY = ' + this.deltaY);
+
         this.logoTL
             .to(['#imgDivLID'], 1, { x: -this.deltaX, y: this.deltaY, transformOrigin: '100% 100%', ease: Power3.easeOut }, 'frame01 += 0')
             .to(['#imgDivRID'], 1, { x: this.deltaX, transformOrigin: '50% 50%', ease: Power3.easeOut, onComplete: this.enableDivs }, 'frame01 += 0')
@@ -97,11 +128,17 @@ export class HomeComponent implements OnInit {
     }
 
     enableDivs() {
+        // console.log('');
+        // console.log('========== home.component.ts - enableDivs() ==========');
+
         document.getElementById('imgDivRID').style.pointerEvents = 'auto';
         document.getElementById('imgDivLID').style.pointerEvents = 'auto';
     }
 
     shigimcpDOTcom() {
+        // console.log('');
+        // console.log('========== home.component.ts - shigimcpDOTcom() ==========');
+
         window.open(
             'https://www.shigimcp.com', '_blank'
         );
@@ -112,9 +149,9 @@ export class HomeComponent implements OnInit {
 
     eggOver(evt: any, propsArray: Array<string | number>) {
     // eggOver(evt: MouseEvent, propsArray: Array<string | number>) {
-
         // console.log('');
-        // console.log('PING! eggOver triggered!   this = ' + this + '     evt = ' + evt + '   propsArray = ' + propsArray);
+        // console.log('========== home.component.ts - eggOver(evt: any, propsArray: Array<string | number>) ==========');
+        // console.log('this = ' + this + '     evt = ' + evt + '   propsArray = ' + propsArray);
         // console.log('evt.target.id = ' + evt.target.id);
         // console.log('evt.target.firstChild.id = ' + evt.target.firstChild.id);
         // console.log('evt.target.lastChild.id = ' + evt.target.lastChild.id);

@@ -65,7 +65,8 @@ export class ResumeComponent implements OnInit {
             }
         });
 
-        showMe('hidden');
+        // showMe('hidden');
+        showMe('shigeru', 'hidden');
     }
 
     // viewWork(thisEmployer: any) {

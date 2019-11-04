@@ -47,6 +47,24 @@ function randMinMax(thisMin, thisMax, thisRound) {
 }
 
 
+//-------------------- FUNCTION: showMe(thisID, thisVisibility) --------------------
+//-------------------- NOTE: initially used to hide <app-shigeru> becuase it is location-dependent (vs display-/device-dependent which will use style sheets for visibility) --------------------
+
+// function showMe(thisVisibility) {
+function showMe(thisID, thisVisibility) {
+
+	// console.log('');
+	// console.log('-------------------- custom.js - showMe(thisVisibility) --------------------');
+	// console.log('PING! hideDefs(thisVisibility) triggered! thisVisibility = ' + thisVisibility);
+
+	// console.log('this = ' + this);
+    // console.log('document.getElementById(shigeru).id = ' + document.getElementById('shigeru').id);
+
+    // document.getElementById('shigeru').style.visibility = thisVisibility;
+    document.getElementById(thisID).style.visibility = thisVisibility;
+}
+
+
 //-------------------- FUNCTION: getDims(thisElem) --------------------
 
 function getDims(thisElem) {
@@ -229,18 +247,6 @@ function hideDefsJS(thisElem) {
 
 			break;
 	}
-}
-
-function showMe(thisVisiblity) {
-
-	// console.log('');
-	// console.log('-------------------- custom.js - showMe(thisVisiblity) --------------------');
-	// console.log('PING! hideDefs(thisVisiblity) triggered! thisVisiblity = ' + thisVisiblity);
-
-	// console.log('this = ' + this);
-    // console.log('document.getElementById(shigeru).id = ' + document.getElementById('shigeru').id);
-
-    document.getElementById('shigeru').style.visibility = thisVisiblity;
 }
 
 

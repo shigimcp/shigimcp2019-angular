@@ -245,7 +245,8 @@
             cursor: pointer;
             pointer-events: none;
 
-            p {
+            // p {
+            .tag {
                 text-align: center;
                 padding: 2.5vh 0 0 0;
             }

@@ -1,57 +1,23 @@
-<!-- 
-<mat-sidenav-container class="sidenav-container">
+<!-- <button mat-button class="btnToggle" (click)="toggle()" position="end">Toggle</button> -->
+<mat-icon class="iconToggle" (click)="toggle()" position="end">menu</mat-icon>
 
-	<mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false" position="end">
-		<mat-toolbar>Menu</mat-toolbar>
-		<p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
+<!-- <mat-sidenav-container class="sidenav-container" autosize> -->
+<mat-sidenav-container [ngClass]="sideNavStyles" autosize>
+
+	<!-- <mat-sidenav #sidenav class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false" position="end"> -->
+	<!-- <mat-sidenav #sidenav class="sidenav" fixedInViewport [attr.role]="'navigation'" [mode]="'over'" [opened]="true" position="end"> -->
+	<mat-sidenav #sidenav class="sidenav" fixedInViewport [attr.role]="'navigation'" [mode]="'over'" [opened]="false" position="end">
+		<!-- <button mat-button class="btnToggle" (click)="toggle()">Toggle</button> -->
 
 		<mat-nav-list>
-			<li mat-list-item *ngFor="let employer of work; index as employerIndex" (click)="goToEmployer(employer.employer)">{{ employer.employer }}</li>
+			<!-- <li mat-list-item *ngFor="let employer of work; index as employerIndex" (click)="goToEmployer(employer.employer)">{{ employer.employer }}</li> -->
+			<!-- <li mat-list-item *ngFor="let employer of work; index as employerIndex" (click)="goToEmployer(employer)">{{ employer.employer }}</li> -->
+
+            <!-- <li mat-list-item *ngFor="let employer of work; index as employerIndex" [routerLink]="['/work']" [fragment]="employer.albumID" (click)="goToEmployer(employer)">{{ employer.employer }}</li> -->
+			<!-- <li mat-list-item *ngFor="let employer of work; index as employerIndex" [routerLink]="['/resume']" [fragment]="employer.albumID" (click)="goToEmployer(employer)">{{ employer.employer }}</li> -->
+			<li mat-list-item *ngFor="let employer of work; index as employerIndex" [routerLink]="thisRoute" [fragment]="employer.albumID" (click)="goToEmployer(employer)">{{ employer.employer }}</li>
 		</mat-nav-list>
 
 	</mat-sidenav>
 
-
-	<mat-sidenav-content>
-		<mat-toolbar color="primary">
-			<button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
-				<mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-			</button>
-			<span>shigimcp2019-angular</span>
-		</mat-toolbar>
-		Add Content Here
-	</mat-sidenav-content>
-
-
 </mat-sidenav-container>
- -->
-
-
-
-
-<mat-sidenav-container class="example-container" *ngIf="shouldRun">
-	<mat-sidenav #sidenav [mode]="mode.value">
-		<p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
-		<p>
-			<mat-radio-group class="example-radio-group" [formControl]="mode">
-				<label>Mode:</label>
-				<mat-radio-button value="over">Over</mat-radio-button>
-				<mat-radio-button value="side">Side</mat-radio-button>
-				<mat-radio-button value="push">Push</mat-radio-button>
-			</mat-radio-group>
-		</p>
-	</mat-sidenav>
-
-	<mat-sidenav-content>
-		<p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
-		<p>
-			<mat-radio-group class="example-radio-group" [formControl]="mode">
-				<label>Mode:</label>
-				<mat-radio-button value="over">Over</mat-radio-button>
-				<mat-radio-button value="side">Side</mat-radio-button>
-				<mat-radio-button value="push">Push</mat-radio-button>
-			</mat-radio-group>
-		</p>
-	</mat-sidenav-content>
-</mat-sidenav-container>
-

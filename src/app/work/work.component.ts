@@ -72,15 +72,16 @@ export class WorkComponent implements OnInit {
             }
         });
 
-        showMe('hidden');
+        // showMe('hidden');
+        showMe('shigeru', 'hidden');
     }
 
 
     goToEmployer(thisEmployer: string) {
-        // console.log('');
-        // console.log('========== work.component.ts - goToEmployer(thisEmployer: string) ==========');
+        console.log('');
+        console.log('========== work.component.ts - goToEmployer(thisEmployer: string) ==========');
 
-        // console.log('thisEmployer = ' + thisEmployer);
+        console.log('thisEmployer = ' + thisEmployer);
 
         // this.getElementsByClassName('.bg_txt').nativeElement.innerHtml = thisEmployer;
         this.bgText = thisEmployer;

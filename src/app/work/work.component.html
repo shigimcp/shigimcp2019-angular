@@ -5,17 +5,17 @@
 	<div class="bg_txt">{{ bgText }}</div>
 
 	<!-- <p>========================= WORK COMPONENT =========================</p> -->
-<!-- 
+
 	<div class="work_menu">
 		<ng-container *ngFor="let employer of work; index as employerIndex">
-            <ul>
+            <!-- <ul> -->
                 <li *ngIf="employer.images.length > 0" [routerLink]='"."' [fragment]="employer.albumID" (click)="goToEmployer(employer.employer)">{{ employer.employer }}</li>
-            </ul>
+            <!-- </ul> -->
         </ng-container>
 	</div>
- -->
 
-	<app-work-nav></app-work-nav>
+
+	<!-- <app-work-nav></app-work-nav> -->
 
 	<ng-container *ngFor="let employer of work; index as employerIndex">
 		<app-employer *ngIf="employer.images.length > 0" [employer]="employer" [images]="employer.images" id="{{ employer.albumID }}"></app-employer>

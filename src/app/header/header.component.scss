@@ -1,3 +1,5 @@
+// ------------------------- SMALL screens -------------------------
+
 .headerSm {
     // border: 2px solid #ff0000;
 	background: #000000;
@@ -184,6 +186,8 @@
 	}
 }
 
+
+// ------------------------- MEDIUM screens -------------------------
 
 .headerMd {
     // border: 2px solid #ff0000;
@@ -372,6 +376,8 @@
 }
 
 
+// ------------------------- LARGE screens -------------------------
+
 .headerLg {
     // border: 2px solid #ff0000;
 	background: #000000;
@@ -555,6 +561,10 @@
                 }
 			}
 		}
-	}
+
+        app-work-nav {
+            visibility: hidden;
+        }
+    }
 }
 

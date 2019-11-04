@@ -5,16 +5,21 @@
 
 	<!-- <p>========================= EMPLOYER COMPONENT =========================</p> -->
 
-    <mdb-carousel class="carousel slide carousel-fade" id="{{ employer.albumID }}" [animation]="'fade'" [isControls]="true" [keyboard]="true" [interval]="'0'">
-		<mdb-carousel-item *ngFor="let image of images; index as imageIndex" id="{{ employer.albumID }}{{ imageIndex }}">
+    <mdb-carousel class="carousel slide carousel-fade" id="{{ employer.albumID }}" [animation]="'slide'" [isControls]="true" [keyboard]="true" [interval]="'0'">
+    <!-- <mdb-carousel class="carousel slide carousel-fade" id="{{ employer.albumID }}" [animation]="'fade'" [isControls]="true" [keyboard]="true" [interval]="'0'"> -->
+    <!-- <mdb-carousel class="myCarousel" id="{{ employer.albumID }}" [animation]="'fade'" [isControls]="true" [keyboard]="true" [interval]="'0'"> -->
 
-            <div class="view w-100">
+        <mdb-carousel-item *ngFor="let image of images; index as imageIndex" id="{{ employer.albumID }}{{ imageIndex }}">
+
+            <!-- <div> -->
+            <!-- <div class="view"> -->
+            <!-- <div class="view w-100"> -->
 				<img *ngIf="image.link === '#'; else linkedImage" class="d-block w-100" [src]="imageLoc+slideLoc+employer.slpath+image.src" [alt]="image.src">
 
 				<ng-template #linkedImage>
                     <img class="d-block w-100" [src]="imageLoc+slideLoc+employer.slpath+image.src" [alt]="image.src" (click)="openModal([$event, 'modalApp', image.link, employer.albumID, image])">
 				</ng-template>
-            </div>
+            <!-- </div> -->
 
             <div class="carousel-caption">
                 <p>{{ image.caption }}</p>

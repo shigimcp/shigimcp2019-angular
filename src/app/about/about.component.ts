@@ -74,7 +74,8 @@ export class AboutComponent implements OnInit, AfterViewInit {
             }
         });
 
-        showMe('visible');
+        // showMe('visible');
+        showMe('shigeru', 'visible');
     }
 
 

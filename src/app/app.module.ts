@@ -8,6 +8,8 @@ import { RouterModule, Routes, ExtraOptions } from '@angular/router';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 // import { LayoutModule } from '@angular/cdk/layout';
 
+// import { ReactiveFormsModule } from '@angular/forms';
+
 
 import { HeaderComponent } from './header/header.component';
 import { ResumeComponent } from './resume/resume.component';
@@ -25,12 +27,15 @@ import { ShigeruComponent } from './shigeru/shigeru.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WorkNavComponent } from './work-nav/work-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
+// import { ChangeContentDirective } from './change-content.directive';
+
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-// import { ChangeContentDirective } from './change-content.directive';
+
+// import {MatButtonModule, MatCheckboxModule, MatInputModule, MatMenuModule, MatSidenavModule, MatButtonToggleModule, MatExpansionModule, MatRippleModule} from '@angular/material';
 
 
 const workRoutes: Routes = [
@@ -75,7 +80,11 @@ const routerOptions: ExtraOptions = {
         MatSidenavModule,
         MatIconModule,
         MatListModule,
+        // ReactiveFormsModule,
+        // MatButtonModule, MatCheckboxModule, MatInputModule, MatMenuModule, MatSidenavModule, MatButtonToggleModule, MatExpansionModule, MatRippleModule,
     ],
+
+    // exports: [MatButtonModule, MatCheckboxModule, MatInputModule, MatMenuModule, MatSidenavModule, MatButtonToggleModule, MatExpansionModule, MatRippleModule],
 
     declarations: [
         AppComponent,

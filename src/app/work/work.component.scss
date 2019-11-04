@@ -44,6 +44,8 @@
         // right: 0;
         z-index: 99;
 
+        visibility: hidden;
+
         li {
             // border: 2px solid #0000ff;
             // background-color: rgba(0, 0, 0, 0.5);
@@ -108,6 +110,8 @@
         top: 17.5vh;
         right: 0;
         z-index: 99;
+
+        visibility: hidden;
 
         li {
             // border: 2px solid #0000ff;
@@ -175,7 +179,8 @@
 
         position: fixed;
         // top: 120px;
-        top: 15vh;
+        top: 12.5vh;
+        // top: 15vh;
         // top: 25vh;
         left: 75vw;
         // right: 0;
@@ -190,6 +195,7 @@
 
             margin: 0;
             // margin: 10px 0;
+            // padding: 0;
             // padding: 5px 0;
             padding: 0.5em 1em 0.5em 2.5em;
 
