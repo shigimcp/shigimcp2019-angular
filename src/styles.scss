@@ -277,18 +277,43 @@ body {
             .carousel-item {
                 // border: 2px solid #0000ff;
 
+                // width: 100%;
+                // width: auto;
                 height: inherit;
+                // width: calc(height * 16 / 9);
 
                 display: flex;
-                display: -webkit-flex;
+                // display: -webkit-flex;
+                // display: -ms-flexbox;
+                // display: -webkit-box;
+                // display: -moz-box;
+
                 justify-content: center;
-                -webkit-justify-content: center;
+                // -moz-justify-content: center;
+                // -ms-justify-content: center;
+                // -webkit-justify-content: center;
 
                 img {
                     // border: 2px solid #ffff00;
 
+                    // width: auto;
+                    // height: inherit;
+                    // width: calc(height * 16 / 9);
+                    // width: 150%;
+    
                     display: block;
                     margin: auto;
+
+                    // display: flex;
+                    // display: -webkit-flex;
+                    // display: -ms-flexbox;
+                    // display: -webkit-box;
+                    // display: -moz-box;
+
+                    // justify-content: center;
+                    // -moz-justify-content: center;
+                    // -ms-justify-content: center;
+                    // -webkit-justify-content: center;
                 }
             }
         }

@@ -14,11 +14,11 @@
             <!-- <div> -->
             <!-- <div class="view"> -->
             <!-- <div class="view w-100"> -->
-				<img *ngIf="image.link === '#'; else linkedImage" class="d-block w-100" [src]="imageLoc+slideLoc+employer.slpath+image.src" [alt]="image.src">
+                <img *ngIf="image.link === '#'; else linkedImage" class="d-block w-100" [src]="imageLoc+slideLoc+employer.slpath+image.src" [alt]="image.src">
 
-				<ng-template #linkedImage>
+                <ng-template #linkedImage>
                     <img class="d-block w-100" [src]="imageLoc+slideLoc+employer.slpath+image.src" [alt]="image.src" (click)="openModal([$event, 'modalApp', image.link, employer.albumID, image])">
-				</ng-template>
+                </ng-template>
             <!-- </div> -->
 
             <div class="carousel-caption">
@@ -30,7 +30,7 @@
         <div [ngClass]="thumbStyles">
             <img *ngFor="let thumb of images; index as thumbIndex" class="thumbnail"  [src]="imageLoc+thumbLoc+employer.slpath+thumb.src" [alt]="thumb.src" (click)="goToImage(thumbIndex)">
         </div>
- -->
+-->
     </mdb-carousel>
 
     <div [ngClass]="thumbStyles">
