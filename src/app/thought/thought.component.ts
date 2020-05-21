@@ -31,11 +31,11 @@ export class ThoughtComponent implements OnInit, AfterViewInit {
 
     @ViewChildren('curlSVG') public curlSVG: QueryList<ElementRef>;
 
-    @ViewChild('boingSVG', {static: false}) public boingSVG: ElementRef;
-    @ViewChild('boingLf', {static: false}) public boingLf: ElementRef;
-    @ViewChild('boingRt', {static: false}) public boingRt: ElementRef;
+    @ViewChild('boingSVG') public boingSVG: ElementRef;
+    @ViewChild('boingLf') public boingLf: ElementRef;
+    @ViewChild('boingRt') public boingRt: ElementRef;
 
-    @ViewChild('thoughtBubble', {static: false}) public thoughtBubble: ElementRef;
+    @ViewChild('thoughtBubble') public thoughtBubble: ElementRef;
 
 
 // -------------------- generic --------------------

@@ -1,6 +1,7 @@
 // import { Component } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 // import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+// import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 // import { Observable } from 'rxjs';
 // import { map, shareReplay } from 'rxjs/operators';
@@ -8,7 +9,8 @@ import { Router } from '@angular/router';
 
 // import { FormControl } from '@angular/forms';
 import { ViewChild } from '@angular/core';
-import { MatSidenav} from '@angular/material';
+// import { MatSidenav} from '@angular/material/';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 import { Work } from '../../assets/data/work';
 
@@ -23,7 +25,8 @@ import { Work } from '../../assets/data/work';
 // export class WorkNavComponent {
 export class WorkNavComponent implements OnInit {
 
-    @ViewChild('sidenav', {static: false}) sidenav: MatSidenav;
+    // @ViewChild('sidenav') sidenav: MatSidenav;
+    @ViewChild('sidenav') sidenav: MatSidenavModule;
 
     // mode = new FormControl('over');
 

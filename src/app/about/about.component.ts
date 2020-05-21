@@ -21,7 +21,7 @@ declare const getDims: any;
 
 export class AboutComponent implements OnInit, AfterViewInit {
 
-    @ViewChild(ThoughtComponent, {static: false}) childComp: ThoughtComponent;
+    @ViewChild(ThoughtComponent) childComp: ThoughtComponent;
     // @ViewChildren('appThought') public appThought: QueryList<ElementRef>;
 
     globalStyles: string;
